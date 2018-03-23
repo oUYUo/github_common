@@ -1,0 +1,14 @@
+package com.set;
+
+import java.util.HashSet;
+
+public class Demo1_HashSet {
+	public static void main(String[] args) {
+		HashSet<String> hSet = new HashSet<>();
+		hSet.add("a");
+		boolean b1=hSet.add("a");
+		hSet.add("b");
+		System.out.println(hSet);
+		
+	}
+}

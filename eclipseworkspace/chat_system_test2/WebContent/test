@@ -1,0 +1,15 @@
+	if(!friendword.equals(friendtemp)){
+			friendword=friendtemp;
+			frienddaytmp=day;
+			out.println("He:"+"<br>");
+			out.println(sdf.format(day)+"<br>");
+			out.println(DB.Search(friend)+"<hr>");
+			
+		}
+		else{
+			out.println("He:"+"<br>");
+			out.println(sdf.format(frienddaytmp)+"<br>");
+			out.println(friendword+"<hr>");
+		
+		}
+		

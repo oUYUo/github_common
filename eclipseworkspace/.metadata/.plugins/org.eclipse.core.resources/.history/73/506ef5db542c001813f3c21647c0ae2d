@@ -1,0 +1,13 @@
+package com.Thread;
+class Demo{
+
+	@Override
+	protected void finalize()  {
+	}
+	
+}
+public class Demo1 {
+	public static void main(String[] args) {
+		
+	}
+}

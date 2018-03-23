@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../51job/.idea/51job.iml" filepath="$PROJECT_DIR$/../51job/.idea/51job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mathmodel/.idea/mathmodel.iml" filepath="$PROJECT_DIR$/../mathmodel/.idea/mathmodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../pptdemo/.idea/pptdemo.iml" filepath="$PROJECT_DIR$/../pptdemo/.idea/pptdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../scrapy_zol_wallpaper_for_zhang-master/.idea/scrapy_zol_wallpaper_for_zhang-master.iml" filepath="$PROJECT_DIR$/../scrapy_zol_wallpaper_for_zhang-master/.idea/scrapy_zol_wallpaper_for_zhang-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../test/.idea/test.iml" filepath="$PROJECT_DIR$/../test/.idea/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/xvideo.iml" filepath="$PROJECT_DIR$/.idea/xvideo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../数据分析/.idea/数据分析.iml" filepath="$PROJECT_DIR$/../数据分析/.idea/数据分析.iml" />
+    </modules>
+  </component>
+</project>

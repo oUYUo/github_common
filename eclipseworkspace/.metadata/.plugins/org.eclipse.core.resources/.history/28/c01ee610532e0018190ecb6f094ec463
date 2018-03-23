@@ -1,0 +1,48 @@
+package com.syn;
+
+public class Demo_Synchronized {
+	/*
+	 * 同步代码块
+	 */
+	public static void main(String[] args) {
+		final Printer p = new Printer();
+		new Thread(){
+			public void run() {
+				while (true) {
+					p.print1();
+				}
+				
+			}
+		}.start();
+		new Thread(){
+			public void run() {
+				while (true) {
+					p.print2();
+				}
+				
+			}
+		}.start();
+	}
+}
+
+
+class Printer {
+	public void print1() {
+		synchronized () {
+			System.out.print("1");
+			System.out.print("2");
+			System.out.print("3");
+			System.out.print("\r\n");
+		}
+	
+	}
+	public void print2() {
+		synchronized () {
+			System.out.print("a");
+			System.out.print("b");
+			System.out.print("c");
+			System.out.print("\r\n");
+		}
+	}
+	
+}

@@ -1,0 +1,34 @@
+package com.method;
+
+public class Demo4_Daemon {
+	//守护线程
+	public static void main(String[] args) {
+		Thread t1 = new Thread(){
+			public void run() {
+				for(int i=0;i<2;i++)
+				{
+					System.out.println(getName()+"....aaaaaaa");
+				}
+			}
+		};
+		Thread t2 = new Thread(){
+			public void run() {
+				for(int i=0;i<50;i++)
+				{
+					System.out.println(getName()+"....bbbbbb");
+				}
+			}
+		};
+		Thread t3 = new Thread(){
+			public void run() {
+				for(int i=0;i<50;i++)
+				{
+					System.out.println(getName()+"....cccccccccc");
+				}
+			}
+		};
+		t2.setDaemon(true); 					//当传入true以为着设置为守护进程
+		t1.start();
+		t2.start();
+	}
+}

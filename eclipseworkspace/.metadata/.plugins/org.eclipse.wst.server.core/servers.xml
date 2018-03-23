@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="19">
+    <list key="modules" value0="computer::org.eclipse.jst.jee.server:computer::jst.web::3.0" value1="javabean_demo1::org.eclipse.jst.jee.server:javabean_demo1::jst.web::3.0" value2="learn_jsp_demo1::org.eclipse.jst.jee.server:learn_jsp_demo1::jst.web::3.0" value3="chat_system_test1::org.eclipse.jst.jee.server:chat_system_test1::jst.web::3.0" value4="testDemo::org.eclipse.jst.jee.server:testDemo::jst.web::3.0" value5="chat_system_test2::org.eclipse.jst.jee.server:chat_system_test2::jst.web::3.0" value6="MVCdemo1::org.eclipse.jst.jee.server:MVCdemo1::jst.web::3.0" value7="spring_2_web_helloworld::org.eclipse.jst.jee.server:spring_2_web_helloworld::jst.web::3.0"/>
+  </server>
+</servers>

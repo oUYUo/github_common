@@ -1,0 +1,12 @@
+package com.method;
+
+public class Demo1_Name {
+	public static void main(String[] args) {
+		new Thread(){
+			public void run() {
+				System.out.println("aaaaaaaaaaaaa");
+				
+			}
+		}.setContextClassLoader(cl);
+	}
+}

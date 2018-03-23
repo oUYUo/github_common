@@ -1,0 +1,10 @@
+
+public class Test {
+	private int[] create(){
+		return new int[10];
+	}
+	public static void main(String[] args) {
+		Test test = new Test();
+		int[] data = test.create();
+	}
+}

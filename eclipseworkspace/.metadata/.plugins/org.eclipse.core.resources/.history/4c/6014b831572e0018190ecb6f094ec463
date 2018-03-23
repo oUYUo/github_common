@@ -1,0 +1,49 @@
+package com.syn;
+
+public class Demo2_Synchronized {
+	/*
+	 * 同步代码块
+	 */
+	public static void main(String[] args) {
+		final Printer2 p = new Printer2();
+		new Thread(){
+			public void run() {
+				while (true) {
+					p.print1();
+				}
+				
+			}
+		}.start();
+		new Thread(){
+			public void run() {
+				while (true) {
+					p.print2();
+				}
+				
+			}
+		}.start();
+	}
+}
+
+
+class Printer2 {
+	Integer demo = new Integer(1);
+	//非静态的同步方法的锁对象是什么？
+	public synchronized void print1() {			//同步方法只需要在方法上加上synchronized关键字即可
+			System.out.print("1");
+			System.out.print("2");
+			System.out.print("3");
+			System.out.print("\r\n");
+	
+	}
+	public  void print2() {
+		synchronized (this) {
+			System.out.print("a");
+			System.out.print("b");
+			System.out.print("c");
+			System.out.print("\r\n");
+		}
+		
+	}
+	
+}

@@ -1,0 +1,33 @@
+
+class Node{
+	String name;
+	public Node() {
+	}
+	public Node (String name) {
+		this.name=name;
+
+	}
+	String getInfo() {
+		if(name!=null)
+		{
+			return name;
+		}
+		else {
+			return "Empty";
+		}
+	}
+}
+class Label extends Node{
+	public Label(String name) {
+		super(name);
+	}
+}
+public class Test{
+	public static void main(String[] args) {
+		Node[] nodes ={new Node(),new Label("Hello")};
+		for(int i=0;i<nodes.length;i++){
+			System.out.println(nodes[i].getInfo());
+		}
+		}
+	}
+}

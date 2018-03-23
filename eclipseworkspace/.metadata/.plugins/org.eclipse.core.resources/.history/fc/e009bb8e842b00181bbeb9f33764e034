@@ -1,0 +1,10 @@
+package com.List;
+
+import java.util.ArrayList;
+
+public class Demo5_ArrayListArrayList {
+	//案例：我们学科，学科又分为若干个班级，整个学科是一个大集合，若干个班级分为每一个小集合
+	public static void main(String[] args) {
+		ArrayList<ArrayList<Person>>  list = new ArrayList<>();
+	}
+}

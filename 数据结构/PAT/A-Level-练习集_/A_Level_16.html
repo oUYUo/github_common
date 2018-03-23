@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; " />
+    <title>1016. Phone Bills (25) | Programming Ability Test</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="qJjaTddfqbxfiCFTpnn/qaUBHBo5y/5zY9KZsAxTKBw=" name="csrf-token" />
+    <link href="/s/application-70953deae3fb7747ba7b1bca82481290.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]><link href="/s/blueprint/ie-95046ca80744645e3475cae5890744b7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if lt IE 7]><link href="/s/custom_ie6-01f58d47daa14cae5a4d256ed3368756.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <script src="/s/application-354b0ac70ff1396b9748c0c4ce73eda3.js" type="text/javascript"></script>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <!-- link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' -->
+  </head>
+  <body>
+    <div class="container">
+      <div id="pageHeader">
+  <div id="logo" class="lfloat">
+    <a href="/"><img alt="Logo" src="/images/logo.png" /></a>
+  </div>
+  <div id="headerInfo" class="rfloat">
+        <a href="/users/sign_in">[登录]</a>
+          <a href="/users/sign_up">[注册]</a>
+  </div>
+  <hr> 
+</div>
+
+
+      <div id="navibar" class="span-3">
+  <ul>
+    <li><a href="/">主页</a></li>
+
+    <li><a href="/contests">题目集</a></li>
+
+      <div id='psnavi'>
+        <ul>
+          <li><a href="/contests/pat-a-practise/information">基本信息</a></li>
+          <li><a href="/contests/pat-a-practise">题目列表</a></li>
+		  <li><a href="/contests/pat-a-practise/submissions?self=true">提交列表</a></li>
+            <li><a href="/contests/pat-a-practise/ranklist">排名</a></li>
+        </ul>
+      </div>
+
+
+    <li><a href="/help">帮助</a></li>
+  </ul>
+</div>
+
+
+
+      <div id="body" class="span-22 last">
+
+
+            <h1>1016. Phone Bills (25)</h1>
+        <div id='problemInfo' class='rfloat'>
+  <div class='limit'>
+  <div class='key'>
+    时间限制
+  </div>
+  <div class='value'>
+    400 ms<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    内存限制
+  </div>
+  <div class='value'>
+    65536 kB<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    代码长度限制
+  </div>
+  <div class='value'>
+    16000 B<br>
+  </div>
+</div>
+
+
+
+  <div class='checker'>
+    <div class='key'>
+      判题程序
+    </div>
+    <div class='value'>
+      <span title='纯文本对比'>Standard</span>
+    </div>
+  </div>
+
+    <div class='key'>
+      作者
+    </div>
+    <div class='value'>
+      CHEN, Yue<br>
+    </div>
+</div>
+
+
+<div id='problemContent'>
+  <p>A long-distance telephone company charges its customers by the following rules:</p>
+
+<p>
+Making a long-distance call costs a certain amount per minute, depending on the time of day when the call is made.  When a customer starts connecting a long-distance call, the time will be recorded, and so will be the time when the customer hangs up the phone.  Every calendar month, a bill is sent to the customer for each minute called (at a rate determined by the time of day).  Your job is to prepare the bills for each month, given a set of phone call records.</p>
+
+<p><b>
+Input Specification:
+</b></p>
+
+<p>Each input file contains one test case.  Each case has two parts:  the rate structure, and the phone call records.</p>
+
+<p>The rate structure consists of a line with 24 non-negative integers denoting the toll (cents/minute) from 00:00 - 01:00, the toll from 01:00 - 02:00, and so on for each hour in the day. </P>
+
+<p>The next line contains a positive number N (&lt= 1000), followed by N lines of records.  Each phone call record consists of the name of the customer (string of up to 20 characters without space), the time and date (mm:dd:hh:mm), and the word "on-line" or "off-line".</p>
+
+<p>For each test case, all dates will be within a single month.  Each "on-line" record is paired with the chronologically next record for the same customer provided it is an "off-line" record.  Any "on-line" records that are not paired with an "off-line" record are ignored, as are "off-line" records not paired with an "on-line" record.  It is guaranteed that at least one call is well paired in the input.  You may assume that no two records for the same customer have the same time.  Times are recorded using a 24-hour clock.</p>
+
+<p><b>
+Output Specification:
+</b></p>
+
+<p>For each test case, you must print a phone bill for each customer. </p>
+
+<p>Bills must be printed in alphabetical order of customers' names. 
+For each customer, first print in a line the name of the customer and the month of the bill in the format shown by the sample.  Then for each time period of a call, print in one line the beginning and ending time and date (dd:hh:mm), the lasting time (in minute) and the charge of the call.  The calls must be listed in chronological order.  Finally, print the total charge for the month in the format shown by the sample.</p>
+
+<b>Sample Input:</b><pre>
+10 10 10 10 10 10 20 20 20 15 15 15 15 15 15 15 20 30 20 15 15 10 10 10
+10
+CYLL 01:01:06:01 on-line
+CYLL 01:28:16:05 off-line
+CYJJ 01:01:07:00 off-line
+CYLL 01:01:08:03 off-line
+CYJJ 01:01:05:59 on-line
+aaa 01:01:01:03 on-line
+aaa 01:02:00:01 on-line
+CYLL 01:28:15:41 on-line
+aaa 01:05:02:24 on-line
+aaa 01:04:23:59 off-line
+</pre>
+
+<b>Sample Output:</b><pre>
+CYJJ 01
+01:05:59 01:07:00 61 $12.10
+Total amount: $12.10
+CYLL 01
+01:06:01 01:08:03 122 $24.40
+28:15:41 28:16:05 24 $3.85
+Total amount: $28.25
+aaa 01
+02:00:01 04:23:59 4318 $638.80
+Total amount: $638.80
+</pre>
+
+</div>
+
+<hr>
+
+
+
+
+
+
+
+      </div>
+
+      <div id="pageFooter" class="center">
+  <hr class="nomarginbottom">
+  <div id="footerContainer">
+    <div class="center">
+      版权所有 (C) 2011-2017 浙江大学计算机科学与技术学院
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+  </body>
+</html>
+
+<!--  -->
+

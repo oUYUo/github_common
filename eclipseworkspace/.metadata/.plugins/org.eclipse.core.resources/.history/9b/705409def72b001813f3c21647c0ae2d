@@ -1,0 +1,17 @@
+package com.set;
+
+import java.util.TreeSet;
+
+public class Demo3_TreeSet {
+	public static void main(String[] args) {
+		TreeSet<Integer> treeSet = new TreeSet<>();
+		treeSet.add(1);
+		treeSet.add(1);
+		treeSet.add(2);
+		treeSet.add(4);
+		treeSet.add(1);
+		treeSet.add(3);
+		treeSet.add(1);
+		System.out.println(treeSet);
+	}
+}

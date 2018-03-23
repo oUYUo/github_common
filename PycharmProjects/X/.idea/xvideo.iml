@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="jdk" jdkName="Python 3.6.3 (E:\Anaconda3\python.exe)" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="test" />
+    <orderEntry type="module" module-name="qq" />
+    <orderEntry type="module" module-name="help_liu_scrapy_modelweb_pay_of_200yuan-master" />
+    <orderEntry type="module" module-name="summer_library_activity-master" />
+    <orderEntry type="module" module-name="pptdemo" />
+    <orderEntry type="module" module-name="scrapy_zol_wallpaper_for_zhang-master" />
+    <orderEntry type="module" module-name="mathmodel" />
+    <orderEntry type="module" module-name="2017CUMCMCoding-master" />
+    <orderEntry type="module" module-name="51job" />
+    <orderEntry type="module" module-name="数据分析" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="projectConfiguration" value="Nosetests" />
+    <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
+  </component>
+</module>

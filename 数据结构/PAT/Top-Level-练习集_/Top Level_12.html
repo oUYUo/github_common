@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; " />
+    <title>1012. Greedy Snake (35) | Programming Ability Test</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="9wKshTRmoaMu8GUKOV3N/K9+UGXeZmLqv2fEmKptvcE=" name="csrf-token" />
+    <link href="/s/application-70953deae3fb7747ba7b1bca82481290.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]><link href="/s/blueprint/ie-95046ca80744645e3475cae5890744b7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if lt IE 7]><link href="/s/custom_ie6-01f58d47daa14cae5a4d256ed3368756.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <script src="/s/application-354b0ac70ff1396b9748c0c4ce73eda3.js" type="text/javascript"></script>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <!-- link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' -->
+  </head>
+  <body>
+    <div class="container">
+      <div id="pageHeader">
+  <div id="logo" class="lfloat">
+    <a href="/"><img alt="Logo" src="/images/logo.png" /></a>
+  </div>
+  <div id="headerInfo" class="rfloat">
+        <a href="/users/sign_in">[登录]</a>
+          <a href="/users/sign_up">[注册]</a>
+  </div>
+  <hr> 
+</div>
+
+
+      <div id="navibar" class="span-3">
+  <ul>
+    <li><a href="/">主页</a></li>
+
+    <li><a href="/contests">题目集</a></li>
+
+      <div id='psnavi'>
+        <ul>
+          <li><a href="/contests/pat-t-practise/information">基本信息</a></li>
+          <li><a href="/contests/pat-t-practise">题目列表</a></li>
+		  <li><a href="/contests/pat-t-practise/submissions?self=true">提交列表</a></li>
+            <li><a href="/contests/pat-t-practise/ranklist">排名</a></li>
+        </ul>
+      </div>
+
+
+    <li><a href="/help">帮助</a></li>
+  </ul>
+</div>
+
+
+
+      <div id="body" class="span-22 last">
+
+
+            <h1>1012. Greedy Snake (35)</h1>
+        <div id='problemInfo' class='rfloat'>
+  <div class='limit'>
+  <div class='key'>
+    时间限制
+  </div>
+  <div class='value'>
+    1000 ms<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    内存限制
+  </div>
+  <div class='value'>
+    65536 kB<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    代码长度限制
+  </div>
+  <div class='value'>
+    8000 B<br>
+  </div>
+</div>
+
+
+
+  <div class='checker'>
+    <div class='key'>
+      判题程序
+    </div>
+    <div class='value'>
+      <span title='纯文本对比'>Standard</span>
+    </div>
+  </div>
+
+    <div class='key'>
+      作者
+    </div>
+    <div class='value'>
+      LIU, Rujia<br>
+    </div>
+</div>
+
+
+<div id='problemContent'>
+  <p>Have you ever played the game "Greedy Snake"?  In the game, we control the movements of the snake to eat the fruits scattered in the game field, while the snake's body gets longer whenever it eats a fruit.  The goal of the game is to make the snake eat as many fruits as possible, before its head has no where to go.  It would be a real challenge to let you program this game, right now.</p>
+
+<center><img src='http://nos.patest.cn/m7_ocgeybeufay.jpg'></center>
+
+<p>But hey! Relax!  This time you are only asked to program a simplified version of the game.  In this simple version, the fruits are all over the place except at some extra obstacle cells.  The snake's body will extend all the way along the path while it eats the fruits.  You may take any fruit cell as the starting position of the snake.  Then you have four directions to choose from: UP, DOWN, LEFT or RIGHT.  Once you pick up a direction for the snake, it must keep going until it hits an obstacle or its own body.  This procedure repeats until the head of the snake has no where to go -- that is, every adjacent cell of its head is either an obstacle or its own body.  Your task is to minimize the number of fruits left.</p>
+
+<p>For example, let's define the game field to be a 6 by 6 maze, surrounded by obstacle cells "#", with one extra obstacle "@".  "S" is the starting position of the snake.  All the fruits are represented by dots.</p>
+<pre>
+######
+#..S@#
+#....#
+#....#
+#....#
+######
+</pre>
+<p>
+Then if you decide to move DOWN, RIGHT, and UP, the results are shown below.
+</p>
+<pre>
+######
+#..*@#
+#..*.#
+#..*.#
+#..S.#
+######
+
+######
+#..*@#
+#..*.#
+#..*.#
+#..*S#
+######
+
+######
+#..*@#
+#..*S#
+#..**#
+#..**#
+######
+</pre>
+
+<p>
+Now the snake is stucked, the game is over, and there are 8 fruits left.  However, by carefully changing your moves or choosing another starting position, you can actually control the snake to eat up all the fruits. Try it out!
+</p>
+
+<p>
+Task 1: minimize the number of fruits left, and count the number of starting positions that can lead to the optimal solution.
+</p>
+
+<p>
+Task 2: To make things more interesting, you may replace one fruit cell by an obstacle, to obtain a better result, and count the number of ways to add an obstacle that leads to the better result.  In case there is no way to improve the result by adding one obstacle, you should point out this situation.
+</p>
+
+<p><b>
+Input Specification:
+</b></p>
+
+<p>Each input file contains one test case.  For each case, the first line contains two integers N (4 &lt;= N &lt;= 15), the size of the game field, and K (0 &lt;= K &lt;= 2), the number of extra obstacles.  Then K lines follow, each gives the coordinates of an obstacle in the format "x<sub>i</sub> y<sub>i</sub>" where 2 &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= N-1.</p>
+
+<p><b>
+Output Specification:
+</b></p>
+
+<p>For each case, print the results in two lines.  In the first line print the minimal number of fruits left, and the number of different optimal starting positions.  Then in the second line, either print -1 if there is no way to improve the result, or two integers: the better result and the number of optimal ways to add an obstacle.
+</p>
+
+<b>Sample Input 1:</b><pre>
+6 1
+2 5
+</pre>
+
+
+<b>Sample Output 1:</b><pre>
+0 4
+-1
+</pre>
+
+<b>Sample Input 2:</b><pre>
+6 2
+2 2
+3 3
+</pre>
+
+
+<b>Sample Output 2:</b><pre>
+2 1
+0 2
+</pre>
+
+</div>
+
+<hr>
+
+
+
+
+
+
+
+      </div>
+
+      <div id="pageFooter" class="center">
+  <hr class="nomarginbottom">
+  <div id="footerContainer">
+    <div class="center">
+      版权所有 (C) 2011-2017 浙江大学计算机科学与技术学院
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+  </body>
+</html>
+
+<!--  -->
+

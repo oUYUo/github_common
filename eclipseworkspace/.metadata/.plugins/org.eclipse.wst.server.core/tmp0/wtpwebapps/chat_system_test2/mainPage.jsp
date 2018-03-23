@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="dao.Jdbc,java.util.*,java.text.*" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>主页</title>
+</head>
+<%! int i=0; 
+String word="";
+String friendword="";
+Date daytmp  = new Date();
+Date frienddaytmp = new Date();
+%>
+<body>
+	<%
+		Date day  = new Date();
+		request.setCharacterEncoding("utf-8");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd日mm分ss秒");
+	//	response.setHeader("refresh", "5");
+		
+		String username=(String) session.getAttribute("username");
+		String friend=(String) session.getAttribute("friend");
+		String chatword=request.getParameter("chatword");
+		Jdbc DB = new Jdbc();
+		
+		
+		
+		if(chatword!=null)
+		{
+				DB.Update(username, chatword);
+		}
+		String temp=DB.Search(username);
+		String friendtemp=DB.Search(friend);
+		
+		if(!word.equals(temp)){
+			word=temp;
+			friendword=friendtemp;
+			daytmp=day;
+			out.println("I:"+"<br>");
+			out.println(sdf.format(day)+"<br>");
+			out.println(DB.Search(username)+"<hr>");
+		
+			
+		}
+		else{
+			out.println("I:"+"<br>");
+			out.println(sdf.format(daytmp)+"<br>");
+			out.println(word+"<hr>");
+		
+		
+		}
+		if(!friendword.equals(friendtemp)){
+			friendword=friendtemp;
+			frienddaytmp=day;
+			out.println("He:"+"<br>");
+			out.println(sdf.format(day)+"<br>");
+			out.println(DB.Search(friend)+"<hr>");
+			
+		}
+		else{
+			out.println("He:"+"<br>");
+			out.println(sdf.format(frienddaytmp)+"<br>");
+			out.println(friendword+"<hr>");
+		
+		}
+		
+	%>
+	<jsp:include page="chat.jsp"></jsp:include>
+	<jsp:include page="refresh.jsp"></jsp:include>
+</body>
+</html>

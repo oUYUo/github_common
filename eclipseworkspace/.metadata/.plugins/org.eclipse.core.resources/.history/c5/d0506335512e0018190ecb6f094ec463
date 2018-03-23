@@ -1,0 +1,31 @@
+package com.method;
+
+public class Demo7_Priority {
+	public static void main(String[] args) {
+		Thread t1 = new Thread(){
+			public void run() {
+				for (int i = 0; i < 1000; i++) {
+					System.out.println(getName()+"...aaaaaa");
+					
+				}
+			}
+		};
+		
+		Thread t2 = new Thread(){
+			public void run() {
+				for (int i = 0; i < 1000; i++) {
+					System.out.println(getName()+"...bbbbb");
+					
+				}
+			}
+		};
+		
+//		t1.setPriority(10);				//设置最大优先级
+//		t2.setPriority(1);
+		
+		t1.setPriority(Thread.MIN_PRIORITY);
+		t2.setDaemon(Thread.MAX_PRIORITY);
+		t1.start();
+		t2.start();
+	}
+}

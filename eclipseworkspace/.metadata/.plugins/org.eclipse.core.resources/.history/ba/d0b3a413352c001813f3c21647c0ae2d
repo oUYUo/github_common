@@ -1,0 +1,17 @@
+ class Test1 {
+	protected String name;
+	public Test1(String name){
+		this.name=name;
+		
+	}
+}
+public class Test extends Test1 {
+	public Test(String name){
+		super(name);
+		
+	}
+	public static void main(String[] args) {
+		double a;
+		System.out.println(a);
+	}
+}

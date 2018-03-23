@@ -1,0 +1,16 @@
+package com.Thread;
+
+public class Demo4_Thread {
+	public static void main(String[] args) {
+		new Thread(){
+			public void run() {
+				for(int i=0;i<1000;i++)
+				{
+					System.out.println("aaaaaaaaaaaaa");
+				}
+				
+			}
+		}.start();
+		
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;chat_system_test2/WebContent/FinshdoLogin.jsp&apos; to &apos;FinishdoLogin.jsp&apos;" description="Rename resource &apos;FinshdoLogin.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/FinshdoLogin.jsp" name="FinishdoLogin.jsp" stamp="1520048258062" updateReferences="true"/>
+</session>

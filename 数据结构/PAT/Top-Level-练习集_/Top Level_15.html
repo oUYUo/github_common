@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; " />
+    <title>1015. Letter-moving Game (35) | Programming Ability Test</title>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="faXjCXR5Ve2h5EV0ApBkLyFRyFujnLGR3WYJ1+S8olE=" name="csrf-token" />
+    <link href="/s/application-70953deae3fb7747ba7b1bca82481290.css" media="screen" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 8]><link href="/s/blueprint/ie-95046ca80744645e3475cae5890744b7.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if lt IE 7]><link href="/s/custom_ie6-01f58d47daa14cae5a4d256ed3368756.css" media="screen" rel="stylesheet" type="text/css" /><![endif]-->
+    <script src="/s/application-354b0ac70ff1396b9748c0c4ce73eda3.js" type="text/javascript"></script>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <!-- link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' -->
+  </head>
+  <body>
+    <div class="container">
+      <div id="pageHeader">
+  <div id="logo" class="lfloat">
+    <a href="/"><img alt="Logo" src="/images/logo.png" /></a>
+  </div>
+  <div id="headerInfo" class="rfloat">
+        <a href="/users/sign_in">[登录]</a>
+          <a href="/users/sign_up">[注册]</a>
+  </div>
+  <hr> 
+</div>
+
+
+      <div id="navibar" class="span-3">
+  <ul>
+    <li><a href="/">主页</a></li>
+
+    <li><a href="/contests">题目集</a></li>
+
+      <div id='psnavi'>
+        <ul>
+          <li><a href="/contests/pat-t-practise/information">基本信息</a></li>
+          <li><a href="/contests/pat-t-practise">题目列表</a></li>
+		  <li><a href="/contests/pat-t-practise/submissions?self=true">提交列表</a></li>
+            <li><a href="/contests/pat-t-practise/ranklist">排名</a></li>
+        </ul>
+      </div>
+
+
+    <li><a href="/help">帮助</a></li>
+  </ul>
+</div>
+
+
+
+      <div id="body" class="span-22 last">
+
+
+            <h1>1015. Letter-moving Game (35)</h1>
+        <div id='problemInfo' class='rfloat'>
+  <div class='limit'>
+  <div class='key'>
+    时间限制
+  </div>
+  <div class='value'>
+    200 ms<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    内存限制
+  </div>
+  <div class='value'>
+    65536 kB<br>
+  </div>
+</div>
+<div class='limit'>
+  <div class='key'>
+    代码长度限制
+  </div>
+  <div class='value'>
+    8000 B<br>
+  </div>
+</div>
+
+
+
+  <div class='checker'>
+    <div class='key'>
+      判题程序
+    </div>
+    <div class='value'>
+      <span title='纯文本对比'>Standard</span>
+    </div>
+  </div>
+
+    <div class='key'>
+      作者
+    </div>
+    <div class='value'>
+      CAO, Peng<br>
+    </div>
+</div>
+
+
+<div id='problemContent'>
+  <p>Here is a simple intersting letter-moving game. The game starts with 2 strings S and T consist of lower case English letters. S and T contain the same letters but the orders might be different. In other words S can be obtained by shuffling letters in String T. At each step, you can move one arbitrary letter in S either to the beginning or to the end of it. How many steps at least to change S into T?
+</p>
+
+<p><b>
+Input Specification:
+</b></p>
+
+<p>Each input file contains one test case.  For each case, the first line contains the string S, and the second line contains the string T. They consist of only the lower case English letters and S can be obtained by shuffling T's letters. The length of S is no larger than 1000.</p>
+
+<p><b>
+Output Specification:
+</b></p>
+
+<p>For each case, print in a line the least number of steps to change S into T in the game.
+</p>
+
+<b>Sample Input:</b><pre>
+iononmrogdg
+goodmorning
+</pre>
+
+
+<b>Sample Output:</b><pre>
+8
+</pre>
+
+<b>Sample Solution:</b><pre>
+(0) starts from iononmrogdg
+(1) Move the last g to the beginning: giononmrogd
+(2) Move m to the end: giononrogdm
+(3) Move the first o to the end: ginonrogdmo
+(4) Move r to the end: ginonogdmor
+(5) Move the first n to the end: gionogdmorn
+(6) Move i to the end: gonogdmorni
+(7) Move the first n to the end: googdmornin
+(8) Move the second g to the end: goodmorning
+</pre>
+
+</div>
+
+<hr>
+
+
+
+
+
+
+
+      </div>
+
+      <div id="pageFooter" class="center">
+  <hr class="nomarginbottom">
+  <div id="footerContainer">
+    <div class="center">
+      版权所有 (C) 2011-2017 浙江大学计算机科学与技术学院
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+  </body>
+</html>
+
+<!--  -->
+

@@ -1,0 +1,13 @@
+package com.set;
+
+import java.util.LinkedHashSet;
+
+public class Demo2_LinkedHashSet {
+	public static void main(String[] args) {
+		LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+		linkedHashSet.add("a");
+		linkedHashSet.add("z");
+		linkedHashSet.add("c");
+		System.out.println(linkedHashSet);
+	}
+}

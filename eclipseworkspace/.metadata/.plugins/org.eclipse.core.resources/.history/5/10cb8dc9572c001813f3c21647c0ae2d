@@ -1,0 +1,28 @@
+package com.Thread;
+
+public class Demo3_Thread {
+	public static void main(String[] args) {
+		MyRunnable myRunnable = new MyRunnable();
+		Thread thread=new Thread(myRunnable);
+		thread.start();
+		for (int i = 0; i < 1000000; i++) {
+			System.out.println("bbbbbbbb");
+		}
+	}
+	
+}
+
+class MyRunnable implements Runnable{			//定义一个类实现runnable方法
+
+	@Override
+	public void run() {							//重写run方法
+		// TODO Auto-generated method stub		//将要执行的代码写在run方法中
+			for (int i = 0; i < 1000; i++) {
+				System.out.println("aaaaaaaaaaaaaaaaaa");
+				
+			}
+	}
+	
+	
+	
+}

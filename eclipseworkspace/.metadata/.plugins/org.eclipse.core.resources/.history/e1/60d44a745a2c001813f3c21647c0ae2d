@@ -1,0 +1,44 @@
+import java.awt.Button;
+
+class Node{
+	String name;
+	public Node() {
+	}
+	public Node (String name) {
+		this.name=name;
+
+	}
+	String getInfo() {
+		if(name!=null)
+		{
+			return "Node: "+name;
+		}
+		else {
+			return "Node: "+"Empty";
+		}
+	}
+}
+class Label extends Node{
+	public Label(String name) {
+		super(name);
+	}
+	String getInfo() {
+		if(name!=null)
+		{
+			return "Label: "+name;
+		}
+		else {
+			return "Label: "+"Empty";
+		}
+	}
+}
+public class Test extends Button{
+	public static void main(String[] args) {
+		Node[] nodes ={new Node(),new Label("Hello")};
+		for(int i=0;i<nodes.length;i++){
+			System.out.println(nodes[i].getInfo());
+		}
+		int id;
+		id=10;
+		}
+	}

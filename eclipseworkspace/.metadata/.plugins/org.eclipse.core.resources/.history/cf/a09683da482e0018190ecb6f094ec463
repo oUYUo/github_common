@@ -1,0 +1,20 @@
+package com.method;
+
+public class Demo2_CurrentThread {
+	public static void main(String[] args) {
+		new Thread(){
+			public void run() {
+				System.out.println(getName()+" .......aaaa");
+			}
+		}.start();
+		
+		new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				System.out.println(Thread.currentThread()+"........bbbb");//获取当前正在执行的进程
+			}
+		}).start();
+	}
+}

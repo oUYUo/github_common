@@ -1,0 +1,1541 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN"><head><style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+      
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Lei Shi" />
+        <meta http-equiv="Cache-Control" content="o-transform" />
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <meta name="csrf-token" content="Ijk1ZmZmODdiYWM1ZmMwNjFjODAzYTg1NWMwYWU3NDY5NmQzZTkzYWQi.DL9axQ.O9I_URRHmj44sXcuVxxn-7BVoB8" />
+        
+            
+                <title>插入排序 - 实验楼</title>
+            
+        
+
+        
+        <meta content="实验楼是国内领先的IT在线编程及在线实训学习平台，专业导师提供精选的实践项目，创新的技术使得学习者无需配置繁琐的本地环境，随时在线流畅使用。以就业为导向，提供编程、运维、测试、云计算、大数据、数据库等全面的IT技术动手实践环境，提供Linux、Python、Java、C语言、Node.js、Hadoop、PHP、Docker、Git、R、SQL、MongoDB、Redis、Swift、Spark等千门热门课程。" name="description" />
+        <meta content="实验楼,IT培训,IT教育,编程,在线编程,Linux,Linux教程,Linux操作系统,Python,Python教程,Python基础教程,Java,Java编程,C语言,大数据,Node.js,Hadoop,PHP,Docker,Git,R,SQL,MongoDB,Redis,Swift,Spark,在线实验,IT在线教育,编程入门,项目训练,项目实践,webIDE,软件开发" name="keywords" />
+        
+        <meta content="实验楼，琛石科技" name="author" />
+
+        <link rel="shortcut icon" href="https://static.shiyanlou.com/favicon.ico" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/bootstrap-switch/3.3.2/css/bootstrap-switch.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/bootstrap-table/1.11.0/bootstrap-table.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/katex/0.7.1/katex.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/videojs/6.2.8/video-js.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/highlight.js/9.9.0/css/monokai-sublime.min.css" />
+        <link rel="stylesheet" href="https://static.shiyanlou.com/static/calendar-heatmap/calendar-heatmap.css" />
+
+        <link rel="stylesheet" href="/app/dist/css/styles.css?=20171011092302" />
+
+        <style>
+            @font-face {
+                font-family: "lantingxihei";
+        src: url("https://static.shiyanlou.com/fonts/FZLTCXHJW.TTF");
+        }
+
+        /* modal 模态框*/
+        #invite-user .modal-body {
+        overflow: hidden;
+        }
+        #invite-user .modal-body .form-label {
+        margin-bottom: 16px;
+        font-size:14px;
+        }
+        #invite-user .modal-body .form-invite {
+        width: 80%;
+        padding: 6px 12px;
+        background-color: #eeeeee;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        float: left;
+        margin-right: 10px;
+        }
+        #invite-user .modal-body .msg-modal-style {
+        background-color: #7dd383;
+        margin-top: 10px;
+        padding: 6px 0;
+        text-align: center;
+        width: 100%;
+        }
+        #invite-user .modal-body .modal-flash {
+        position: absolute;
+        top: 53px;
+        right: 74px;
+        z-index: 999;
+        }
+        /* end modal */
+
+        .en-footer {
+        padding: 30px;
+        text-align: center;
+        font-size: 14px;
+        }
+        </style>
+        
+<style>
+    .layout-fullscreen {
+        margin-top: 0;
+    }
+    .labdoc-header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 18px;
+        color: #666;
+        background: #fff;
+        font-size: 16px;
+        border-bottom: solid 1px #eee;
+        z-index: 10;
+    }
+    .labdoc-header a {
+        color: #666;
+    }
+    .labdoc-header a:hover,
+    .labdoc-header a:focus {
+        color: #08bf91;;
+        text-decoration: none;
+    }
+    .labdoc-nav {
+        display: none;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 20%;
+        height: calc(100% - 60px);
+        padding: 0 10px;
+        background-color: #f7f7f7;
+        background-image: url(https://static.shiyanlou.com/img/logo-water-mark.png);
+        background-repeat: no-repeat;
+        background-position: 50% calc(100% - 20px);
+        overflow: auto;
+    }
+    .labdoc-nav-content {
+        margin-left: 10px;
+    }
+    .labdoc-nav h2 {
+        padding: 5px 0;
+        font-size: 16px;
+    }
+    .labdoc-nav h3 {
+        padding: 5px 0;
+        margin-left: 20px;
+        font-size: 14px;
+    }
+    .labdoc-nav h2 a,
+    .labdoc-nav h3 a {
+        color: #666;
+        text-decoration: none;
+    }
+    .labdoc-nav h2:hover a,
+    .labdoc-nav h2:focus a,
+    .labdoc-nav h3:hover a,
+    .labdoc-nav h3:focus a,
+    .labdoc-nav h2.active a,
+    .labdoc-nav h3.active a {
+        color: #08bf91;
+        text-decoration: none;
+    }
+    .labdoc-content-container {
+        float: right;
+        width: 100%;
+        padding: 0;
+        margin-top: 60px;
+    }
+    .labdoc-content {
+        padding: 0 10px 20px;
+        background: #fff;
+    }
+    .lab-btns {
+        display: none;
+        position: fixed;
+        top: 30%;
+        right: 10px;
+        width: 56px;
+        text-align: center;
+        z-index: 10;
+    }
+    .lab-btns div {
+        margin-bottom: 4px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);
+    }
+    .lab-btns a {
+        display: block;
+        padding: 0 2px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .lab-btns a:hover,
+    .lab-btns a:focus {
+        text-decoration: none;
+    }
+
+    .lab-btns img {
+        display: inline-block;
+        border-radius: 5px;
+    }
+    .lab-btns a img {
+        padding: 11px 0;
+    }
+    .lab-btns span {
+        display: none;
+        color: #08bf91;
+    }
+    .lab-btns a:hover img {
+        display: none;
+    }
+    .lab-btns a:hover span {
+        display: block;
+        width: 52px;
+        height: 52px;
+        padding-top: 8px;
+        text-align: center;
+    }
+    .labinfo {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 20%;
+        padding: 5px 20px;
+        background: cornsilk;
+        z-index: 10;
+    }
+    .labinfo-header {
+        margin-bottom: 20px;
+    }
+    .labinfo-body div {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+    .labinfo-body div {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    .labinfo-body a {
+        margin: 10px 0;
+    }
+    .left-time a {
+        position: relative;
+        bottom: 1px;
+        padding: 4px 10px;
+        margin-left: 4px;
+        color: #fff;
+        background: #f66;
+        font-size: 14px;
+    }
+    .left-time a:hover,
+    .left-time a:focus {
+        color: #fff;
+    }
+    .labdoc-page,
+    .labdoc-page:focus,
+    .labdoc-page:hover {
+        padding: 20px;
+        color: #08bf91;
+        font-size: 16px;
+        text-decoration: none;
+    }
+    .course-warning {
+        width: 40%;
+        margin: 10px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+    @media (min-width: 768px) {
+        .labdoc-nav,
+        .lab-btns {
+            display: block;
+        }
+        .labdoc-content-container {
+            width: 80%;
+        }
+        .labdoc-content {
+            padding: 0 100px 20px;
+        }
+    }
+</style>
+
+
+        
+        
+    <style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled &gt; .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css">
+.sidebox-my-contest-history[data-v-530b5260] {
+  overflow: hidden;
+}
+.sidebox-my-contest-record[data-v-530b5260] {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.sidebox-my-contest-record .pull-left[data-v-530b5260] {
+    width: 39%;
+    margin-right: 1%;
+    color: #666;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sidebox-my-contest-record .pull-right[data-v-530b5260] {
+    width: 60%;
+}
+.sidebox-my-contest-record .challenge-meta-status[data-v-530b5260] {
+    position: relative;
+    bottom: 1px;
+}
+.sidebox-record-time[data-v-530b5260] {
+  display: inline-block;
+  margin-left: 4px;
+  color: #666;
+  font-size: 14px;
+}
+.sidebox-footer[data-v-530b5260] {
+  text-align: right;
+}
+.sidebox-footer a[data-v-530b5260] {
+    font-size: 14px;
+}
+</style><style type="text/css">
+.fade-enter-active[data-v-07a2dd56],
+.fade-leave-active[data-v-07a2dd56] {
+  transition: opacity .5s;
+}
+.fade-enter[data-v-07a2dd56],
+.fade-leave-active[data-v-07a2dd56] {
+  opacity: 0;
+}
+.header-message[data-v-07a2dd56] {
+  position: relative;
+  margin-right: 5px;
+}
+.header-message &gt; a[data-v-07a2dd56] {
+  position: relative;
+}
+.header-message &gt; a .fa-bell-o[data-v-07a2dd56] {
+    font-size: 22px;
+    margin-top: -3px;
+}
+.popover[data-v-07a2dd56] {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: -66px;
+  width: 180px;
+  background: #fff;
+}
+.popover .msg-content[data-v-07a2dd56] {
+    padding: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+.popover .msg-content a[data-v-07a2dd56] {
+      color: #f66;
+}
+.popover .msg-content a[data-v-07a2dd56]:focus, .popover .msg-content a[data-v-07a2dd56]:hover {
+        text-decoration: none;
+}
+.mark[data-v-07a2dd56] {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 1px;
+  height: 1px;
+  background: #f66;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+.mark[data-v-07a2dd56] {
+    top: 14px;
+    right: calc(50% - 8px);
+}
+}
+</style><style type="text/css">
+.hidden[data-v-815c5224] {
+  display: none;
+}
+.show[data-v-815c5224] {
+  display: block;
+}
+.fade-enter-active[data-v-815c5224],
+.fade-leave-active[data-v-815c5224] {
+  transition: opacity .5s;
+}
+.fade-enter[data-v-815c5224],
+.fade-leave-active[data-v-815c5224] {
+  opacity: 0;
+}
+.header-userbox a[data-v-815c5224] {
+  display: block;
+  padding: 0;
+}
+.header-avatar[data-v-815c5224] {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.vip-icon[data-v-815c5224] {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 30px);
+  width: 20px;
+  height: 20px;
+}
+@media (min-width: 768px) {
+.vip-icon[data-v-815c5224] {
+    right: 0;
+}
+}
+.user[data-v-815c5224] {
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: -150px;
+  width: 300px;
+  height: 320px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 1px #ccc;
+  z-index: 999 !important;
+}
+.user[data-v-815c5224]:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 220px;
+    height: 50px;
+}
+.user.popover &gt; .arrow[data-v-815c5224] {
+    left: 63%;
+}
+.user-info[data-v-815c5224] {
+  overflow: hidden;
+}
+.user-info a[data-v-815c5224] {
+    float: left;
+}
+.user-info a img[data-v-815c5224] {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+}
+.username[data-v-815c5224] {
+  position: relative;
+}
+.username &gt; img[data-v-815c5224] {
+    width: 20px;
+    position: absolute;
+    left: -30px;
+    bottom: 10px;
+}
+.username &gt; span[data-v-815c5224] {
+    display: inline-block;
+    max-width: 150px;
+    color: #666;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.username &gt; span.user-level[data-v-815c5224] {
+      color: #fec42d;
+      font-size: 14px;
+      font-weight: 700;
+}
+.username &gt; p[data-v-815c5224] {
+    color: #A4A4A4;
+    font-size: 12px;
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 170px;
+    text-overflow: ellipsis;
+}
+.marked-words[data-v-815c5224] {
+  width: 100%;
+  color: #A4A4A4 !important;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  top: 130px;
+  left: 0;
+}
+.marked-words &gt; a[data-v-815c5224] {
+    color: #A4A4A4 !important;
+    font-size: 12px;
+}
+.marked-words &gt; a[data-v-815c5224]:hover, .marked-words &gt; a[data-v-815c5224]:focus {
+      text-decoration: none;
+      color: #A4A4A4;
+}
+.start-experiment &gt; a[data-v-815c5224] {
+  display: inline-block;
+  width: 240px;
+  height: 35px;
+  line-height: 35px;
+  background-color: #08BF91;
+  border-radius: 100px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+}
+.start-experiment &gt; a[data-v-815c5224]:hover, .start-experiment &gt; a[data-v-815c5224]:focus {
+    text-decoration: none;
+    color: #fff;
+}
+.user-links[data-v-815c5224] {
+  margin-top: 30px;
+}
+.user-links .row &gt; div[data-v-815c5224] {
+    padding-right: 0;
+    padding-left: 10px;
+}
+.user-links .row a[data-v-815c5224],
+  .user-links .row .invite-user-btn[data-v-815c5224] {
+    width: 115px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px 0 10px;
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    *display: inline;
+    *zoom: 1;
+}
+.user-links .row a[data-v-815c5224]:focus, .user-links .row a[data-v-815c5224]:hover,
+    .user-links .row .invite-user-btn[data-v-815c5224]:focus,
+    .user-links .row .invite-user-btn[data-v-815c5224]:hover {
+      text-decoration: none;
+}
+.user-links .row a[data-v-815c5224]:hover,
+    .user-links .row .invite-user-btn[data-v-815c5224]:hover {
+      background: #eee;
+}
+.user-links .invite-user-btn[data-v-815c5224] {
+    margin: 0 !important;
+}
+.user-links a.member-index[data-v-815c5224] {
+    border: 1px solid #f66;
+    color: #f66;
+}
+.user-links a.member-index[data-v-815c5224]:hover, .user-links a.member-index[data-v-815c5224]:focus {
+      background: #f66;
+      color: #fff;
+}
+.feedback[data-v-815c5224] {
+  font-size: 12px;
+  color: #C6C6C6;
+  margin-top: 35px;
+  margin-left: calc(50% - 96px);
+}
+.friendly-link[data-v-815c5224] {
+  margin-top: 10px;
+}
+.friendly-link .invite-user[data-v-815c5224] {
+    width: 240px;
+    color: #C6C6C6;
+    font-size: 12px;
+}
+.friendly-link .invite-user img[data-v-815c5224] {
+      width: 18px;
+      height: 18px;
+}
+.friendly-link .invite-user a[data-v-815c5224] {
+      display: inline-block;
+      width: 18px;
+}
+.log-out[data-v-815c5224] {
+  display: block;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  padding-top: 20px;
+  width: 100%;
+  text-align: right;
+}
+.log-out a[data-v-815c5224] {
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+}
+.log-out a[data-v-815c5224]:hover, .log-out a[data-v-815c5224]:focus {
+      text-decoration: none;
+      color: #999;
+}
+.invite-user-link[data-v-815c5224] {
+  display: none;
+}
+.invite-user-msg[data-v-815c5224] {
+  position: absolute;
+  bottom: -20px;
+}
+.no_member_vm[data-v-815c5224] {
+  background: #ddd !important;
+}
+.no_member_vm .memberVmIcon[data-v-815c5224] {
+    margin-left: 5px;
+}
+.is-member[data-v-815c5224] {
+  cursor: default;
+}
+</style><style type="text/css">
+.header-learn-info[data-v-33ac7940] {
+  float: right;
+  width: 100%;
+  padding: 23.5px 10px;
+  margin: 0;
+  position: relative;
+}
+.header-learn-info &gt; span[data-v-33ac7940] {
+    font-size: 16px;
+    color: #666;
+}
+.header-learn-info &gt; span img[data-v-33ac7940] {
+      transform: rotate(-90deg);
+}
+.header-learn-info &gt; span[data-v-33ac7940]:hover {
+      cursor: pointer;
+}
+.home-page[data-v-33ac7940] {
+  color: #666;
+}
+.home-page[data-v-33ac7940]:hover {
+    text-decoration: none;
+    color: #08bf91;
+}
+@media (min-width: 768px) {
+.header-learn-info[data-v-33ac7940] {
+    width: auto;
+}
+}
+@media (max-width: 1200px) {
+.header-learn-info[data-v-33ac7940] {
+    display: none;
+}
+}
+.fade-enter-active[data-v-33ac7940],
+.fade-leave-active[data-v-33ac7940] {
+  transition: opacity .5s;
+}
+.fade-enter[data-v-33ac7940],
+.fade-leave-active[data-v-33ac7940] {
+  opacity: 0;
+}
+.learninfo-box[data-v-33ac7940] {
+  display: block;
+  width: 223px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 20px;
+  left: 35px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border: none;
+}
+.learninfo-box .lab-running &gt; span[data-v-33ac7940] {
+    font-size: 14px;
+    color: #a4a4a4;
+}
+.learninfo-box .lab-running .lab-running-name[data-v-33ac7940] {
+    font-size: 14px;
+    padding: 10px 0;
+}
+.learninfo-box .lab-running .lab-running-name &gt; span[data-v-33ac7940] {
+      max-width: 60%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: inline-block;
+}
+.learninfo-box .lab-running .lab-running-name .lab-continue[data-v-33ac7940] {
+      background: #08bf91;
+      font-size: 12px;
+      color: #fff;
+      border: none;
+      padding: 2px 12px;
+      margin-top: -1px;
+}
+.learninfo-box .learn-records &gt; span[data-v-33ac7940] {
+    font-size: 14px;
+    color: #a4a4a4;
+}
+.learninfo-box .learn-records .records-list[data-v-33ac7940] {
+    margin-top: 10px;
+}
+.learninfo-box .learn-records .records-list .record-item[data-v-33ac7940] {
+      display: inline-block;
+      font-size: 14px;
+      color: #666;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+}
+.learninfo-box .learn-records .records-list .record-item[data-v-33ac7940]:hover {
+        text-decoration: none;
+        background-color: #f5f5f5;
+}
+.learninfo-box .learn-records .record-view-all[data-v-33ac7940] {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.learninfo-box .learn-records .record-view-all[data-v-33ac7940]:hover {
+      text-decoration: none;
+}
+@media (min-width: 768px) {
+.learninfo-box[data-v-33ac7940] {
+    left: -30px;
+    margin-bottom: 0;
+}
+}
+</style><style type="text/css">
+.side-new-contest .sidebox-body[data-v-7d67fa2d] {
+  overflow: hidden;
+}
+.side-new-contest .sidebox-body span[data-v-7d67fa2d] {
+    position: relative;
+    top: 4px;
+    color: #3a3a3a;
+    font-size: 14px;
+}
+.side-new-contest .sidebox-body .btn[data-v-7d67fa2d] {
+    padding: 2px 10px;
+    color: #08bf91;
+    font-size: 14px;
+    border: solid 1px #08bf91;
+}
+.side-new-contest .sidebox-body .btn[data-v-7d67fa2d]:hover, .side-new-contest .sidebox-body .btn[data-v-7d67fa2d]:focus {
+      color: #fff;
+      background: #09bf91;
+}
+</style><style type="text/css">
+a[data-v-9b3c8994] {
+    display: inline-block;
+}
+.fa[data-v-9b3c8994] {
+    padding: 4px;
+    color: #274a59;
+    background: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.fa[data-v-9b3c8994]:hover {
+    color: #ec5353;
+}
+.pull-left[data-v-9b3c8994] {
+    margin-left: 10px;
+}
+
+/*# sourceURL=/home/shiyanlou/shiyanlou/simplecloud/app/src/base/components/weibo.vue?ddc63646 */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL3NoaXlhbmxvdS9zaGl5YW5sb3Uvc2ltcGxlY2xvdWQvYXBwL3NyYy9iYXNlL2NvbXBvbmVudHMvd2VpYm8udnVlP2RkYzYzNjQ2Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFrQ0E7SUFDQSxzQkFBQTtDQUNBO0FBQ0E7SUFDQSxhQUFBO0lBQ0EsZUFBQTtJQUNBLGlCQUFBO0lBQ0EsZ0JBQUE7SUFDQSxtQkFBQTtDQUNBO0FBQ0E7SUFDQSxlQUFBO0NBQ0E7QUFDQTtJQUNBLGtCQUFBO0NBQ0EiLCJmaWxlIjoid2VpYm8udnVlIiwic291cmNlc0NvbnRlbnQiOlsiPHRlbXBsYXRlPlxuPGEgOmhyZWY9XCJocmVmXCIgOmNsYXNzPVwieyAnYnRuIGJ0bi1wcmltYXJ5JzogaXNCdG4gLCAncHVsbC1sZWZ0JzogaXNMZWZ0fVwiIHRhcmdldD1cIl9ibGFua1wiPlxuICAgIDxzcGFuIHYtaWY9XCJpc0J0blwiPuWIhuS6q+WIsOW+ruWNmjwvc3Bhbj5cbiAgICA8aW1nIDpzcmM9XCJpY29uXCIgYWx0PVwiXCI+XG48L2E+XG48L3RlbXBsYXRlPlxuXG48c2NyaXB0PlxuZXhwb3J0IGRlZmF1bHQge1xuICAgIHByb3BzOiBbJ2lzQnRuJywgJ3BhdGgnLCAndGl0bGUnLCAncGljJywgJ2ljb24nLCAnaXNMZWZ0JywgJ3VybCddLFxuICAgIGRhdGEoKSB7XG4gICAgICAgIHJldHVybiB7XG4gICAgICAgICAgICBocmVmOiAnJyxcbiAgICAgICAgICAgIHBhcmFtczoge1xuICAgICAgICAgICAgICAgIHRpdGxlOiB0aGlzLnRpdGxlLFxuICAgICAgICAgICAgICAgIGFwcGtleTogJzEzNDM3MTMwNTMnLFxuICAgICAgICAgICAgICAgIHBpYzogKHRoaXMucGljICYmIHRoaXMucGljLmxlbmd0aCkgPyB0aGlzLnBpYyA6IFsnaHR0cHM6Ly9zdGF0aWMuc2hpeWFubG91LmNvbS9pbWcvbG9nby1iYXNlLnBuZyddLFxuICAgICAgICAgICAgICAgIHNlYXJjaFBpYzogZmFsc2UsXG4gICAgICAgICAgICAgICAgdXJsOiB0aGlzLnVybFxuICAgICAgICAgICAgfSxcbiAgICAgICAgICAgIHdlaWJvVXJsOiB0aGlzLnVybCA/IGBodHRwOi8vc2VydmljZS53ZWliby5jb20vc2hhcmUvc2hhcmUucGhwP3VybD0ke3RoaXMudXJsfSBgOiBgaHR0cDovL3NlcnZpY2Uud2VpYm8uY29tL3NoYXJlL3NoYXJlLnBocD91cmw9aHR0cHM6Ly93d3cuc2hpeWFubG91LmNvbWAsXG4gICAgICAgIH07XG4gICAgfSxcbiAgICBtb3VudGVkKCkge1xuICAgICAgICB0aGlzLmhyZWYgPSBgJHt0aGlzLndlaWJvVXJsfSR7dGhpcy5wYXRofWBcbiAgICAgICAgICAgICsgYCZ0aXRsZT0ke2VuY29kZVVSSUNvbXBvbmVudCh0aGlzLnBhcmFtcy50aXRsZSl9YFxuICAgICAgICAgICAgKyBgJmFwcGtleT0ke3RoaXMucGFyYW1zLmFwcGtleX1gXG4gICAgICAgICAgICArIGAmcGljPSR7dGhpcy5wYXJhbXMucGljLmpvaW4oJ3x8Jyl9YFxuICAgICAgICAgICAgKyBgJnNlYXJjaFBpYz0ke3RoaXMucGFyYW1zLnNlYXJjaFBpY31gO1xuICAgIH1cbn1cbjwvc2NyaXB0PlxuXG48c3R5bGUgc2NvcGVkPlxuYSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuLmZhIHtcbiAgICBwYWRkaW5nOiA0cHg7XG4gICAgY29sb3I6ICMyNzRhNTk7XG4gICAgYmFja2dyb3VuZDogI2ZmZjtcbiAgICBmb250LXNpemU6IDE0cHg7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xufVxuLmZhOmhvdmVyIHtcbiAgICBjb2xvcjogI2VjNTM1Mztcbn1cbi5wdWxsLWxlZnQge1xuICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xufVxuPC9zdHlsZT5cblxuIl0sInNvdXJjZVJvb3QiOiIifQ== */</style><style type="text/css">
+.search-autocomplete[data-v-72bea96c] {
+  position: absolute;
+  top: 35px;
+  left: 1px;
+  width: 195px;
+  padding: 4px;
+  border: solid 1px #ddd;
+  border-top: none;
+  background: #fff;
+  z-index: 1000;
+}
+.search-autocomplete a[data-v-72bea96c] {
+    display: block;
+    padding: 6px 8px;
+    color: #4c5157;
+    font-size: 13px;
+}
+.search-autocomplete a[data-v-72bea96c]:hover, .search-autocomplete a[data-v-72bea96c]:focus {
+      color: #fff;
+      background: #0c9;
+      text-decoration: none;
+}
+</style></head>
+
+    <body>
+        
+
+
+        
+<div class="layout layout-margin-top layout-fullscreen">
+    <div class="container">
+        
+        
+    </div>
+    
+<div class="lab-btns">
+    
+        
+
+        
+
+        
+            
+        
+
+        
+        <div>
+            <img src="https://static.shiyanlou.com/img/best-study-way.png" />
+            <a class="  lab-item-start-newlab " data-mobile-url="/courses/document/108" data-url="/courses/start/108" data-next="/courses/running">
+                <img src="https://static.shiyanlou.com/img/labdoc-start.png" />
+                <span>开始<br />实验</span>
+            </a>
+        </div>
+    
+    <div>
+        <a data-toggle="modal" href="#askquestion">
+            <img src="https://static.shiyanlou.com/img/labdoc-question.png" />
+            <span>我要<br />提问</span>
+        </a>
+    </div>
+    <div>
+        <a class="commit-error">
+            <img src="https://static.shiyanlou.com/img/labdoc-jiucuo.png" />
+            <span>我要<br />纠错</span>
+        </a>
+    </div>
+</div>
+<div class="labdoc-header">
+    <a href="/courses/20">
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        数据结构(新版)
+    </a>
+    
+</div>
+<div class="labdoc-nav">
+    <div class="labdoc-nav-content">
+                <h2>
+                    <a href="#labdoc-header-0">实验简介</a>
+                </h2>
+            
+                <h2>
+                    <a href="#labdoc-header-1">一、直接插入排序</a>
+                </h2>
+            
+                <h2>
+                    <a href="#labdoc-header-2">二、希尔排序</a>
+                </h2>
+            
+                <h2>
+                    <a href="#labdoc-header-3">三、小结</a>
+                </h2>
+            
+                <h2>
+                    <a href="#labdoc-header-4">作业</a>
+                </h2>
+            </div>
+    
+</div>
+<div class="labdoc-content-container">
+    <div class="markdown-body labdoc-content"><div><h1 id="-">插入排序</h1>
+<h2 id="labdoc-header-0">实验简介</h2>
+<p>学习了前面一章的查找，我们知道二分查找需要先对数据进行排序，那么这章开始我们就来讲解一下几种经典的排序算法。</p>
+<h2 id="labdoc-header-1">一、直接插入排序</h2>
+<p>首先我们来讲直接插入排序，它的做法是：每次从无序表中取出第一个元素，把它插入到有序表的合适位置，使有序表仍然有序。第一趟比较前两个数，然后把第二个数按大小插入到有序表中； 第二趟把第三个数据与前两个数从前向后扫描，把第三个数按大小插入到有序表中；依次进行下去，进行了(n-1)趟扫描以后就完成了整个排序过程，如下图所示。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/sjjg/35.gif" alt="" /></p>
+<p>直接插入排序的代码实现：</p>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-keyword">int</span> n;
+
+<span class="hljs-comment">/*
+ * 直接插入排序
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">InsertSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *<span class="hljs-built_in">array</span>)</span>
+</span>{
+    <span class="hljs-keyword">int</span> i, j;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">2</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">array</span>[i] &lt; <span class="hljs-built_in">array</span>[i - <span class="hljs-number">1</span>])
+        {
+            <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>] = <span class="hljs-built_in">array</span>[i];
+            <span class="hljs-built_in">array</span>[i] = <span class="hljs-built_in">array</span>[i - <span class="hljs-number">1</span>];
+            <span class="hljs-keyword">for</span> (j = i - <span class="hljs-number">2</span>; <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>] &lt; <span class="hljs-built_in">array</span>[j]; j--)
+            {
+                <span class="hljs-built_in">array</span>[j + <span class="hljs-number">1</span>] = <span class="hljs-built_in">array</span>[j];
+            }
+            <span class="hljs-built_in">array</span>[j + <span class="hljs-number">1</span>] = <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>];
+        }
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">int</span> *<span class="hljs-built_in">array</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"请输入数组的大小："</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);
+    <span class="hljs-built_in">array</span> = (<span class="hljs-keyword">int</span>*) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>) * (n + <span class="hljs-number">1</span>));
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"请输入数据（用空格分隔）："</span>);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;<span class="hljs-built_in">array</span>[i]);
+    }
+    InsertSort(<span class="hljs-built_in">array</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"排序后为："</span>);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, <span class="hljs-built_in">array</span>[i]);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);
+}
+</code></pre><h2 id="labdoc-header-2">二、希尔排序</h2>
+<p>希尔排序也是插入排序的一种，但它在效率上要比上面的直接插入排序高，它是对直接插入排序的改进，它的基本思想是先取一个小于n的整数d1作为第一个增量，把文件的全部记录分组。所有距离为d1的倍数的记录放在同一个组中。先在各组内进行直接插入排序；然后，取第二个增量d2&lt; d1重复上述的分组和排序，直至所取的增量dt=1(dt&lt;…&lt; d2&lt; d1)，即所有记录放在同一组中进行直接插入排序为止，增量序列尤为关键，一般的初次取序列的一半为增量，以后每次减半，直到增量为1，大致过程如下图所示。</p>
+<p><img src="https://dn-anything-about-doc.qbox.me/sjjg/33.png" alt="" /></p>
+<p><img src="https://dn-anything-about-doc.qbox.me/sjjg/36.gif" alt="" /></p>
+<p>希尔排序的代码实现：</p>
+<pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-keyword">int</span> n;
+
+<span class="hljs-comment">/*
+ * 希尔排序
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">ShellSort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> *<span class="hljs-built_in">array</span>)</span>
+</span>{
+    <span class="hljs-keyword">int</span> k = n / <span class="hljs-number">2</span>; <span class="hljs-comment">//增量序列（仅作举例）</span>
+    <span class="hljs-keyword">while</span> (k &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">int</span> i, j;
+        <span class="hljs-keyword">for</span> (i = k + <span class="hljs-number">1</span>; i &lt;=n; i++)
+        {
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">array</span>[i] &lt; <span class="hljs-built_in">array</span>[i - k])
+            {
+                <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>] = <span class="hljs-built_in">array</span>[i];
+                <span class="hljs-keyword">for</span> (j = i - k; j &gt; <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>] &lt; <span class="hljs-built_in">array</span>[j]; j -= k)
+                {
+                    <span class="hljs-built_in">array</span>[j + k] = <span class="hljs-built_in">array</span>[j];
+                }
+                <span class="hljs-built_in">array</span>[j + k] = <span class="hljs-built_in">array</span>[<span class="hljs-number">0</span>];
+            }
+        }
+        k = k / <span class="hljs-number">2</span>;
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">int</span> i;
+    <span class="hljs-keyword">int</span> *<span class="hljs-built_in">array</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"请输入数组的大小："</span>);
+    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;n);
+    <span class="hljs-built_in">array</span> = (<span class="hljs-keyword">int</span>*) <span class="hljs-built_in">malloc</span>(<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">int</span>) * (n + <span class="hljs-number">1</span>));
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"请输入数据（用空格分隔）："</span>);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-built_in">scanf</span>(<span class="hljs-string">"%d"</span>, &amp;<span class="hljs-built_in">array</span>[i]);
+    }
+    ShellSort(<span class="hljs-built_in">array</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"排序后为："</span>);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">1</span>; i &lt;= n; i++)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">"%d "</span>, <span class="hljs-built_in">array</span>[i]);
+    }
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">"\n"</span>);
+}
+</code></pre><h2 id="labdoc-header-3">三、小结</h2>
+<p>这一章讲了插入排序中的两个经典算法，直接插入排序和希尔排序。直接插入排序的主要思想是每次从无序表中取出第一个元素，把它插入到有序表的合适位置，使有序表仍然有序，它属于稳定的排序，最坏时间复杂性为O(n^2)，空间复杂度为O(1)。希尔排序的主要思想是分组插入，它是不稳定的排序，它的时间复杂度跟增量序列有关，在取增量序列时要保证其中的值没有除1之外的公因子，并且最后一个增量值必为1。</p>
+<h2 id="labdoc-header-4">作业</h2>
+<p>结合这章讲的插入排序实现二分查找。</p>
+<p>实验中有任何问题欢迎到<a href="http://www.shiyanlou.com/questions" target="_blank">实验楼问答</a>提问。</p>
+</div></div>
+    
+    
+    <a class="pull-left labdoc-page" href="/courses/20/labs/107/document">
+        上一节：查找
+    </a>
+    
+    
+    <a class="pull-right labdoc-page" href="/courses/20/labs/109/document">
+        下一节：交换排序
+    </a>
+    
+</div>
+<textarea id="editor" style="display:none;"># 插入排序
+
+## 实验简介
+
+学习了前面一章的查找，我们知道二分查找需要先对数据进行排序，那么这章开始我们就来讲解一下几种经典的排序算法。
+
+## 一、直接插入排序
+
+首先我们来讲直接插入排序，它的做法是：每次从无序表中取出第一个元素，把它插入到有序表的合适位置，使有序表仍然有序。第一趟比较前两个数，然后把第二个数按大小插入到有序表中； 第二趟把第三个数据与前两个数从前向后扫描，把第三个数按大小插入到有序表中；依次进行下去，进行了(n-1)趟扫描以后就完成了整个排序过程，如下图所示。
+
+![](https://dn-anything-about-doc.qbox.me/sjjg/35.gif)
+
+直接插入排序的代码实现：
+```
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int n;
+
+/*
+ * 直接插入排序
+ */
+void InsertSort(int *array)
+{
+	int i, j;
+	for (i = 2; i &lt;= n; i++)
+	{
+		if (array[i] &lt; array[i - 1])
+		{
+			array[0] = array[i];
+			array[i] = array[i - 1];
+			for (j = i - 2; array[0] &lt; array[j]; j--)
+			{
+				array[j + 1] = array[j];
+			}
+			array[j + 1] = array[0];
+		}
+	}
+}
+
+int main()
+{
+	int i;
+	int *array;
+	printf("请输入数组的大小：");
+	scanf("%d", &amp;n);
+	array = (int*) malloc(sizeof(int) * (n + 1));
+	printf("请输入数据（用空格分隔）：");
+	for (i = 1; i &lt;= n; i++)
+	{
+		scanf("%d", &amp;array[i]);
+	}
+	InsertSort(array);
+	printf("排序后为：");
+	for (i = 1; i &lt;= n; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	printf("\n");
+}
+```
+
+## 二、希尔排序
+
+希尔排序也是插入排序的一种，但它在效率上要比上面的直接插入排序高，它是对直接插入排序的改进，它的基本思想是先取一个小于n的整数d1作为第一个增量，把文件的全部记录分组。所有距离为d1的倍数的记录放在同一个组中。先在各组内进行直接插入排序；然后，取第二个增量d2&lt; d1重复上述的分组和排序，直至所取的增量dt=1(dt&lt;…&lt; d2&lt; d1)，即所有记录放在同一组中进行直接插入排序为止，增量序列尤为关键，一般的初次取序列的一半为增量，以后每次减半，直到增量为1，大致过程如下图所示。
+
+![](https://dn-anything-about-doc.qbox.me/sjjg/33.png)
+
+![](https://dn-anything-about-doc.qbox.me/sjjg/36.gif)
+
+希尔排序的代码实现：
+```
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+int n;
+
+/*
+ * 希尔排序
+ */
+void ShellSort(int *array)
+{
+	int k = n / 2; //增量序列（仅作举例）
+	while (k &gt; 0)
+	{
+		int i, j;
+		for (i = k + 1; i &lt;=n; i++)
+		{
+			if (array[i] &lt; array[i - k])
+			{
+				array[0] = array[i];
+				for (j = i - k; j &gt; 0 &amp;&amp; array[0] &lt; array[j]; j -= k)
+				{
+					array[j + k] = array[j];
+				}
+				array[j + k] = array[0];
+			}
+		}
+		k = k / 2;
+	}
+}
+
+int main()
+{
+	int i;
+	int *array;
+	printf("请输入数组的大小：");
+	scanf("%d", &amp;n);
+	array = (int*) malloc(sizeof(int) * (n + 1));
+	printf("请输入数据（用空格分隔）：");
+	for (i = 1; i &lt;= n; i++)
+	{
+		scanf("%d", &amp;array[i]);
+	}
+	ShellSort(array);
+	printf("排序后为：");
+	for (i = 1; i &lt;= n; i++)
+	{
+		printf("%d ", array[i]);
+	}
+	printf("\n");
+}
+```
+
+## 三、小结
+
+这一章讲了插入排序中的两个经典算法，直接插入排序和希尔排序。直接插入排序的主要思想是每次从无序表中取出第一个元素，把它插入到有序表的合适位置，使有序表仍然有序，它属于稳定的排序，最坏时间复杂性为O(n^2)，空间复杂度为O(1)。希尔排序的主要思想是分组插入，它是不稳定的排序，它的时间复杂度跟增量序列有关，在取增量序列时要保证其中的值没有除1之外的公因子，并且最后一个增量值必为1。
+
+## 作业
+
+结合这章讲的插入排序实现二分查找。
+
+实验中有任何问题欢迎到[实验楼问答](http://www.shiyanlou.com/questions)提问。
+
+
+</textarea>
+
+</div>
+
+
+        
+        
+
+        
+        
+
+        <div class="modal fade" id="invite-user" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">邀请好友，双方都可获赠实验豆！</h4>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <div class="form-label">
+                            分享专属链接给好友，或粘贴到QQ群/微博/论坛，好友注册后，您和好友将分别获赠3个实验豆！
+                        </div>
+                        <input type="text" id="bstext" class="form-invite" value="https://www.shiyanlou.com/register?inviter=NTY0MzE5MzI4NTQw" />
+                        
+                        <div id="msg-modal"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="flash-message" tabindex="-1" role="dialog">
+            <div class="modal-dialog" rolw="document">
+            </div>
+        </div>
+        <div class="modal fade" id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">注意</h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary confirm" data-dismiss="modal">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="new-loading new-loading-modal" id="new-loading-modal">
+            <div class="loading-wrapper">
+                <p class="loading-icon-lion">
+                    <img src="https://static.shiyanlou.com/img/console/icon_loading.png" alt="" />
+                </p>
+                <div class="progress">
+                    <div class="progress-bar load-progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0;">
+                        <span class="sr-only">0% Complete</span>
+                    </div>
+                </div>
+              <p class="loading-txt">
+                    加载中，精彩就在后面...
+              </p>
+              <p class="progress-reload">
+                  <a href="javascript:;" type="button" class="btn-progress-reload" title="">卡住了？点击重试</a>
+              </p>
+            </div>
+        </div>
+
+        
+<div class="modal fade" id="start-newlab">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>开始新实验</h3>
+			</div>
+			<div class="modal-body">
+                <p>一个实验正在进行，是否停止它，开始新实验？</p>
+			</div>
+			<div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                <a class="btn btn-primary start-newlab-confirm">确定</a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="start-evaluation-course">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>开始评估课实验</h3>
+			</div>
+			<div class="modal-body">
+                <div>
+                    <p>为了让评估结果更加准确，请注意以下操作：</p>
+                    <ul>
+                        <li>完成实验后点击「停止实验」按钮</li>
+                        <li>将代码提交到代码库</li>
+                        <li>尽可能详尽的撰写实验报告</li>
+                        <li>尽可能在实验操作的关键步骤截图</li>
+                        <li>尽可能减少无用操作</li>
+                        <li>尽可能高效的利用内存/CPU资源</li>
+                    </ul>
+                    <p>评估课还在不断完善中，我们真挚希望你能通过我们提供的这个平台，找到更好的发展机会。</p>
+                </div>
+                <br />
+                <div class="start-newlab"></div>
+			</div>
+			<div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                <a class="btn btn-primary start-confirm">确定</a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="vip-startlab-modal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4>请选择想使用的环境</h4>
+			</div>
+			<div class="modal-body">
+                <div class="start-newlab"></div>
+                
+                <div class="use-tmp-vm">
+                    <button type="button" class="btn btn-primary col-lg-12 newvm">该实验默认环境</button>
+                </div>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div>
+
+
+<div class="modal fade askquestion-modal" id="askquestion" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">发帖</h4>
+            </div>
+            <div class="modal-body words-ctrl">
+                <form class="form-horizontal" action="/questions/">
+                    <input name="_csrf_token" type="hidden" value="Ijk1ZmZmODdiYWM1ZmMwNjFjODAzYTg1NWMwYWU3NDY5NmQzZTkzYWQi.DL9axQ.O9I_URRHmj44sXcuVxxn-7BVoB8" />
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">标题</label>
+                        <div class="col-md-10">
+                            <input type="text" name="title" min="5" max="100" class="form-control" placeholder="至少输入5个字" value="" />
+                            <span class="help-block"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">描述</label>
+                        <div class="col-md-10">
+                            
+                            
+                            
+<div class="tabpanel mkeditor">
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#mkeditor-editor" role="tab" data-toggle="tab">编辑</a>
+        </li>
+        <li role="presentation">
+            <a class="mkeditor-btn-view" href="#mkeditor-viewer" role="tab" data-toggle="tab">预览</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active mkeditor-editor" id="mkeditor-editor" role="tabpanel">
+            
+            <div class="btn-group" role="group">
+            
+                <button type="button" class="btn btn-default mkeditor-btn-bold">
+                    <i class="fa fa-bold"></i>
+                </button>
+                <button type="button" class="btn btn-default mkeditor-btn-italic">
+                    <i class="fa fa-italic"></i>
+                </button>
+                <button type="button" class="btn btn-default mkeditor-btn-link">
+                    <i class="fa fa-link"></i>
+                </button>
+                <button type="button" class="btn btn-default mkeditor-btn-quote">
+                    <i class="fa fa-quote-left"></i>
+                </button>
+                <button type="button" class="btn btn-default mkeditor-btn-code">
+                    <i class="fa fa-code"></i>
+                </button>
+                <button id="mkeditor-pickfile" type="button" class="btn btn-default mkeditor-btn-img" style="z-index: 1;">
+                    <i class="fa fa-image"></i>
+                </button>
+                
+                <button type="button" class="btn btn-default mkeditor-btn-listol">
+                    <i class="fa fa-list-ol"></i>
+                </button>
+                <button type="button" class="btn btn-default mkeditor-btn-listul">
+                    <i class="fa fa-list-ul"></i>
+                </button>
+            <div id="html5_1bs55kce4bqu701ambb7l157s3_container" class="moxie-shim moxie-shim-html5" style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px; overflow: hidden; z-index: 0;"><input id="html5_1bs55kce4bqu701ambb7l157s3" type="file" style="font-size: 999px; opacity: 0; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;" multiple="" accept="" /></div></div>
+            <div class="btn-group pull-right" role="group">
+                <a style="font-size:12px; color:#666; text-decoration:underline;" href="/questions/764" target="_blank">
+                    <i class="fa fa-question-circle"></i>Markdown 语法
+                </a>
+            </div>
+            <textarea name="content" class="content" min="0" max="20000" placeholder="推荐使用 Markdown 语法，至少输入 5 个字"></textarea>
+            <div class="help-block"></div>
+        </div>
+        <div class="tab-pane mkeditor-viewer markdown-body" id="mkeditor-viewer" role="tabpanel">
+            <div></div>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                    <div class="form-group" style="display:none;">
+                        <label class="col-md-2 control-label">板块</label>
+                        <div class="col-md-10">
+                            <div class="q-types" data-type="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a type="button" class="bottom-link btn btn-primary" href="/vip" target="_blank" style="background:#FFFFFF;color:#00CC99;border:none;float:left;padding-left:0;"><img src="https://static.shiyanlou.com/img/icon-vip-advance.png" alt="" /> 加入高级会员获得助教答疑</a>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="submit-question btn btn-primary">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+        
+        
+        
+        
+        
+
+        
+
+        <div class="modal fade" id="sign-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <button type="button" class="close-modal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <div class="modal-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#signin-form" aria-controls="signin-form" role="tab" data-toggle="tab">登录</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#signup-form" aria-controls="signup-form" role="tab" data-toggle="tab">注册</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="signin-form">
+                        <form action="/login" method="post">
+                            <input name="_csrf_token" type="hidden" value="Ijk1ZmZmODdiYWM1ZmMwNjFjODAzYTg1NWMwYWU3NDY5NmQzZTkzYWQi.DL9axQ.O9I_URRHmj44sXcuVxxn-7BVoB8" />
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input type="email" name="login" class="form-control" placeholder="请输入邮箱" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="请输入密码" />
+                                </div>
+                            </div>
+                            <div class="form-inline verify-code-item" style="display:none;">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码" />
+                                    </div>
+                                </div>
+                                <img class="verify-code" src="" source="/captcha.gif" />
+                            </div>
+                            <div class="form-group remember-login">
+                                <input name="remember" type="checkbox" value="y" /> 下次自动登录
+                                <a class="pull-right" href="/reset_password">忘记密码？</a>
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary" name="submit" type="submit" value="进入实验楼" />
+                            </div>
+                            <div class="form-group widget-signin">
+                                <span>快速登录</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="signup-form">
+                        <form action="/register" method="post">
+                            <input name="_csrf_token" type="hidden" value="Ijk1ZmZmODdiYWM1ZmMwNjFjODAzYTg1NWMwYWU3NDY5NmQzZTkzYWQi.DL9axQ.O9I_URRHmj44sXcuVxxn-7BVoB8" />
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-envelope" style="margin:0;"></i>
+                                    </div>
+                                    <input type="email" name="email" class="form-control" placeholder="请输入邮箱" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-lock" style="margin:0;"></i>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="请输入密码" />
+                                </div>
+                            </div>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" name="captcha_v" class="form-control" placeholder="请输入验证码" />
+                                    </div>
+                                </div>
+                                <img class="verify-code" src="" source="/captcha.gif" />
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-primary" name="submit" type="submit" value="注册" />
+                            </div>
+                            <div class="form-group agree-privacy">
+                                注册表示您已经同意我们的<a href="/privacy" target="_blank">隐私条款</a>
+                            </div>
+                            <div class="form-group widget-signup">
+                                <span>快速注册</span>
+                                <a href="/auth/qq?next="><i class="fa fa-qq"></i></a>
+                                <a href="/auth/weibo?next="><i class="fa fa-weibo"></i></a>
+                                <a href="/auth/weixin?next="><i class="fa fa-weixin"></i></a>
+                                <a href="/auth/github?next="><i class="fa fa-github"></i></a>
+                                <a href="/auth/renren?next="><i class="fa fa-renren"></i></a>
+                            </div>
+                            <div class="form-group error-msg">
+                                <div class="alert alert-danger" role="alert"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="base-data" data-flash="false" data-is-login="true" data-jwt-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIzMTU4NjUiLCJpc3MiOiJzaGl5YW5sb3U6d2ViOmFwcCIsInVuYW1lIjoic3Vuemh1byIsImlzX2FkbWluIjpmYWxzZSwiZXhwIjoxNTA3NzkzNjA1LCJpYXQiOjE1MDc3MDcyMDV9.VfKS7JlW_RNODTS2Yt0hXg_Pcz0697njacGhJDjWi_U" data-user-id="315865" data-is-jwt="true" data-socket-url="wss://comet.shiyanlou.com" data-msg-user="" data-msg-system=""></div>
+
+        <!-- 不带 CSS 的库 -->
+        <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://static.shiyanlou.com/static/babel-polyfill/6.20.0/polyfill.min.js"></script>
+        <script src="/app/dist/js/manifest.js?=20171011092302"></script>
+        <script src="/app/dist/js/vendor.js?=20171011092302"></script>
+
+        <script src="https://static.shiyanlou.com/static/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/jquery.form/3.51/jquery.form.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/jquery.menu/jquery.menu-aim.js"></script>
+        <script src="https://static.shiyanlou.com/static/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/html2canvas/0.4.1/html2canvas.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/jspdf/1.3.2/jspdf.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/zeroclipboard/2.3.0/ZeroClipboard.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/aliyun/aliyun-oss-sdk-4.3.0.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/qiniu/qiniu.js"></script>
+        <script src="https://static.shiyanlou.com/static/plupload/2.1.9/js/plupload.full.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/echarts/v3.3.2/echarts.min.js"></script>
+        <!-- 不带 CSS 的库 end -->
+
+        <!-- 带有 CSS 的库 -->
+        <script src="https://static.shiyanlou.com/static/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/bootstrap-table/1.11.0/bootstrap-table.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/bootstrap-table/1.11.0/locale/bootstrap-table-zh-CN.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/bootstrap-table/1.11.0/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+        <script src="https://static.shiyanlou.com/static/ace/1.2.5/ace.js"></script>
+        <script src="https://static.shiyanlou.com/static/videojs/6.2.8/video.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/videojs/6.2.8/videojs-flash.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/katex/0.7.1/katex.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/highlight.js/9.9.0/js/highlight.min.js"></script>
+        <!-- 带有 CSS 的库 end -->
+
+        <script src="https://static.shiyanlou.com/static/d3/d3.min.js"></script>
+        <script src="https://static.shiyanlou.com/static/moment/moment.min.js" charset="utf-8"></script>
+        <script src="https://static.shiyanlou.com/static/calendar-heatmap/calendar-heatmap.js"></script>
+
+        
+
+        
+<div id="jinja-data" data-qiniu-token-url="/api/qiniu/token" data-labid="108" data-is-authenticated="true" data-tencent-labid="[877]" data-course-detail="/courses/20" data-left-time="0" data-course-id="20" data-userlab-id="4456286" data-question-form="/questions/meta" data-start-newlab-url="/courses/clear"></div>
+<script src="/app/dist/js/course/labDoc.js?=20171011092302"></script><div class="showTimeOut" style="display: none; position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background: rgba(0, 0, 0, 0.8); text-align: center; z-index: 1600;"><i class="fa fa-spinner fa-pulse" style="margin-top: 270px; color: rgb(255, 255, 255); font-size: 35px;"></i></div>
+
+
+
+        
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-89338452-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+</body></html>

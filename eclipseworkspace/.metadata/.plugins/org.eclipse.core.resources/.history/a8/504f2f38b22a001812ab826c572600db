@@ -1,0 +1,21 @@
+package com.collection;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class Demo5 {
+	public static void main(String[] args) {
+		ArrayList<String> list = new ArrayList<>();
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add("d");
+		String[] arr = list.toArray(new String[10]);
+		for(String string:arr)
+		{
+			System.out.println(string);
+		}
+		Integer[] aIntegers ={11,22,33};
+		ArrayList<Integer> arrayList = Arrays.asList(aIntegers);
+	}
+}

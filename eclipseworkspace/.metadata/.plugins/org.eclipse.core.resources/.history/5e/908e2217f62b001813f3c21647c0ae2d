@@ -1,0 +1,39 @@
+package com.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test3 {
+	/*
+	 * 需求：将集合中的重复元素去掉
+	 * 
+	 * 分析：
+	 * 1.创建List集合存储若干个重复元素
+	 * 2.单独定义个方法去除重复
+	 * 3.打印一下list集合
+	 */
+	public static void main(String[] args) {
+		ArrayList<String> arrayList = new ArrayList<>();
+		arrayList.add("a");
+		arrayList.add("a");
+		arrayList.add("a");
+		arrayList.add("a");
+		arrayList.add("b");
+		arrayList.add("b");
+		arrayList.add("b");
+		arrayList.add("b");
+		arrayList.add("c");
+		arrayList.add("c");
+		arrayList.add("c");
+		arrayList.add("c");
+		arrayList.add("c");
+		
+		getSingle(arrayList);
+		System.out.println(arrayList);
+	}
+
+	public static void getSingle(List<String> arrayList) {
+		// TODO Auto-generated method stub
+		
+	}
+}

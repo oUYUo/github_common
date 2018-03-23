@@ -1,0 +1,23 @@
+package com.method;
+
+public class Demo1_Name {
+	public static void main(String[] args) {
+		demo1();
+	}
+
+	private static void demo1() {
+		new Thread("A"){
+			public void run() {
+				System.out.println(this.getName()+"aaaaaaaaaaaaa");
+				
+			}
+		}.start();
+		
+		new Thread("B"){
+			public void run() {
+				System.out.println(this.getName()+"bbbbbbbbbbbbbb");
+				
+			}
+		}.start();
+	}
+}

@@ -1,0 +1,23 @@
+package com.syn;
+
+public class Demo_Synchronized {
+	/*
+	 * 同步代码块
+	 */
+	public static void main(String[] args) {
+		
+	}
+}
+
+
+class Printer {
+	public void print1() {
+		System.out.println("卓逼1");
+		
+	}
+	public void print2() {
+		System.out.println("卓逼2");
+		
+	}
+	
+}

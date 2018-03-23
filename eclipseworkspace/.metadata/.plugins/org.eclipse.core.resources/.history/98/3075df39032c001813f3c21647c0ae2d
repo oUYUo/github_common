@@ -1,0 +1,30 @@
+package com.set;
+
+import java.util.TreeSet;
+
+import com.bean.Person;
+
+public class Demo3_TreeSet {
+	public static void main(String[] args) {
+		TreeSet<Person> treeSet = new TreeSet<>();
+		treeSet.add(new Person("张三",23));
+		treeSet.add(new Person("李四",25));
+		treeSet.add(new Person("我那",27));
+		treeSet.add(new Person("张三阿士大夫",26));
+		
+//		System.out.println(treeSet);
+		
+	}
+
+	private static void demo1() {
+		TreeSet<Integer> treeSet = new TreeSet<>();
+		treeSet.add(1);
+		treeSet.add(1);
+		treeSet.add(2);
+		treeSet.add(4);
+		treeSet.add(1);
+		treeSet.add(3);
+		treeSet.add(1);
+		System.out.println(treeSet);
+	}
+}

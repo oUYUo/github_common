@@ -1,0 +1,172 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+nav
+{
+	
+	background: #ccc;
+	height:50px;
+}
+
+#banner
+{
+	background: #777;
+	height: 700px;
+}
+
+
+nav ul
+{
+	list-style: none;
+	margin: 0px;
+	float: right;
+}
+
+nav ul li,nav .logo{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+nav ul li a{
+	line-height: 50px;
+	text-decoration: none;	
+	display: inline-block;
+	height: inherit;	
+	color: #fff;
+}
+
+
+#banner .inner
+{
+	max-width: 300px;
+	text-align: center;
+	margin:0 auto;
+	position: relative;
+	top:160px;
+}
+#banner .inner h1
+{
+	margin:0;
+}
+
+button{
+	border: none;
+	background: #333;
+	color:#eee;
+	padding: 5px;
+}
+
+#banner .inner .more
+{
+	margin-top: 200px;
+
+}
+
+.sub-heading{
+	line-height: 30px;
+	margin: 30px;
+}
+
+#banner button{
+	padding: 14px 60px;
+}
+
+.logo{
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: 700;
+	padding: 0 20px;
+
+
+}
+
+
+
+.logo a{
+	color: #fff;
+	text-decoration: none;	
+}
+
+.green-section
+{
+	text-align: center;
+	background: #089DB0;
+	color:#fff;
+	padding: 100px 0px;
+}
+
+.wrapper
+{
+
+	max-width: 1080px;
+	margin: 0 auto;
+
+}
+
+.hr
+{
+	width: 100%;
+	margin:20px auto;
+	height: 2px;
+	
+
+}
+
+.green-section .hr
+{
+	background: red;
+
+}
+
+.icon-group
+{
+	margin-top: 20px;
+
+}
+
+.green-section .icon-group .icon
+{
+	margin: 0 20px;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	/*background: #fff;*/
+	transform: rotate(45deg);
+	border: 1px solid #0D6F7C;
+}
+.gray-section
+{
+	background: red;
+
+}
+
+.gray-section .img-section
+{
+	
+	width: 35%;
+}
+
+.img-section img{
+	width: 100%;
+}
+
+.gray-section .text-section
+{
+	
+	background: red;
+	width: 55%;
+
+}
+
+.article-preview > div{
+	float: left;
+}
+
+.article-preview:after
+{
+	content: "";
+	display: block;
+	clear: both;
+}

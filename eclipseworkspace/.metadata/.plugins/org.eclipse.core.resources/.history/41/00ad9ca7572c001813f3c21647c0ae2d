@@ -1,0 +1,22 @@
+package com.Thread;
+
+public class Demo3_Thread {
+	public static void main(String[] args) {
+		
+	}
+}
+
+class MyRunnable implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+			for (int i = 0; i < 1000; i++) {
+				System.out.println("aaaaaaaaaaaaaaaaaa");
+				
+			}
+	}
+	
+	
+	
+}

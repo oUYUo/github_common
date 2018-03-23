@@ -1,0 +1,37 @@
+package com.method;
+
+public class Demo5_Join {
+	/*
+	 * join方法，当前线程暂停，等待指定线程结束后，当前线程再继续
+	 */
+	public static void main(String[] args) {
+		final Thread t1 = new Thread(){
+			public void run() {
+				for(int i =0;i<10;i++)
+				{
+					System.out.println(getName()+"...aaaaaaaa");
+				}
+			}
+		};
+		Thread t2 = new Thread(){
+			public void run() {
+				for(int i =0;i<10;i++)
+				{	
+					if(i==2){
+						try {
+//							t1.join(1);					//插队指定时间，过了指定时间后，两条线程交替执行
+							t1.join();
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+					System.out.println(getName()+"...bbbbb");
+				}
+			}
+		};
+		
+		t1.start();
+		t2.start();
+	}
+}

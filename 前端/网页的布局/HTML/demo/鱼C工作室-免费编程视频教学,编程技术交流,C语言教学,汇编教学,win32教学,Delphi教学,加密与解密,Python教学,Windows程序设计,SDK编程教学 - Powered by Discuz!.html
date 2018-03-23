@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://bbs.fishc.com/home.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 -  Powered by Discuz!</title>
+
+<meta name="keywords" content="空间">
+<meta name="description" content="空间 ">
+<meta name="generator" content="Discuz! X3.1">
+<meta name="author" content="Discuz! Team and Comsenz UI Team">
+<meta name="copyright" content="2001-2013 Comsenz Inc.">
+<meta name="MSSmartTagsPreventParsing" content="True">
+<meta http-equiv="MSThemeCompatible" content="Yes">
+<!--<base href="http://bbs.fishc.com/">--><base href="."><link rel="stylesheet" type="text/css" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/style_52_common.css"><link rel="stylesheet" type="text/css" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/style_52_home_space.css"><script type="text/javascript">var STYLEID = '52', STATICURL = 'static/', IMGDIR = 'template/dreambred_c_apple/images/common/', VERHASH = 'DTt', charset = 'gbk', discuz_uid = '0', cookiepre = 'oMVX_2132_', cookiedomain = '', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'login|newthread', creditnotice = '1|荣誉|,2|鱼币|,3|贡献|,5|技术值|,6|C币|', defaultstyle = '', REPORTURL = 'aHR0cDovL2Jicy5maXNoYy5jb20vaG9tZS5waHA=', SITEURL = 'http://bbs.fishc.com/', JSPATH = 'data/cache/', DYNAMICURL = '';</script>
+<script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/common.js.下载" type="text/javascript"></script>
+
+
+<!--<link href="apple_c_3.css" rel="stylesheet" type="text/css" />--><meta name="application-name" content="鱼C论坛">
+<meta name="msapplication-tooltip" content="鱼C论坛">
+<meta name="msapplication-task" content="name=门户;action-uri=http://bbs.fishc.com/portal.php;icon-uri=http://bbs.fishc.com/template/dreambred_c_apple/images/common//portal.ico"><meta name="msapplication-task" content="name=论坛;action-uri=http://bbs.fishc.com/forum.php;icon-uri=http://bbs.fishc.com/template/dreambred_c_apple/images/common//bbs.ico">
+<meta name="msapplication-task" content="name=群组;action-uri=http://bbs.fishc.com/group.php;icon-uri=http://bbs.fishc.com/template/dreambred_c_apple/images/common//group.ico"><meta name="msapplication-task" content="name=空间;action-uri=http://bbs.fishc.com/home.php;icon-uri=http://bbs.fishc.com/template/dreambred_c_apple/images/common//home.ico"><script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/home.js.下载" type="text/javascript"></script>
+    
+<style>@charset "utf-8";
+@font-face{font-family:'nc_iconfont';src:url("//at.alicdn.com/t/font_1465353706_4784257.eot");src:url("//at.alicdn.com/t/font_1465353706_4784257.eot?#iefix") format('embedded-opentype'),url("//at.alicdn.com/t/font_1465353706_4784257.woff") format('woff'),url("//at.alicdn.com/t/font_1465353706_4784257.ttf") format('truetype'),url("//at.alicdn.com/t/font_1465353706_4784257.svg#iconfont") format('svg')}@font-face{font-family:'ncpc_iconfont';src:url("//at.alicdn.com/t/font_384029_rhzpmteb25oecdi.eot");src:url("//at.alicdn.com/t/font_384029_rhzpmteb25oecdi.eot?#iefix") format('embedded-opentype'),url("//at.alicdn.com/t/font_384029_rhzpmteb25oecdi.woff") format('woff'),url("//at.alicdn.com/t/font_384029_rhzpmteb25oecdi.ttf") format('truetype'),url("//at.alicdn.com/t/font_384029_rhzpmteb25oecdi.svg#ncpc_iconfont") format('svg')}.nc-container div#nc-loading-circle{background:transparent;width:20px;height:20px;display:inline-block;position:relative;vertical-align:middle}.nc-container div#nc-loading-circle .sk-circle{background:transparent;width:100%;height:100%;position:absolute;left:0;top:0}.nc-container #nc-loading-circle .sk-circle:before{content:'';display:block;margin:0 auto;width:15%;height:15%;background-color:#818181;border-radius:100%;-webkit-animation:sk-circleFadeDelay 1.2s infinite ease-in-out both;animation:sk-circleFadeDelay 1.2s infinite ease-in-out both}.nc-container #nc-loading-circle .sk-circle2{-webkit-transform:rotate(30deg);-ms-transform:rotate(30deg);transform:rotate(30deg)}.nc-container #nc-loading-circle .sk-circle3{-webkit-transform:rotate(60deg);-ms-transform:rotate(60deg);transform:rotate(60deg)}.nc-container #nc-loading-circle .sk-circle4{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.nc-container #nc-loading-circle .sk-circle5{-webkit-transform:rotate(120deg);-ms-transform:rotate(120deg);transform:rotate(120deg)}.nc-container #nc-loading-circle .sk-circle6{-webkit-transform:rotate(150deg);-ms-transform:rotate(150deg);transform:rotate(150deg)}.nc-container #nc-loading-circle .sk-circle7{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.nc-container #nc-loading-circle .sk-circle8{-webkit-transform:rotate(210deg);-ms-transform:rotate(210deg);transform:rotate(210deg)}.nc-container #nc-loading-circle .sk-circle9{-webkit-transform:rotate(240deg);-ms-transform:rotate(240deg);transform:rotate(240deg)}.nc-container #nc-loading-circle .sk-circle10{-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}.nc-container #nc-loading-circle .sk-circle11{-webkit-transform:rotate(300deg);-ms-transform:rotate(300deg);transform:rotate(300deg)}.nc-container #nc-loading-circle .sk-circle12{-webkit-transform:rotate(330deg);-ms-transform:rotate(330deg);transform:rotate(330deg)}.nc-container #nc-loading-circle .sk-circle2:before{-webkit-animation-delay:-1.1s;animation-delay:-1.1s}.nc-container #nc-loading-circle .sk-circle3:before{-webkit-animation-delay:-1s;animation-delay:-1s}.nc-container #nc-loading-circle .sk-circle4:before{-webkit-animation-delay:-.9s;animation-delay:-.9s}.nc-container #nc-loading-circle .sk-circle5:before{-webkit-animation-delay:-.8s;animation-delay:-.8s}.nc-container #nc-loading-circle .sk-circle6:before{-webkit-animation-delay:-.7s;animation-delay:-.7s}.nc-container #nc-loading-circle .sk-circle7:before{-webkit-animation-delay:-.6s;animation-delay:-.6s}.nc-container #nc-loading-circle .sk-circle8:before{-webkit-animation-delay:-.5s;animation-delay:-.5s}.nc-container #nc-loading-circle .sk-circle9:before{-webkit-animation-delay:-.4s;animation-delay:-.4s}.nc-container #nc-loading-circle .sk-circle10:before{-webkit-animation-delay:-.3s;animation-delay:-.3s}.nc-container #nc-loading-circle .sk-circle11:before{-webkit-animation-delay:-.2s;animation-delay:-.2s}.nc-container #nc-loading-circle .sk-circle12:before{-webkit-animation-delay:-.1s;animation-delay:-.1s}@-webkit-keyframes sk-circleFadeDelay{0%,39%,100%{opacity:0}40%{opacity:1}}@-webkit-keyframes sk-circleFadeDelay{0%,39%,100%{opacity:0}40%{opacity:1}}@keyframes sk-circleFadeDelay{0%,39%,100%{opacity:0}40%{opacity:1}}.nc-container .scale_text2 #nc-loading-circle .sk-circle:before{background-color:#fff}.nc_iconfont{font-family:"nc_iconfont";color:#ff3f08;font-size:16px;font-style:normal}.ncpc_iconfont{font-family:"ncpc_iconfont";color:#ff3f08;font-size:16px;font-style:normal}.captcha-error .icon_ban{float:left;font-size:16px;padding-right:5px;line-height:14px}.clickCaptcha_text .btn_refresh{font-style:normal;cursor:pointer;background:#fff;color:#737383}.imgCaptcha .btn_refresh{font-size:20px;cursor:pointer;background:#fff;color:#737383}.nc_voice{display:none;position:relative;margin-top:-34px;z-index:99;width:auto;height:34px;background:#fff}.omeo-code-img,.omeo-code-audio{font-size:0;text-align:left}.omeo-code-audiobox,.omeo-code-img a,.omeo-code-audio a,.omeo-code-state{display:inline-block;*display:inline;zoom:1;height:32px;vertical-align:top;font-size:12px}.omeo-code .omeo-code-refresh{background:transparent;width:32px;height:32px;font-size:20px;color:#888;text-align:center;text-decoration:none;padding-left:4px;line-height:32px}.omeo-code .omeo-switch{display:none;width:32px;height:32px;border-left:1px solid #e1e1e1;background-image:url("//g.alicdn.com/sd/ncpc/images/checkcode.png");background-repeat:no-repeat}.omeo-img-active .omeo-code-img{display:block}.omeo-img-active .omeo-code-audio{display:none}.omeo-code-img img{border:1px solid #cdcdcd;cursor:pointer}.omeo-code-img .omeo-switch{background-position:9px -41px}.omeo-audio-active .omeo-code-audio{display:block}.omeo-audio-active .omeo-code-img{display:none}.omeo-code-refresh{position:relative;left:95px}.omeo-code-audiobox{position:relative;height:30px;line-height:32px;border:1px solid #e1e1e1;text-align:center;overflow:hidden;left:100px;top:1px;width:45%;min-width:80px;background-color:#eee}.omeo-code-audiobox a{display:block;text-decoration:none;color:#06c}.omeo-code-audiobox-playing a{visibility:hidden}.omeo-code-audiobox span,.omeo-code-audiobox b{visibility:hidden;position:absolute;top:0;left:0;height:30px;font-weight:100;overflow:hidden}.omeo-code-audiobox-playing span,.omeo-code-audiobox-playing b{visibility:visible}.omeo-code-audiobox span{z-index:0;width:0;background:#186bca}.omeo-code-audiobox b{width:100%;z-index:1;text-align:left;text-indent:30px;color:#999;background:url("//g.alicdn.com/sd/ncpc/images/checkcode.png") no-repeat 14px -89px}.omeo-code-audio .omeo-switch{background-position:5px 10px}input[type=text]::-ms-clear{display:none}.omeo-box{position:relative;background-color:#fff}.omeo-code-echo{position:absolute;top:2px;left:2px}.omeo-code-echo input{padding:5px;height:18px;line-height:18px;border:1px solid #ddd;width:80px;outline:0}.omeo-code-state{height:30px;line-height:30px;text-indent:25px;white-space:nowrap;background-image:url("//g.alicdn.com/sd/ncpc/images/checkcode.png");background-repeat:no-repeat;background-position:100px 100px}.omeo-code-echo .omeo-code-state-error{width:auto;background-position:7px -193px}.omeo-code-echo .omeo-code-state-success{position:absolute;width:30px;background-position:7px -243px}.omeo-code-state{position:absolute;left:0;top:28px}.nc_voice_close{display:inline-block;position:relative;cursor:pointer;left:95px;top:0;border-left:#ddd 2px solid;padding:0 0 0 7px;background-color:#fff;font-size:20px;color:#888;line-height:32px}.nc_help{position:absolute;width:100%;height:100%;left:0;top:0;z-index:99999}.nc_help .mask{background-color:#000;opacity:.5;filter:alpha(opacity=50);width:100%;height:100%;top:0;left:0}.nc_btn_close{position:absolute;height:20px;left:500px;border-radius:20px;padding:10px 30px;background-color:#aaa;color:#fff;cursor:pointer;z-index:10}.nc_btn_close:hover{background-color:#afafaf}.nc_hand{position:absolute;width:68px;height:53px;background-image:url("//g.alicdn.com/sd/ncpc/images/hand.png");z-index:3}.nc_slide_bg{z-index:3;font-size:12px;text-align:center;color:#fff;line-height:34px}.nc_voicebtn{position:absolute;padding:0;right:-25px;font-size:23px;color:#888;cursor:pointer;line-height:34px}.nc_helpbtn{position:absolute;cursor:pointer;right:-95px;top:4px;font-size:12px;background-color:#ffb668;color:#fff;padding:4px;border-radius:2px;line-height:18px;display:none}.nc_helpbtn:before{width:0;height:0;content:"";position:absolute;left:-2px;top:6px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:4px solid #ffb668}.nc-container .errloading{border:#faf1d5 1px solid;text-indent:3px;background-image:none;font-size:12px;width:290px;line-height:20px;padding:7px 5px 8px 5px;color:#ef9f06;}.nc-container .errloading a{color:#30a7fc}.nc_captcha_text .nc_err{float:left;text-indent:0}.button_move{transition:left .5s;-moz-transition:left .5s;-webkit-transition:left .5s;-o-transition:left .5s}.bg_move{transition:width .5s;-moz-transition:width .5s;-webkit-transition:width .5s;-o-transition:width .5s}.nc_slide_box{position:absolute}.nc_captcha_text{height:auto;line-height:20px;visibility:hidden;font-size:12px;color:#999;font-weight:normal}.nc-container .nc_captcha_img_text{width:auto;height:auto;line-height:20px;visibility:hidden;font-size:12px;color:#999;font-weight:normal;display:none;padding:0 0 10px 0;background-position:0 0;}.nc-container .nc_captcha_img_text span.nc-lang-cnt{line-height:inherit}.nc-container .imgCaptcha .nc_captcha_img_text{width:auto}.nc_captcha_img_text{height:auto;line-height:20px;visibility:hidden;font-size:12px;color:#999;font-weight:normal;display:none;padding:0 0 10px 3px;background-position:0 0}.nc-container .nc_wrapper{width:auto}.nc_scale{width:auto;height:34px;background:#e8e8e8;position:relative;margin:0;padding:0}.nc_scale.is_audio{margin-right:25px}.nc-container .nc_scale div{height:auto}.nc-container .nc_scale ul{list-style:none}.nc-container .nc_scale .btn_slide{color:#737383;background-image:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.nc-container .nc_scale span{text-align:center;width:40px;height:32px;line-height:32px;border:1px solid #ccc;position:absolute;left:0;cursor:move;background:#fff;z-index:2}.nc-container .nc_scale span.nc-lang-cnt{*line-height:34px;float:none;width:auto;height:auto;*height:34px;border:none;position:static;cursor:inherit;background:none;z-index:0;display:inline}.nc_slide_button{width:40px;height:32px;border:1px solid #ccc;position:absolute;left:0;cursor:move;background:#fff url("//g.alicdn.com/sd/ncpc/images/rt.png") no-repeat center;z-index:2}@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none){.nc_scale span{height:32px}}.nc-container .nc_scale .btnok{cursor:default;background:#fff url("//g.alicdn.com/sd/ncpc/images/yes.png") no-repeat center;z-index:3}.nc-container .nc_scale .btnok2{cursor:default;font-size:20px;background:#fff url("//g.alicdn.com/sd/ncpc/images/no.png") no-repeat center;z-index:3}.nc-container .nc_scale .btn_warn{cursor:default;color:#ff3f08;line-height:34px;text-align:center;font-size:20px;background:#fff;z-index:3}.nc-container .clickCaptcha_text .btn_refresh{font-size:20px}.nc-container .clickCaptcha_text .icon_close{line-height:30px;margin-left:8px;cursor:default;color:#ff3f08;font-size:16px;float:left;margin-right:2px;background:transparent;z-index:3}.nc-container .nc_captcha_img_text .icon_close{cursor:default;color:#ff3f08;font-size:16px;float:left;margin-right:4px;background:transparent;z-index:3;line-height:18px}.nc-container .errloading .icon_warn{cursor:default;color:#ff3f08;font-size:18px;float:left;background:transparent;z-index:3}.nc-container .nc_scale .btn_ok{cursor:default;line-height:34px;text-align:center;font-size:20px;background:#fff;z-index:3;color:#76c61d}.nc-container .nc_scale .nc_ok,.nc-container .nc_scale .nc_bg{background:#7ac23c}.nc-container .nc_scale .nc_bg{position:absolute;height:100%;_height:34px;left:0;width:10px}.nc-container .nc_scale div.redbar{background:#fc461e;opacity:.5;filter:alpha(opacity=50)}.nc-container .nc_scale div.orange{background:#f00}.nc-container .nc_scale .scale_text{width:100%;height:100%;text-align:center;position:absolute;z-index:1;background:transparent;color:#9c9c9c;line-height:34px;font-size:12px;cursor:pointer}.nc-container .nc_scale .scale_text2{text-align:left;color:#fff;font-size:12px;text-indent:10px}.nc-container .nc_scale .scale_text2 b{padding-left:0;font-weight:normal}.nc-container .nc_scale .scale_text.scale_loading_text{text-align:center}.nc-container .nc_scale .imgCaptcha,.nc-container .nc_scale .clickCaptcha{display:none;overflow:hidden;border:1px solid #ccc;background:#fff;z-index:20000;}.nc-container .nc_scale .imgCaptcha p.error span,.nc-container .nc_scale .clickCaptcha p.error span{line-height:normal}.nc-container .nc_scale .imgCaptcha{height:auto}.nc-container .nc_scale .clickCaptcha{position:absolute;left:0;top:35px;height:270px;background:#fff;display:none;}.nc-container .nc_scale .clickCaptcha p.error i{color:#ff3f08;font-style:normal}.nc-container .nc_scale .clickCaptcha div{position:static;clear:both;width:100%;background:#fff;height:auto}.nc-container .nc_scale .clickCaptcha .clickCaptcha_text{height:30px;line-height:30px;font-size:12px;color:#999;}.nc-container .nc_scale .clickCaptcha .clickCaptcha_text b{font-weight:normal}.nc_btn_2{position:absolute;right:0;top:0;cursor:pointer;margin:2px 9px 0 0}.nc_iconfont.nc_btn_2{position:absolute;right:0;top:0;cursor:pointer}.nc_iconfont.nc_btn_1{position:absolute;top:10px;right:5px}.nc_btn_1{top:10px;right:10px}.scale_text i{font-style:normal;border:none;position:static;cursor:default;color:#fffc00;background:none;display:inline;width:100%}.nc-container .clickCaptcha .clickCaptcha_img{margin:0 auto;clear:both;position:relative;}.nc-container .clickCaptcha .clickCaptcha_img img{width:230px;height:230px;margin-left:10px;margin-top:5px}.nc-container .clickCaptcha .clickCaptcha_btn{margin:10px 0 0 15px;position:relative;text-align:left;}.nc-container .clickCaptcha .clickCaptcha_btn img{cursor:pointer}.nc-container .imgCaptcha{position:absolute;left:0;top:35px;height:auto;padding-bottom:15px;border:1px solid #ccc;background:#fff;}.nc-container .imgCaptcha div{position:static;width:90%;background-color:#fff}.nc-container .imgCaptcha,.nc-container .clickCaptcha{text-align:left;}.nc-container .imgCaptcha a,.nc-container .clickCaptcha a{color:#ff3f08}.nc-container .imgCaptcha .imgCaptcha_text{height:42px;line-height:42px;width:120px;background:#fff;font-size:14px;text-align:left;color:#747474;float:left;margin-left:10px;}.nc-container .imgCaptcha .imgCaptcha_text input{margin-top:5px;height:30px;line-height:30px;font-size:14px;width:90px;background:#fff}.nc-container .imgCaptcha .imgCaptcha_text input:focus{outline:none;color:#bbb}.nc-container .imgCaptcha .imgCaptcha_btn{margin:0 0 0 12px;*margin-left:0;clear:both;padding-top:5px;width:90%;}.nc-container .imgCaptcha .imgCaptcha_btn img{cursor:pointer}.nc-container .imgCaptcha .nc_scale_submit{margin:0 auto;cursor:pointer;background-color:#fc461e;width:120px;height:32px;line-height:32px;color:#fff;text-align:center}.nc-container .imgCaptcha .imgCaptcha_img{margin:4px 0 0 100px;height:40px;width:130px;overflow:hidden;cursor:pointer;}.nc-container .imgCaptcha .imgCaptcha_img img{width:130px}.nc-container .imgCaptcha .imgCaptcha_img input{border:solid 1px #ccc}.nc-lang-ar_MA,.nc-lang-ar_SA,.nc-lang-iw_HE,.nc-lang-iw_IL{text-align:right;*text-align:left;}.nc-lang-ar_MA .nc_scale .scale_text2,.nc-lang-ar_SA .nc_scale .scale_text2,.nc-lang-iw_HE .nc_scale .scale_text2,.nc-lang-iw_IL .nc_scale .scale_text2{text-align:right;}.nc-lang-ar_MA .nc_scale .scale_text2 span,.nc-lang-ar_SA .nc_scale .scale_text2 span,.nc-lang-iw_HE .nc_scale .scale_text2 span,.nc-lang-iw_IL .nc_scale .scale_text2 span{*display:inline-block;padding:0 56px 0 0}.nc-lang-ar_MA .nc_captcha_img_text,.nc-lang-ar_SA .nc_captcha_img_text,.nc-lang-iw_HE .nc_captcha_img_text,.nc-lang-iw_IL .nc_captcha_img_text{*text-align:right}.nc-lang-ar_MA span.nc-lang-cnt,.nc-lang-ar_SA span.nc-lang-cnt,.nc-lang-iw_HE span.nc-lang-cnt,.nc-lang-iw_IL span.nc-lang-cnt{text-align:right;direction:rtl}.nocaptcha span.nc-lang-cnt{float:none;height:auto;line-height:30px}.nc-container{font-size:12px;-ms-touch-action:none;touch-action:none;}.nc-container p{margin:0;padding:0;display:inline}.nc-container .scale_text.scale_text span[data-nc-lang="_startTEXT"]{display:inline-block;width:100%}.nc-container .scale_text.scale_text.slidetounlock span[data-nc-lang="_startTEXT"]{background:-webkit-gradient(linear,left top,right top,color-stop(0,#4d4d4d),color-stop(.4,#4d4d4d),color-stop(.5,#fff),color-stop(.6,#4d4d4d),color-stop(1,#4d4d4d));-webkit-background-clip:text;-webkit-text-fill-color:transparent;-webkit-animation:slidetounlock 3s infinite;-webkit-text-size-adjust:none}.nc-container .nc_scale .nc-align-center.scale_text2{text-align:center;text-indent:-42px}@-webkit-keyframes slidetounlock{0%{background-position:-200px 0}100%{background-position:200px 0}}.nc-container.tb-login .clickCaptcha_text .icon_close{line-height:30px;margin-left:0;cursor:default;color:#ff3f08;font-size:16px;float:left;margin-right:0;background:transparent;z-index:3}.nc-container.tb-login{position:relative;margin-top:20px;display:none;}.nc-container.tb-login .nc_scale{width:auto;}.nc-container.tb-login .nc_scale .scale_text2{text-indent:-42px;text-align:center;}.nc-container.tb-login .nc_scale .scale_text2 b{padding:0}.nc-container.tb-login .nc_scale.nc_err div.scale_text{background:#f79977}.nc-container.tb-login .errloading{width:auto}.nc-container.tb-login .imgCaptcha,.nc-container.tb-login .clickCaptcha{width:252px;*width:256px;border:0;*height:300px;min-height:300px;max-height:inherit !important;}.nc-container.tb-login .imgCaptcha div.login-msg.error,.nc-container.tb-login .clickCaptcha div.login-msg.error{background:#fff2f2}.nc-container.tb-login .imgCaptcha .captcha-error,.nc-container.tb-login .clickCaptcha .captcha-error{position:absolute;top:0;width:244px;height:auto;margin-bottom:15px;padding:3px;border:solid 1px #ff8e8e;line-height:18px}.nc-container.tb-login .imgCaptcha .captcha-inform,.nc-container.tb-login .clickCaptcha .captcha-inform{font-size:110%;margin-left:20px}.nc-container.tb-login .imgCaptcha{padding-top:66px;}.nc-container.tb-login .imgCaptcha .imgCaptcha_text{width:100px;margin-left:0;}.nc-container.tb-login .imgCaptcha .imgCaptcha_text input:focus{color:#000}.nc-container.tb-login .imgCaptcha .imgCaptcha_img{width:120px;_width:100px}.nc-container.tb-login .imgCaptcha .imgCaptcha_btn{width:100%;margin-left:0}.nc-container.tb-login .imgCaptcha .nc_scale_submit{width:100%;height:36px;line-height:36px;margin-top:20px;margin-left:0;border-radius:3px;font-size:16px;font-family:Tahoma,Helvetica,Arial,sans-serif;background:#ff3f08}.nc-container.tb-login .clickCaptcha{padding-top:40px;}.nc-container.tb-login .clickCaptcha .clickCaptcha_text{text-indent:4px}.nc-container.tb-login .clickCaptcha .clickCaptcha_img img{margin-left:10px}.nc-container.tb-login .nc_btn_1{top:77px;_top:57px}.nc-container.tb-login .nc_btn_2{top:36px}.login .nc-container.tb-login .login-msg p,.login-box .nc-container.tb-login .login-msg p{width:auto;float:left}.nc-container.tb-login.nc-old-login{margin:20px 0 10px 0;width:250px;}.nc-container.tb-login.nc-old-login .nc_wrapper{width:250px}.nc-container.tb-login.nc-old-login .imgCaptcha,.nc-container.tb-login.nc-old-login .clickCaptcha{width:250px;min-height:auto;}.nc-container.tb-login.nc-old-login .imgCaptcha .captcha-error,.nc-container.tb-login.nc-old-login .clickCaptcha .captcha-error{line-height:16px}.nc-container.tb-login.nc-old-login .clickCaptcha{padding-top:28px;}.nc-container.tb-login.nc-old-login .clickCaptcha .clickCaptcha_img img{width:200px;height:200px}.nc-container.nc-old-login.show-click-captcha{padding-bottom:60px}.nc-container.nc-old-login.show-click-captcha.nc-tm-min-fix{padding-bottom:40px}.nc-container.tb-login.nc-tm-min-fix .clickCaptcha{max-height:340px !important}#content .login-box .bd .nc-container.tb-login .login-msg{margin:10px auto 15px auto}#content .login-box .bd .nc-container.tb-login.nc-old-login.show-click-captcha .login-msg{margin:2px 0 0 0}.nc-container .nc_scale .nc-cc{display:none;position:absolute;left:0;top:35px;z-index:20000;width:360px;height:570px;border:1px solid #5eaef1;border-radius:4px;background:#fff;font-size:14px;line-height:18px;color:#333;}.nc-container .nc_scale .nc-cc.nc-cc-status-loading .nc-cc-btn,.nc-container .nc_scale .nc-cc.nc-cc-status-verifing .nc-cc-btn{background-color:#90c1eb}.nc-container .nc_scale .nc-cc.nc-cc-status-loading .nc-cc-btn,.nc-container .nc_scale .nc-cc.nc-cc-status-verifing .nc-cc-btn,.nc-container .nc_scale .nc-cc.nc-cc-status-loading .nc-cc-refresh,.nc-container .nc_scale .nc-cc.nc-cc-status-verifing .nc-cc-refresh{cursor:default}.nc-container .nc_scale .nc-cc.nc-cc-status-loading .nc-cc-refresh,.nc-container .nc_scale .nc-cc.nc-cc-status-verifing .nc-cc-refresh{color:#999}.nc-container .nc_scale .nc-cc a{color:#3199f4;text-decoration:none}.nc-container .nc_scale .nc-cc .nc_iconfont{vertical-align:top;margin-right:8px}.nc-container .nc_scale .nc-cc-btn{display:inline-block;*display:inline;*zoom:1;vertical-align:top;letter-spacing:normal;word-spacing:normal;width:100px;line-height:30px;text-align:center;background-color:#3199f4;color:#fff;border-radius:4px;cursor:pointer;}.nc-container .nc_scale .nc-cc-btn.nc-cc-disabled{background-color:#90c1eb;cursor:default}.nc-container .nc_scale .nc-cc-btn .nc-lang-cnt{line-height:18px}.nc-container .nc_scale .nc-cc-header{padding:20px 20px 19px 20px;height:100px;background:#f4f8fa;border-bottom:1px solid #ccc}.nc-container .nc_scale .nc-cc-img1-box{float:left;width:100px;height:100px;margin-right:16px}.nc-container .nc_scale .nc-cc-txt{overflow:hidden;*zoom:1;line-height:30px;padding-top:11px}.nc-container .nc_scale .nc-cc-img2-box{position:relative;padding:0 20px;margin-top:20px}.nc-container .nc_scale .nc-cc-items{position:absolute;left:20px;_left:0;top:0;width:320px;overflow:hidden}.nc-container .nc_scale .nc-cc-items-inner{margin-right:-20px}.nc-container .nc_scale .nc-cc-item{position:relative;display:inline-block;*display:inline;*zoom:1;vertical-align:top;letter-spacing:normal;word-spacing:normal;margin-right:10px;margin-bottom:10px;border:1px solid #ccc;width:98px;height:98px;background:url("//gtms02.alicdn.com/tps/i2/T1ty2QFNNXXXc6Yc2r-1-1.gif");}.nc-container .nc_scale .nc-cc-item:hover{border-color:#3199f4}.nc-container .nc_scale .nc-cc-item .nc_iconfont{display:none;position:absolute;right:0;bottom:0;color:#3199f4;font-size:22px;margin-right:0}.nc-container .nc_scale .nc-cc-item.nc-cc-selected .nc_iconfont{display:block}.nc-container .nc_scale .nc-cc-tip{display:none;position:absolute;left:0;bottom:60px;width:360px;line-height:18px;text-align:center;color:#eb4f38;}.nc-container .nc_scale .nc-cc-tip span{line-height:normal}.nc-container .nc_scale .nc-cc-footer{position:absolute;left:0;bottom:20px;width:360px;height:30px;line-height:30px;text-align:center;}.nc-container .nc_scale .nc-cc-footer .nc_iconfont{color:#c4cbd0}.nc-container .nc_scale .nc-cc-refresh,.nc-container .nc_scale .nc-cc-wait{position:absolute;left:20px;top:0;color:#3199f4;cursor:pointer}.nc-container .nc_scale .nc-cc-wait{display:none}.nc-container .nc_scale .nc-cc-cancel{position:absolute;right:20px;top:0;color:#3199f4;cursor:pointer;}.nc-container .nc_scale .nc-cc-cancel .nc_iconfont{position:relative;top:-1px}.nc-container .nc_scale .nc-cc-loading{margin-top:247px;text-align:center;line-height:14px}.nc-container .nc_scale .nc-cc-loading-img{display:inline-block;*display:inline;*zoom:1;vertical-align:top;letter-spacing:normal;word-spacing:normal;vertical-align:middle;background:url("//img.alicdn.com/tps/TB1OdxsKpXXXXcgXFXXXXXXXXXX-14-14.gif") no-repeat;width:14px;height:14px;position:relative;top:-1px;margin-right:9px}.nc-container .nc_scale .nc-cc-fail{position:absolute;left:50%;top:50%;width:320px;height:180px;margin-left:-160px;margin-top:-90px;background:#fff;border-radius:4px}.nc-container .nc_scale .nc-cc-fail-inner{text-align:center;padding:55px 10px 10px}.nc-container .nc_scale .nc-cc-fail-action{margin:28px 0 18px;}.nc-container .nc_scale .nc-cc-fail-action a{display:inline-block;*display:inline;*zoom:1;vertical-align:top;letter-spacing:normal;word-spacing:normal;line-height:30px;margin-left:16px}.nc-container .nc_scale .nc-cc-contact{text-align:right;color:#666;padding-right:9px}.nc-container .nc_scale .nc-cc-mask{display:none;position:absolute;left:0;top:0;width:360px;height:570px;background:rgba(0,0,0,0.3);filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#4C000000', endColorstr='#4C000000');}:root .nc-container .nc_scale .nc-cc-mask{-webkit-filter:none;filter:none}.nc-container .nc_scale .nc-cc-arrow-1,.nc-container .nc_scale .nc-cc-arrow-2{display:none;position:absolute;top:340px;border:solid transparent;height:0;width:0}.nc-container .nc_scale .nc-cc-arrow-1{border-width:16px;margin-top:-1px}.nc-container .nc_scale .nc-cc-arrow-2{border-width:15px}.nc-container .nc_scale .nc-cc-right .nc-cc-arrow-1,.nc-container .nc_scale .nc-cc-left .nc-cc-arrow-1,.nc-container .nc_scale .nc-cc-right .nc-cc-arrow-2,.nc-container .nc_scale .nc-cc-left .nc-cc-arrow-2{display:block;_display:none}.nc-container .nc_scale .nc-cc-right{left:180px;top:-339px;}.nc-container .nc_scale .nc-cc-right .nc-cc-arrow-1{border-right-color:#5eaef1;left:-32px}.nc-container .nc_scale .nc-cc-right .nc-cc-arrow-2{border-right-color:#fff;left:-30px}.nc-container .nc_scale .nc-cc-left{left:-335px;top:-339px;}.nc-container .nc_scale .nc-cc-left .nc-cc-arrow-1{border-left-color:#5eaef1;right:-32px}.nc-container .nc_scale .nc-cc-left .nc-cc-arrow-2{border-left-color:#fff;right:-30px}</style></head>
+
+<body id="nv_home" class="pg_space" onkeydown="if(event.keyCode==27) return false;">
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+        
+<div id="toptb" class="cl">
+        <div class="wp">
+<div class="z"><a href="javascript:;" onclick="setHomepage(&#39;http://bbs.fishc.com/&#39;);">设为首页</a><a href="http://bbs.fishc.com/" onclick="addFavorite(this.href, &#39;鱼C论坛&#39;);return false;">收藏本站</a>                    </div>
+
+
+<script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/logging.js.下载" type="text/javascript"></script>
+<div class="fastlg cl">
+<div class="y pns">
+            <div class="no">
+                <a href="http://bbs.fishc.com/member.php?mod=logging&amp;action=login&amp;referer=" onclick="showWindow(&#39;login&#39;, this.href);return false;" class="xi2">登录</a>
+                <span class="pipe">|</span>
+                <a href="http://bbs.fishc.com/member.php?mod=register_GT86">立即注册</a>
+            </div>
+</div>
+
+<div class="fastlg_fm y" style="margin-right: 10px; padding-right: 10px">
+<p><a href="http://bbs.fishc.com/connect.php?mod=login&amp;op=init&amp;referer=home.php&amp;statfrom=login_simple"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/qq_login.gif" class="vm" alt="QQ登录"></a></p>
+<p class="hm xg1" style="padding-top: 2px;">只需一步，快速开始</p>
+</div>
+            <link rel="stylesheet" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/oculus.css">
+            <link rel="stylesheet" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/nc.css" disabled="">
+            <script type="text/javascript" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/nc.js.下载"></script>
+            <script type="text/javascript" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/oculus_nc.js.下载"></script>
+            <div id="nc-float" style="display:none;">
+                <div class="nc-f-head">
+                    <img class="nc-f-icon" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/TB1_3FrKVXXXXbdXXXXXXXXXXXX-129-128.png" alt="" height="20" width="20">
+                    <span class="nc-f-title">安全验证</span>
+                    <a class="close" href="http://bbs.fishc.com/#"><i class="nc_iconfont"></i></a>
+                </div>
+                <div class="nc-f-body" id="oculus-nc-f-body">
+                    <div class="nc-f-des">请完成以下验证码</div>
+                    <div id="_umfp" style="width:1px;height:1px"></div>
+                    <div id="nocaptcha"></div>
+                </div>
+            </div>
+            <script type="text/javascript" reload="1" defer="true">
+            paxmac_ready(function(){
+            var lsform = document.getElementById('lsform');
+            var o = document.createElement("button");
+            o.id = "header-loggin-btn";
+            o.setAttribute('type', 'submit');
+            o.value = "";
+            o.style.display = "none";
+            try{
+            lsform.appendChild(o);
+                }
+            catch(err){
+                
+            }
+            window['aq-nc-grey-ratio'] = 1;
+            o.onclick = function() {
+                var ncf = new NCFloat(document.getElementById('nc-float'));
+                _nc_plugin_init('FFF10000000007278671', 'nocaptcha', 'lsform', 'discuz_header_nc');
+                discuz_header_nc.on('success', function(){
+                            ncf.hide(1);
+                            lsSubmit();
+                    });
+                discuz_header_nc.on('after_code', function() {
+                    document.getElementById('oculus-nc-f-body').style.height = "300px";
+                });
+                ncf.show();
+
+            };
+            });
+            </script>                </div>
+                        
+</div>
+</div>
+        <div class="toptb"></div>
+
+        
+        	        
+<div id="qmenu_menu" class="p_pop blk" style="display: none;">
+<div class="ptm pbw hm">
+请 <a href="javascript:;" class="xi2" onclick="lsSubmit()"><strong>登录</strong></a> 后使用快捷导航<br>没有帐号？<a href="http://bbs.fishc.com/member.php?mod=register_GT86" class="xi2 xw1">立即注册</a>
+</div>
+<div id="fjump_menu" class="btda"></div></div><div id="hd">
+<div class="wp">
+            
+            
+<div class="hdc cl">                    <h2><a href="http://bbs.fishc.com/" title="鱼C论坛"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/logo.png" alt="鱼C论坛" border="0"></a></h2>
+                    <div class="nv clearfix">
+                        <ul>
+                                                            <li id="mn_portal"><a href="http://bbs.fishc.com/portal.php" hidefocus="true" title="Portal" style="font-weight: bold;">门户<span>Portal</span></a></li>                                                            <li id="mn_forum"><a href="http://bbs.fishc.com/forum.php" hidefocus="true" title="BBS" style="font-weight: bold;">论坛<span>BBS</span></a></li>                                                            <li class="a" id="mn_home"><a href="http://bbs.fishc.com/home.php" hidefocus="true" title="Space" style="font-weight: bold;">空间<span>Space</span></a></li>                                                            <li id="mn_Nc00d"><a href="http://bbs.fishc.com/bestanswer.php" hidefocus="true" title="加入组织，赢丰厚奖品！" style="font-weight: bold;color: orange">互助平台<span>加入组织，赢丰厚奖品！</span></a></li>                                                            <li id="mn_forum_11"><a href="http://bbs.fishc.com/forum.php?mod=collection" hidefocus="true" title="Collection" style="font-weight: bold;">淘帖<span>Collection</span></a></li>                                                            <li id="mn_group"><a href="http://bbs.fishc.com/group.php" hidefocus="true" title="Group" style="font-weight: bold;">群组<span>Group</span></a></li>                                                            <li id="mn_N816a"><a href="http://bbs.fishc.com/forum-105-1.html" hidefocus="true" title="好书推荐" style="font-weight: bold;">好书<span>好书推荐</span></a></li>                                                            <li id="mn_N4dac" onmouseover="showMenu({&#39;ctrlid&#39;:this.id,&#39;ctrlclass&#39;:&#39;hover&#39;,&#39;duration&#39;:2})"><a href="http://bbs.fishc.com/#" hidefocus="true" target="_blank" style="font-weight: bold;color: red">VIP通道</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
+                                            </div>
+                    <a href="javascript:;" id="qmenu" onmouseover="delayShow(this, function () {showMenu({&#39;ctrlid&#39;:&#39;qmenu&#39;,&#39;pos&#39;:&#39;34!&#39;,&#39;ctrlclass&#39;:&#39;a&#39;,&#39;duration&#39;:2});showForummenu(0);})">&nbsp;</a>
+
+</div>
+                
+
+
+<ul class="p_pop h_pop" id="mn_N4dac_menu" style="display: none"><li><a href="http://blog.fishc.com/" hidefocus="true" target="_blank">最新视频下载</a></li><li><a href="http://bbs.fishc.com/thread-51842-1-1.html" hidefocus="true" target="_blank" style="color: red">教学资源打包（VIP特权）</a></li><li><a href="http://bbs.fishc.com/forum-150-1.html" hidefocus="true" target="_blank">课件与源代码（VIP免费）</a></li><li><a href="http://bbs.fishc.com/forum-149-1.html" hidefocus="true" target="_blank">VIP每月领取津贴</a></li><li><a href="http://fishc.com/dvd/vip.html" hidefocus="true" target="_blank">VIP会员特权一览</a></li></ul><div class="p_pop h_pop" id="mn_userapp_menu" style="display: none"></div><div id="mu" class="cl">
+</div>
+                
+                
+                <!--landscape-->
+                <div class="landscape clear">
+                	<div class="searcharea">
+                    <div id="scbar" class="cl">
+<form id="scbar_form" method="post" autocomplete="off" onsubmit="searchFocus($(&#39;scbar_txt&#39;))" action="http://bbs.fishc.com/search.php?searchsubmit=yes" target="_blank">
+<input type="hidden" name="mod" id="scbar_mod" value="search">
+<input type="hidden" name="formhash" value="4bbf065d">
+<input type="hidden" name="srchtype" value="title">
+<input type="hidden" name="srhfid" value="0">
+<input type="hidden" name="srhlocality" value="home::space">
+        <table cellspacing="0" cellpadding="0">
+<tbody><tr>
+            	<td class="choarea"><a href="javascript:;" id="scbar_type" class="showmenu xg1 xs2" onclick="showMenu(this.id)" hidefocus="true">搜索</a></td>
+<td class="txtarea"><input type="text" name="srchtxt" id="scbar_txt" value="请输入搜索内容" autocomplete="off" x-webkit-speech="" speech="" class=" xg1" placeholder="请输入搜索内容"></td>
+<td class="btnarea"><button type="submit" name="searchsubmit" id="scbar_btn" sc="1" class="pn pnc" value="true"><strong class="xi2 xs2">搜索</strong></button>
+                </td>
+</tr>
+</tbody></table>
+        <div id="scbar_hot" style=" display:none;">
+</div>
+</form>
+</div>
+<ul id="scbar_type_menu" class="p_pop" style="display: none;"><li><a href="javascript:;" rel="user">用户</a></li></ul>
+<script type="text/javascript">
+initSearchmenu('scbar', '');
+</script>
+                    </div>
+                    
+            		<div class="flash2"><embed style="height:128; width:615px" align="right" src="dreambred_dir/apple_c_3/images/stars.swf" type="application/x-shockwave-flash" ;="" quality="high" wmode="transparent" width="615" height="128"></div>
+                </div>
+                <!--landscape-->
+                </div>
+</div>
+
+            <link rel="stylesheet" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/oculus.css">
+            <link rel="stylesheet" href="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/nc.css">
+            <script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/nc.js.下载"></script>
+            <script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/oculus_nc.js.下载"></script>
+            <div id="nc-float" style="display:none;">
+                <div class="nc-f-head">
+                    <img class="nc-f-icon" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/TB1_3FrKVXXXXbdXXXXXXXXXXXX-129-128.png" alt="" height="20" width="20">
+                    <span class="nc-f-title">安全验证</span>
+                    <a class="close" href="http://bbs.fishc.com/#"><i class="nc_iconfont"></i></a>
+                </div>
+                <div class="nc-f-body" id="oculus-nc-f-body">
+                <div class="nc-f-des">请完成以下验证码</div>
+                    <div id="nocaptcha"></div>
+                </div>
+            </div><div id="wp" class="wp">
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="http://bbs.fishc.com/" class="nvhm" title="首页">鱼C论坛</a> <em>&#8250;</em>
+<a href="http://bbs.fishc.com/home.php">空间</a></div>
+</div>
+
+<style id="diy_style" type="text/css"></style>
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="ct" class="ct3_a wp cl">
+
+<div class="appl">
+<ul><li><span><a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=blog">发布</a></span><a href="http://bbs.fishc.com/home.php?mod=space&amp;do=blog"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/blog.gif" width="16" height="16">日志</a></li><li><span><a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=upload">上传</a></span><a href="http://bbs.fishc.com/home.php?mod=space&amp;do=album"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/album.gif" width="16" height="16">相册</a></li><li><span><a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=share" onclick="showWindow(&#39;share&#39;, this.href, &#39;get&#39;, 0);return false;">添加</a></span><a href="http://bbs.fishc.com/home.php?mod=space&amp;do=share"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/share.gif" width="16" height="16">分享</a></li><li><a href="http://bbs.fishc.com/home.php?mod=space&amp;do=doing"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/doing.gif" width="16" height="16">记录</a></li></ul><hr class="da"><ul></ul>
+</div>
+<!--/sidebar-->
+<div class="sd ptm">
+
+<style type="text/css">
+.midaben_con {
+font-family:arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+background-color:#fff;
+width:218px;
+height:50px;
+border-radius:5px;
+/*position:relative*/
+}
+.midaben_con .midaben_signpanel {
+background-color:#009966;
+height:50px;
+display:block;
+position:relative;
+border-radius:4px;
+background-image:url(./source/plugin/k_misign/static/default/tou.png);
+background-repeat:no-repeat;
+background-position:14px 8px;
+cursor:pointer
+}
+.midaben_con .midaben_signpanel .font {
+position:absolute;
+color:#fff;
+width:60px;
+text-align:center;
+height:30px;
+font-size:22px;
+line-height:30px;
+top:11px;
+left:45px
+}
+.midaben_con .midaben_signpanel .nums {
+display:none
+}
+.midaben_con .midaben_signpanel .fblock {
+height:46px;
+width:101px;
+background-color:#fff;
+padding-left:5px;
+padding-right:5px;
+position:absolute;
+top:2px;
+right:2px;
+font-size:14px;
+color:#606060
+}
+.midaben_con .midaben_signpanel .fblock .all {
+height:23px;
+line-height:26px;
+padding-left:30px;
+border-bottom:1px solid #eee;
+background-image:url(./source/plugin/k_misign/static/default/tou2.jpg);
+background-repeat:no-repeat;
+background-position:5px 0;
+margin-bottom:0;
+color:#606060
+}
+.midaben_con .midaben_signpanel .fblock .line {
+height:22px;
+line-height:24px;
+padding-left:30px;
+width:60px;
+background-image:url(./source/plugin/k_misign/static/default/tou2.jpg);
+background-repeat:no-repeat;
+background-position:5px -25px;
+color:#606060
+}
+.midaben_con a.midaben_signpanel:hover {
+background-color:#ff7d49;
+}
+.midaben_con a.midaben_signpanel:active {
+background-color:#ff7d49;
+}
+.midaben_con .default {
+cursor:default;
+background-color:#009966;
+}
+.midaben_con a.default:hover {
+background-color:#ff7d49;
+}
+.midaben_con a.default:active {
+background-color:#ff7d49;
+}
+.midaben_con .visted {
+background-position:7px 8px
+}
+.midaben_con .visted .font {
+font-size:18px;
+line-height:25px;
+width:60px;
+text-align:center;
+left:40px;
+top:8px;
+text-shadow:0 1px 0 #ff7d49;
+}
+.midaben_con .visted .nums {
+display:block;
+font-size:12px;
+width:60px;
+text-align:center;
+line-height:20px;
+position:absolute;
+color:#fff;
+top:29px;
+left:43px
+}
+.midaben_con .midaben_win {
+width:218px;
+height:115px;
+background-color:#fff;
+border:1px solid #dedfe3;
+border-radius:5px;
+position:absolute;
+margin-top: 15px;
+box-shadow:0 -5px 0 #dedfe3;
+padding-left:5px;
+padding-right:5px;
+z-index: 301;
+}
+.midaben_con .midaben_win .angleA {
+width:0;
+_border:0;
+position:absolute;
+top:-30px;
+left:70px;
+border-color:transparent transparent #dedfe3;
+border-style:solid;
+border-width:15px
+}
+.midaben_con .midaben_win .angleB {
+    width: 0;
+    _border: 0;
+    position: absolute;
+    top: -16px;
+    left: 75px;
+    border-color: transparent transparent #fff;
+    border-style: solid;
+    border-width: 10px;
+}
+.midaben_con .midaben_win .title {
+padding-left:58px;
+height:55px;
+padding-top:22px;
+background-repeat:no-repeat;
+background-image:url(./source/plugin/k_misign/static/default/tou3.jpg);
+background-position:0 5px;
+border-bottom:1px solid #eee
+}
+.midaben_con .midaben_win .title h3 {
+font-size:18px;
+color:#434a54;
+line-height:25px;
+font-weight:400;
+margin:0;
+padding:0
+}
+.midaben_con .midaben_win .title .con {
+font-size:12px;
+color:#434a54;
+line-height:20px;
+font-weight:normal;
+width:150px;
+margin:0;
+padding:0;
+border:none;
+}
+.midaben_con .midaben_win .info {
+height:35px;
+line-height:35px;
+color:#aab2bd;
+font-size:14px;
+text-align:center;
+padding-left:10px
+}
+.midaben_con a.midaben_signpanel:visited,.midaben_con a.visted:visited,.midaben_con a.visted:hover,.midaben_con a.visted:active {
+background-color:#009966
+}
+
+</style>
+<script type="text/javascript">
+function cjdsign(){
+document.getElementById("JD_sign").className = 'midaben_signpanel JD_sign visted';	
+document.getElementById("JD_sign").href = 'plugin.php?id=k_misign:sign';
+document.getElementById("JD_sign").target = '_blank';
+document.getElementById("JD_sign").onclick = '';
+document.getElementById('JD_win').style.display='block';
+var fadeOut=function(){
+document.getElementById('JD_win').style.display='none';
+}
+setTimeout(fadeOut,3000);
+} 
+</script>
+<div id="midaben_sign">
+    <div class="midaben_con mbm">
+        <a href="http://bbs.fishc.com/member.php?mod=logging&amp;action=login" onclick="showWindow(&#39;login&#39;, this.href);return false;" class="midaben_signpanel JD_sign" id="JD_sign">
+            <div class="font">
+                签到
+            </div>
+            <span class="nums">
+                连续天
+            </span>
+            <div class="fblock">
+                <div class="all">
+                    579人
+                </div>
+                <div class="line">
+                    <span style="font-size:12px;">签到看排名</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="drag">
+<!--[diy=diysidetop]--><div id="diysidetop" class="area"></div><!--[/diy]-->
+</div>
+<div class="drag">
+<!--[diy=diydefaultusertop]--><div id="diydefaultusertop" class="area"></div><!--[/diy]-->
+</div>
+
+<div class="drag">
+<!--[diy=diynewusertop]--><div id="diynewusertop" class="area"></div><!--[/diy]-->
+</div>
+
+<div class="bm">
+<div class="bm_h cl">
+<span class="y">
+<a href="http://bbs.fishc.com/misc.php?mod=ranklist&amp;type=member">全部</a>
+</span>
+<h2>竞价排名</h2>
+</div>
+<div class="bm_c">
+<ul class="ml mls cl"><li>
+<a href="http://bbs.fishc.com/space-uid-263749.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar.php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-263749.html" title="hldh214">hldh214</a></p>
+<!--span><span title="5071">5071</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-106491.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(1).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-106491.html" title="小生我怕怕">小生我怕怕</a></p>
+<!--span><span title="2283">2283</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-407121.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(2).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-407121.html" title="李金龙">李金龙</a></p>
+<!--span><span title="1208">1208</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-295283.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(3).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-295283.html" title="wei_Y">wei_Y</a></p>
+<!--span><span title="1185">1185</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-244117.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(4).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-244117.html" title="康小泡">康小泡</a></p>
+<!--span><span title="1175">1175</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-45.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(5).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-45.html" title="仰望天上的光">仰望天上的光</a></p>
+<!--span><span title="1149">1149</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-343010.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(6).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-343010.html" title="shuofxz">shuofxz</a></p>
+<!--span><span title="1120">1120</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-241055.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(7).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-241055.html" title="拈花小仙">拈花小仙</a></p>
+<!--span><span title="1117">1117</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-82.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(8).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-82.html" title="小逸">小逸</a></p>
+<!--span><span title="1052">1052</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-375046.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(9).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-375046.html" title="SixPy">SixPy</a></p>
+<!--span><span title="955">955</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-217643.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(10).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-217643.html" title="101℃太阳">101℃太阳</a></p>
+<!--span><span title="793">793</span></span-->
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-372647.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(11).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-372647.html" title="无符号整形">无符号整形</a></p>
+<!--span><span title="747">747</span></span-->
+</li>
+</ul>
+</div>
+</div>
+<div class="bm">
+<div class="bm_h cl">
+<h2>新加入会员</h2>
+</div>
+<div class="bm_c">
+<ul class="ml mls cl"><li>
+<a href="http://bbs.fishc.com/space-uid-478040.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(12).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478040.html" title="gzlhai">gzlhai</a></p>
+<span><span title="10-24">3&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478039.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(13).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478039.html" title="chary1n">chary1n</a></p>
+<span><span title="10-24">4&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478038.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(14).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478038.html" title="guobingjie123">guobingjie123</a></p>
+<span><span title="10-24">8&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478037.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(15).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478037.html" title="厨子和肉丝">厨子和肉丝</a></p>
+<span><span title="10-24">8&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478036.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(16).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478036.html" title="weiye9123">weiye9123</a></p>
+<span><span title="10-24">11&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478035.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(17).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478035.html" title="爱你的猪哥哥">爱你的猪哥哥</a></p>
+<span><span title="10-24">23&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478034.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(18).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478034.html" title="hdzx68">hdzx68</a></p>
+<span><span title="10-24">25&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478033.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(19).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478033.html" title="松风木月">松风木月</a></p>
+<span><span title="10-24">27&nbsp;分钟前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478032.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(20).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478032.html" title="Rikimaru">Rikimaru</a></p>
+<span><span title="10-24">半小时前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478031.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(21).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478031.html" title="Andy采薇">Andy采薇</a></p>
+<span><span title="10-24">半小时前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478030.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(22).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478030.html" title="曼联小爵爷">曼联小爵爷</a></p>
+<span><span title="10-24">半小时前</span></span>
+</li>
+<li>
+<a href="http://bbs.fishc.com/space-uid-478029.html" title="" class="avt">
+<img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(23).php"></a>
+<p><a href="http://bbs.fishc.com/space-uid-478029.html" title="2027508885">2027508885</a></p>
+<span><span title="10-24">半小时前</span></span>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="drag">
+<!--[diy=diyvisitorlisttop]--><div id="diyvisitorlisttop" class="area"></div><!--[/diy]-->
+</div>
+
+
+<div class="drag">
+<!--[diy=diyfriendtop]--><div id="diyfriendtop" class="area"></div><!--[/diy]-->
+</div>
+
+
+<div class="drag">
+<!--[diy=diybirthtop]--><div id="diybirthtop" class="area"></div><!--[/diy]-->
+</div>
+
+
+<div class="drag">
+<!--[diy=diysidebottom]--><div id="diysidebottom" class="area"></div><!--[/diy]-->
+</div>
+
+</div>
+<div class="mn ptm pbm">
+<!--[diy=diycontenttop]--><div id="diycontenttop" class="area"></div><!--[/diy]-->
+<div class="bm bw0"><p class="tbmu">
+<a href="http://bbs.fishc.com/home.php?mod=space&amp;do=home&amp;view=all&amp;order=dateline" class="a">最新动态</a><span class="pipe">|</span>
+<a href="http://bbs.fishc.com/home.php?mod=space&amp;do=home&amp;view=all&amp;order=hot">热点动态</a>
+</p>
+
+<div id="feed_div" class="e">
+<div class="xld xlda mtm"><h4 class="et">
+今天</h4><dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477720.html" target="_blank" c="1" mid="card_5207"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(24).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149900_li" onmouseover="feed_menu(149900,1);" onmouseout="feed_menu(149900,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149900" class="o" id="a_feed_menu_149900" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display: none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477720.html" target="_blank">河边一枝花</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 14:41">半小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98315-1-1.html" target="_blank">看一看</a></b><br>不知道怎么赚鱼币，淘宝也买不到</div>
+</div>
+</div>
+
+<div id="feedcomment_149900" style="display:none;"></div>
+</li><li class="cl " id="feed_149899_li" onmouseover="feed_menu(149899,1);" onmouseout="feed_menu(149899,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149899" class="o" id="a_feed_menu_149899" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display: none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477720.html" target="_blank">河边一枝花</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 14:33">半小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98314-1-1.html" target="_blank">怎么获得鱼币啊</a></b><br></div>
+</div>
+</div>
+
+<div id="feedcomment_149899" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-397660.html" target="_blank" c="1" mid="card_1618"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(25).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149898_li" onmouseover="feed_menu(149898,1);" onmouseout="feed_menu(149898,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149898" class="o" id="a_feed_menu_149898" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display: none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-397660.html" target="_blank">5zhangliang</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 14:26">半小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98313-1-1.html" target="_blank">爬虫 有道翻译 第一步就出错，请帮忙 小白</a></b><br>import urllib.request
+import urllib.parse
+
+url= 'http://fanyi.youdao.com/translate_o?smartresult=dict&amp;smartresult=rule&amp;sessionFrom='
+data={}
+data ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149898" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank" c="1" mid="card_7393"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(26).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149897_li" onmouseover="feed_menu(149897,1);" onmouseout="feed_menu(149897,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149897" class="o" id="a_feed_menu_149897" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display: none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank">不二如是</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 13:54">1&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98312-1-1.html" target="_blank">★ 第三十五讲 字符串 | 【附（男女）四字真经】★</a></b><br></div>
+</div>
+</div>
+
+<div id="feedcomment_149897" style="display:none;"></div>
+</li><li class="cl " id="feed_149878_li" onmouseover="feed_menu(149878,1);" onmouseout="feed_menu(149878,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149878" class="o" id="a_feed_menu_149878" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank">不二如是</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 07:04">8&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98297-1-1.html" target="_blank">你知道“钟摆理论”吗？ | 【高冷反鸡汤】</a></b><br>推荐阅读：
+
+[hr]
+
+人生就是在痛苦和无聊这二者之间像钟摆一样摆来摆去：当你需要为生存而劳作时，你是痛苦的；当你的基本需求满足之后，你会感到无聊。
+叔 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149878" style="display:none;"></div>
+</li><li class="cl " id="feed_149876_li" onmouseover="feed_menu(149876,1);" onmouseout="feed_menu(149876,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149876" class="o" id="a_feed_menu_149876" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank">不二如是</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 06:20">8&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98295-1-1.html" target="_blank">编写一个方法 求一个字符串的字节长度</a></b><br>问：编写一个方法 求一个字符串的字节长度
+
+[hr]
+
+答：
+
+**** 本内容被作者隐藏 ****
+
+[hr]
+  
+○试题索引贴●
+如果喜欢，请订阅 ：
+ ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149876" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-400745.html" target="_blank" c="1" mid="card_920"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(27).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149896_li" onmouseover="feed_menu(149896,1);" onmouseout="feed_menu(149896,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149896" class="o" id="a_feed_menu_149896" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-400745.html" target="_blank">wyuri</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 13:44">1&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98311-1-1.html" target="_blank">C语言a+b的结果在哪里存储，存储类型是什么</a></b><br># include 
+int main (void)
+{
+	int a = 1, b = 2;
+	printf ("sum = %d\n", a + b);     //a + b 的结果放在了哪里，类型是 int 么 
+
+	return 0;
+}
+
+
+ ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149896" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477769.html" target="_blank" c="1" mid="card_7209"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(28).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149895_li" onmouseover="feed_menu(149895,1);" onmouseout="feed_menu(149895,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149895" class="o" id="a_feed_menu_149895" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477769.html" target="_blank">Baalish</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 13:08">2&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98310&amp;pid=3057534"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum.php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98310-1-1.html" target="_blank">求助</a></b><br>求一个VS2013的百度云</div>
+</div>
+</div>
+
+<div id="feedcomment_149895" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-440453.html" target="_blank" c="1" mid="card_5470"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(29).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149894_li" onmouseover="feed_menu(149894,1);" onmouseout="feed_menu(149894,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149894" class="o" id="a_feed_menu_149894" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-440453.html" target="_blank">如默</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 11:31">3&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98308&amp;pid=3057466"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(1).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98308-1-1.html" target="_blank">《零基础入门学习Python》第六章1-3小节笔记</a></b><br>6.1创建和调用函数想必大家都很清楚，就是用define的缩写def关键字来定义。#注意，函数名后面要加上小括号，我每次都会忘记。函数的参数，我认为可以理解为初高 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149894" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477167.html" target="_blank" c="1" mid="card_4399"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(30).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149893_li" onmouseover="feed_menu(149893,1);" onmouseout="feed_menu(149893,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149893" class="o" id="a_feed_menu_149893" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477167.html" target="_blank">39133188</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 11:25">3&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98307-1-1.html" target="_blank">元角分最新2017系统  oashishicaisaiche开心乐园</a></b><br>OA新版开心乐园ws程序
+
+Q:40336011  微:15179768255 
+最新SL防火墙+采用高级512双重加密技术数据备份我们的宗旨：客户使用放心我们才能安心，
+程序金字塔 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149893" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-470413.html" target="_blank" c="1" mid="card_6972"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(31).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149892_li" onmouseover="feed_menu(149892,1);" onmouseout="feed_menu(149892,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149892" class="o" id="a_feed_menu_149892" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=click" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/click.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-470413.html" target="_blank">月满霜华</a> 送了一个“鲜花”给 <a href="http://bbs.fishc.com/space-uid-446884.html" target="_blank">丶忘却的年少o</a> 的日志 <a href="http://bbs.fishc.com/home.php?mod=space&amp;uid=446884&amp;do=blog&amp;id=3792" target="_blank">【记录】用C写的第一个小游戏程序——飞机游戏</a> 
+<span class="xg1"><span title="2017-10-24 11:02">4&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+</div>
+</div>
+
+</li><li class="cl " id="feed_149890_li" onmouseover="feed_menu(149890,1);" onmouseout="feed_menu(149890,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149890" class="o" id="a_feed_menu_149890" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=doing" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/doing.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-470413.html" target="_blank">月满霜华</a>：人的身上有两个洞：不断不断的忧愁，和永远无法满足的愿望。它们无时无刻不在消磨我们的力量 
+<span class="xg1"><span title="2017-10-24 11:00">4&nbsp;小时前</span></span>
+
+(<a href="javascript:;" onclick="showWindow(this.id, &#39;home.php?mod=spacecp&amp;ac=feed&#39;, &#39;get&#39;, 0);doane(event);" id="jx59ZV3M_do_a_op_7599">回复</a>)
+
+<div class="ec">
+
+</div>
+</div>
+
+<div id="jx59ZV3M_7599" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477975.html" target="_blank" c="1" mid="card_9998"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(32).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149891_li" onmouseover="feed_menu(149891,1);" onmouseout="feed_menu(149891,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149891" class="o" id="a_feed_menu_149891" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=profile" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/profile.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477975.html" target="_blank">殷子</a> 更新了自己的基本资料 
+<span class="xg1"><span title="2017-10-24 11:00">4&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<p>其他参与者:<a href="http://bbs.fishc.com/space-uid-475004.html">gavin987</a>, <a href="http://bbs.fishc.com/space-uid-477972.html">rubysyf</a>, <a href="http://bbs.fishc.com/space-uid-476931.html">raimond</a>, <a href="http://bbs.fishc.com/space-uid-477093.html">余春来</a>, <a href="http://bbs.fishc.com/space-uid-459472.html">liangbaba007</a>, <a href="http://bbs.fishc.com/space-uid-477904.html">我不不相信</a>, <a href="http://bbs.fishc.com/space-uid-477887.html">Cyrilma</a>, <a href="http://bbs.fishc.com/space-uid-457660.html">onlybetter</a>, <a href="http://bbs.fishc.com/space-uid-477855.html">fengling1017</a>, <a href="http://bbs.fishc.com/space-uid-477844.html">病瓶子</a>, <a href="http://bbs.fishc.com/space-uid-477808.html">Zarathustra</a>, <a href="http://bbs.fishc.com/space-uid-476990.html">远方的家</a>, <a href="http://bbs.fishc.com/space-uid-477790.html">BSOD</a>, <a href="http://bbs.fishc.com/space-uid-477769.html">Baalish</a>, <a href="http://bbs.fishc.com/space-uid-477724.html">xinyo1993</a>, <a href="http://bbs.fishc.com/space-uid-477595.html">迷途鱼</a>, <a href="http://bbs.fishc.com/space-uid-477664.html">style0105</a>, <a href="http://bbs.fishc.com/space-uid-477653.html">韩云送</a>, <a href="http://bbs.fishc.com/space-uid-465961.html">yangben</a></p>
+</div>
+</div>
+
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-455187.html" target="_blank" c="1" mid="card_8463"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(33).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149887_li" onmouseover="feed_menu(149887,1);" onmouseout="feed_menu(149887,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149887" class="o" id="a_feed_menu_149887" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-455187.html" target="_blank">zzjtwg</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 10:29">4&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98305-1-1.html" target="_blank">同样语句放在不同地方怎么运行效果不同</a></b><br>ui文档
+    def setupUi(self, Dialog):
+        Dialog.setObjectName("Dialog")
+        Dialog.resize(400, 300)
+        Dialog.setSizeGripEnabled(Tru ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149887" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-240396.html" target="_blank" c="1" mid="card_2477"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(34).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149885_li" onmouseover="feed_menu(149885,1);" onmouseout="feed_menu(149885,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149885" class="o" id="a_feed_menu_149885" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-240396.html" target="_blank">孙屹飞</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 10:05">5&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98304-1-1.html" target="_blank">网页中嵌入的地图抓取</a></b><br>http://permit.mep.gov.cn/permitExt/syssb/wysb/hpsp/hpsp-company-sewage!getxxgkContent.action?dataid=7bbed20c539d47158cfcec06eaf0a1ba,这个网页上的地图 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149885" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-443779.html" target="_blank" c="1" mid="card_261"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(35).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149884_li" onmouseover="feed_menu(149884,1);" onmouseout="feed_menu(149884,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149884" class="o" id="a_feed_menu_149884" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-443779.html" target="_blank">只为</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 09:40">5&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98302&amp;pid=3057352"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(2).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98302-1-1.html" target="_blank">Django 导入app路径</a></b><br>如图，d11是django项目的主目录，现在新建一个books 的app，需要把books的app导入到d11的urls.py中进行路径配置，路径引入需要怎么写，d11跟books是同一级别 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149884" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-429403.html" target="_blank" c="1" mid="card_8171"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(36).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149882_li" onmouseover="feed_menu(149882,1);" onmouseout="feed_menu(149882,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149882" class="o" id="a_feed_menu_149882" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-429403.html" target="_blank">叶落天际</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 09:10">6&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98300&amp;pid=3057299"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(3).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98300-1-1.html" target="_blank">TclError: can't find package Tix怎么解决啊？</a></b><br>Tkinter的报错，网站没找到解决方法 在官网下了个Tix 但是是2008年的压缩包打开是2002年的，版本太低</div>
+</div>
+</div>
+
+<div id="feedcomment_149882" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-387418.html" target="_blank" c="1" mid="card_113"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(37).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149881_li" onmouseover="feed_menu(149881,1);" onmouseout="feed_menu(149881,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149881" class="o" id="a_feed_menu_149881" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-387418.html" target="_blank">阿撩</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 08:56">6&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98299-1-1.html" target="_blank">求问这是怎么回事？</a></b><br>程序运行后报错说：
+
+但是在
+
+这个程序里，writelines(boy)就可以， 但是boy不是也是一个列表吗？
+求问各位大佬这是怎么回事？</div>
+</div>
+</div>
+
+<div id="feedcomment_149881" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-436747.html" target="_blank" c="1" mid="card_1065"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(38).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149880_li" onmouseover="feed_menu(149880,1);" onmouseout="feed_menu(149880,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149880" class="o" id="a_feed_menu_149880" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=doing" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/doing.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-436747.html" target="_blank">21度深蓝梦境</a>：距2018还有68天。 
+<span class="xg1"><span title="2017-10-24 08:45">6&nbsp;小时前</span></span>
+
+(<a href="javascript:;" onclick="showWindow(this.id, &#39;home.php?mod=spacecp&amp;ac=feed&#39;, &#39;get&#39;, 0);doane(event);" id="oAag25gM_do_a_op_7598">回复</a>)
+
+<div class="ec">
+
+</div>
+</div>
+
+<div id="oAag25gM_7598" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-201005.html" target="_blank" c="1" mid="card_9158"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(39).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149879_li" onmouseover="feed_menu(149879,1);" onmouseout="feed_menu(149879,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149879" class="o" id="a_feed_menu_149879" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-201005.html" target="_blank">破渔网兜兜</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 08:37">6&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98298&amp;pid=3057279"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(4).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98298-1-1.html" target="_blank">2017-10-24】每天进步一点点</a></b><br>翻译原文：
+翻译答案：
+读完一本书翻译原文：
+翻译答案：
+  [/backcolor]  [/backcolor]   翻译篇（每次翻译的量都不会很大，全部翻译才有奖励哦）
+
+
+
+
+ ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149879" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-392655.html" target="_blank" c="1" mid="card_1648"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(40).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149877_li" onmouseover="feed_menu(149877,1);" onmouseout="feed_menu(149877,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149877" class="o" id="a_feed_menu_149877" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-392655.html" target="_blank">alltolove</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 06:22">8&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98296&amp;pid=3057238"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(5).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98296-1-1.html" target="_blank">android programing 7.2.2</a></b><br>activity_main.xml
+AndroidManifest.xml
+MainActivity.java
+display picture:</div>
+</div>
+</div>
+
+<div id="feedcomment_149877" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-475875.html" target="_blank" c="1" mid="card_579"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(41).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149875_li" onmouseover="feed_menu(149875,1);" onmouseout="feed_menu(149875,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149875" class="o" id="a_feed_menu_149875" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-475875.html" target="_blank">咖喱饭咖喱</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 02:07">13&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98294&amp;pid=3057217"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(6).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98294-1-1.html" target="_blank">我想给小甲鱼老师提一处错误</a></b><br>这一处是我看小甲鱼老师教学中关于逗号表达式和逗号运算符的讲解结合自己实践操作得出这里可能存在一点错误：
+此处       Y=表达式1，表达式2，表达式3......n  ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149875" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-361569.html" target="_blank" c="1" mid="card_8246"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(42).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149874_li" onmouseover="feed_menu(149874,1);" onmouseout="feed_menu(149874,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149874" class="o" id="a_feed_menu_149874" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-361569.html" target="_blank"> 懒-猫</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 01:20">13&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98293-1-1.html" target="_blank">吾爱C语言原创教程</a></b><br>链接: https://pan.baidu.com/s/1skGUNAt 密码: m08u</div>
+</div>
+</div>
+
+<div id="feedcomment_149874" style="display:none;"></div>
+</li><li class="cl " id="feed_149873_li" onmouseover="feed_menu(149873,1);" onmouseout="feed_menu(149873,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149873" class="o" id="a_feed_menu_149873" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-361569.html" target="_blank"> 懒-猫</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-24 01:17">14&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98292-1-1.html" target="_blank">工具</a></b><br>链接: https://pan.baidu.com/s/1eSGl1zs 密码: **** 本内容被作者隐藏 ****z</div>
+</div>
+</div>
+
+<div id="feedcomment_149873" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-468761.html" target="_blank" c="1" mid="card_7693"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(43).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149872_li" onmouseover="feed_menu(149872,1);" onmouseout="feed_menu(149872,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149872" class="o" id="a_feed_menu_149872" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=post" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/post.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-468761.html" target="_blank">but4sky</a> 回复了 <a href="http://bbs.fishc.com/space-uid-254170.html" target="_blank">水城</a> 的话题 <a href="http://bbs.fishc.com/forum.php?mod=redirect&amp;goto=findpost&amp;pid=3057186&amp;ptid=36747" target="_blank">手机上编写python</a> 
+<span class="xg1"><span title="2017-10-24 00:24">14&nbsp;小时前</span></span>
+
+
+<div class="ec">
+
+</div>
+</div>
+
+<div id="feedcomment_149872" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<h4 class="et">
+昨天</h4><dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477321.html" target="_blank" c="1" mid="card_7677"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(44).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149869_li" onmouseover="feed_menu(149869,1);" onmouseout="feed_menu(149869,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149869" class="o" id="a_feed_menu_149869" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477321.html" target="_blank">minipiao</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 23:33">昨天&nbsp;23:33</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98291-1-1.html" target="_blank">Python课本的练习题目问题</a></b><br>好书栏里推荐的《Python零基础入门学习》，有视频课后的题目吗？</div>
+</div>
+</div>
+
+<div id="feedcomment_149869" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-470423.html" target="_blank" c="1" mid="card_4864"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(45).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149867_li" onmouseover="feed_menu(149867,1);" onmouseout="feed_menu(149867,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149867" class="o" id="a_feed_menu_149867" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-470423.html" target="_blank">Kidand</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 22:43">昨天&nbsp;22:43</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98289&amp;pid=3057092"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(7).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98289-1-1.html" target="_blank">关于virtualbox增强工具，急急急</a></b><br>想学习C语言，按照教程到增强工具这一块，出现如图的状况该怎么办，弄了好久，该怎么办，很绝望，求大神帮助一下？</div>
+</div>
+</div>
+
+<div id="feedcomment_149867" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-451247.html" target="_blank" c="1" mid="card_9315"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(46).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149864_li" onmouseover="feed_menu(149864,1);" onmouseout="feed_menu(149864,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149864" class="o" id="a_feed_menu_149864" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-451247.html" target="_blank">1141429506</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 22:09">昨天&nbsp;22:09</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98288-1-1.html" target="_blank">python爬虫</a></b><br>哪位大佬可以逐行讲解一下下面的爬虫每一步都是在干嘛？只有一点python基础，没怎么学爬虫，，，学长让解决其中爬取数据会断页的问题，，脑袋要炸。。。得先看的 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149864" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-438555.html" target="_blank" c="1" mid="card_1224"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(47).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149863_li" onmouseover="feed_menu(149863,1);" onmouseout="feed_menu(149863,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149863" class="o" id="a_feed_menu_149863" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-438555.html" target="_blank">微笑向暖~</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 22:02">昨天&nbsp;22:02</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98286&amp;pid=3057012"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(8).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98286-1-1.html" target="_blank">兼容win10的vc++6.0怎么不能解压？</a></b><br>这个怎么不能解压？@丶忘却的年少o</div>
+</div>
+</div>
+
+<div id="feedcomment_149863" style="display:none;"></div>
+</li><li class="cl " id="feed_149856_li" onmouseover="feed_menu(149856,1);" onmouseout="feed_menu(149856,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149856" class="o" id="a_feed_menu_149856" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-438555.html" target="_blank">微笑向暖~</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:56">昨天&nbsp;19:56</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98278-1-1.html" target="_blank">求个兼容win10的vc++6.0</a></b><br>兼容win10的vc++6.0
+
+各位谁有兼容win10的vc++6.0,求个安装包，谢谢！！！</div>
+</div>
+</div>
+
+<div id="feedcomment_149856" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477769.html" target="_blank" c="1" mid="card_7209"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(28).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149862_li" onmouseover="feed_menu(149862,1);" onmouseout="feed_menu(149862,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149862" class="o" id="a_feed_menu_149862" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477769.html" target="_blank">Baalish</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 22:02">昨天&nbsp;22:02</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98285&amp;pid=3057011"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(9).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98285-1-1.html" target="_blank">帮帮我</a></b><br>为什么我下载VC++6.0一直是安装程序正在更新您的系统，然后未响应，安装失败</div>
+</div>
+</div>
+
+<div id="feedcomment_149862" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-444842.html" target="_blank" c="1" mid="card_3079"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(48).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149861_li" onmouseover="feed_menu(149861,1);" onmouseout="feed_menu(149861,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149861" class="o" id="a_feed_menu_149861" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-444842.html" target="_blank">shuiyu</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 21:38">昨天&nbsp;21:38</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98284&amp;pid=3056968"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(10).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98284-1-1.html" target="_blank">《解密系列-基础篇》第二讲</a></b><br>越努力，越幸运。欢迎大家来看我的笔记，不对的请各位大佬指正，谢谢 
+
+
+一些解密必备常识
+（1）多字节存储顺序，微处理器中的存放顺序 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149861" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-430199.html" target="_blank" c="1" mid="card_5343"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(49).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149860_li" onmouseover="feed_menu(149860,1);" onmouseout="feed_menu(149860,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149860" class="o" id="a_feed_menu_149860" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-430199.html" target="_blank">“隐士”</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 21:25">昨天&nbsp;21:25</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98282-1-1.html" target="_blank">线性表</a></b><br>大神求助哪里有问题      我感觉这个有点漂移数据结构了
+
+#include
+
+typedef struct
+{
+	int la[10];
+	int lb[5];
+}list;
+
+
+void getelem(int *lb,i ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149860" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-475926.html" target="_blank" c="1" mid="card_6822"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(50).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149858_li" onmouseover="feed_menu(149858,1);" onmouseout="feed_menu(149858,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149858" class="o" id="a_feed_menu_149858" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-475926.html" target="_blank">不死狗狗</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 20:33">昨天&nbsp;20:33</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98280&amp;pid=3056889"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(11).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98280-1-1.html" target="_blank">19讲问题提问</a></b><br>length \\=2     在这段代码里有没有意义？？</div>
+</div>
+</div>
+
+<div id="feedcomment_149858" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank" c="1" mid="card_1660"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(51).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149857_li" onmouseover="feed_menu(149857,1);" onmouseout="feed_menu(149857,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149857" class="o" id="a_feed_menu_149857" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 20:28">昨天&nbsp;20:28</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98279-1-1.html" target="_blank">python-19讲，课后题求解答</a></b><br>var = ' Hi '
+
+def fun1():
+    global var
+    var = ' Baby '
+    return fun2(var)
+
+def fun2(var):
+    var += 'I love you'
+    fun3(var)
+    r ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149857" style="display:none;"></div>
+</li><li class="cl " id="feed_149855_li" onmouseover="feed_menu(149855,1);" onmouseout="feed_menu(149855,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149855" class="o" id="a_feed_menu_149855" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:40">昨天&nbsp;19:40</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98276-1-1.html" target="_blank">《品三国》易中天/著</a></b><br>---当时的名人许劭评价曹操“治世之能臣，乱世之奸雄。” 这句话可以有两种解释，一种是处在治世就是能臣，处在乱世就是奸雄；第二种解释你治理天下就是能臣扰乱 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149855" style="display:none;"></div>
+</li><li class="cl " id="feed_149854_li" onmouseover="feed_menu(149854,1);" onmouseout="feed_menu(149854,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149854" class="o" id="a_feed_menu_149854" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:34">昨天&nbsp;19:34</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98275-1-1.html" target="_blank">《人类简史》尤瓦尔.赫拉力/著</a></b><br>---当男人究竟有什么好的？
+　　至少农业革命以来，大多数人类社会都属于重男轻女的父权社会。不论这些社会对男女的定义为何，当男人总是比较优越。性别就像是 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149854" style="display:none;"></div>
+</li></ul>
+
+<p class="xg1 cl"><span onclick="showmore(&#39;yesterday&#39;, &#39;381424&#39;, this);" class="unfold">展开</span></p>
+<div id="feed_more_div_yesterday_381424" style="display:none;">
+<ul class="el"><li class="cl " id="feed_149853_li" onmouseover="feed_menu(149853,1);" onmouseout="feed_menu(149853,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149853" class="o" id="a_feed_menu_149853" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:30">昨天&nbsp;19:30</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98274-1-1.html" target="_blank">《刀锋》毛姆/著</a></b><br>---“你就很难不问自己生活到底是为了什么，生活有没有任何意义，生活是否只不过是盲目的命运悲剧性的胡闹。”
+
+---  并不是说他比从前严肃了，他在安静的时候 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149853" style="display:none;"></div>
+</li><li class="cl " id="feed_149851_li" onmouseover="feed_menu(149851,1);" onmouseout="feed_menu(149851,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149851" class="o" id="a_feed_menu_149851" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:26">昨天&nbsp;19:26</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98273-1-1.html" target="_blank">《受戒》、《大淖记事》汪曾祺/著</a></b><br>---她挎着一篮子荸荠回去了，在柔软的田埂上留了一串脚印。明海看着她的脚印，傻了。五个小小的趾头，脚掌平平的，脚跟细细的，脚弓部分缺了一块。明海身上有一 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149851" style="display:none;"></div>
+</li><li class="cl " id="feed_149850_li" onmouseover="feed_menu(149850,1);" onmouseout="feed_menu(149850,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149850" class="o" id="a_feed_menu_149850" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-381424.html" target="_blank">千亩计者</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 19:22">昨天&nbsp;19:22</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98272-1-1.html" target="_blank">今年春节看的一本关于李斯的书，很感动</a></b><br>《流血的仕途》-曹昇
+摘录的几段:
+   --李斯丢了地位，失了朋友，却依然拥有足够的资本。他掌握着秦国的大量机密，整个秦国的情报系统还完好无损地保存在他的 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149850" style="display:none;"></div>
+</li></ul>
+</div>
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-476988.html" target="_blank" c="1" mid="card_7982"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(52).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149849_li" onmouseover="feed_menu(149849,1);" onmouseout="feed_menu(149849,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149849" class="o" id="a_feed_menu_149849" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-476988.html" target="_blank">洛洛123</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 18:30">昨天&nbsp;18:30</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98271-1-1.html" target="_blank">检测点3.1（2）不懂</a></b><br>为什么 JMP 0FF0：0100 后面是 MOV AX,2000H????????</div>
+</div>
+</div>
+
+<div id="feedcomment_149849" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-441676.html" target="_blank" c="1" mid="card_7532"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(53).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149847_li" onmouseover="feed_menu(149847,1);" onmouseout="feed_menu(149847,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149847" class="o" id="a_feed_menu_149847" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-441676.html" target="_blank">我相信有一天</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 18:21">昨天&nbsp;18:21</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98270&amp;pid=3056743"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(12).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98270-1-1.html" target="_blank">django： NoReverseMatch at /pizzas/  找不到哪里有问题了</a></b><br>刚学django，一般这类错误都可以在哪里入手呢，找不到思路，</div>
+</div>
+</div>
+
+<div id="feedcomment_149847" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-435886.html" target="_blank" c="1" mid="card_4616"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(54).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149845_li" onmouseover="feed_menu(149845,1);" onmouseout="feed_menu(149845,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149845" class="o" id="a_feed_menu_149845" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-435886.html" target="_blank">Ruide</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 17:54">昨天&nbsp;17:54</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98268&amp;pid=3056716"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(13).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98268-1-1.html" target="_blank">【C】-&gt;【math.h】</a></b><br></div>
+</div>
+</div>
+
+<div id="feedcomment_149845" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank" c="1" mid="card_7393"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(26).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149844_li" onmouseover="feed_menu(149844,1);" onmouseout="feed_menu(149844,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149844" class="o" id="a_feed_menu_149844" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank">不二如是</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 17:20">昨天&nbsp;17:20</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98267&amp;pid=3056670"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(14).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98267-1-1.html" target="_blank">JavaScript部落传说 | 【长篇经典漫画】</a></b><br>推荐阅读：
+
+JavaScript是未来编程语言界的王者?
+
+Web教程，天下一统 | 【分久必合】
+
+实用Tips - 5 “HTML”亲手为“Flash”放上最后一根稻草
+
+[hr]
+
+ ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149844" style="display:none;"></div>
+</li><li class="cl " id="feed_149831_li" onmouseover="feed_menu(149831,1);" onmouseout="feed_menu(149831,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149831" class="o" id="a_feed_menu_149831" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-378930.html" target="_blank">不二如是</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 13:51">昨天&nbsp;13:51</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98256-1-1.html" target="_blank">★ 第三十四讲 八皇后问题 ★</a></b><br>索引帖   
+
+用一节课的时间，提高生活幸福感[/backcolor]
+------小甲鱼
+
+欢乐与傻笑并存
+
+智慧与邪恶同 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149831" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-103904.html" target="_blank" c="1" mid="card_4756"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(55).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149842_li" onmouseover="feed_menu(149842,1);" onmouseout="feed_menu(149842,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149842" class="o" id="a_feed_menu_149842" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-103904.html" target="_blank">小蒙</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 17:04">昨天&nbsp;17:04</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98266-1-1.html" target="_blank">C primer plus 第8章编程练习第八题过于繁琐，求指教</a></b><br></div>
+</div>
+</div>
+
+<div id="feedcomment_149842" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-264135.html" target="_blank" c="1" mid="card_329"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(56).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149841_li" onmouseover="feed_menu(149841,1);" onmouseout="feed_menu(149841,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149841" class="o" id="a_feed_menu_149841" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-264135.html" target="_blank">yaoyaozhe</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:58">昨天&nbsp;16:58</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98265-1-1.html" target="_blank">爬虫接活</a></b><br>想在工作之外接点活，本人懂得多种爬虫的奇淫技巧，有需求的可以留言。</div>
+</div>
+</div>
+
+<div id="feedcomment_149841" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477325.html" target="_blank" c="1" mid="card_8139"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(57).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149840_li" onmouseover="feed_menu(149840,1);" onmouseout="feed_menu(149840,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149840" class="o" id="a_feed_menu_149840" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477325.html" target="_blank">lebroncm</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:53">昨天&nbsp;16:53</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98264-1-1.html" target="_blank">等号的麻烦</a></b><br>(一)
+list6=[5,6,4,2,1,3]
+ list7=list6
+ list7
+[5, 6, 4, 2, 1, 3]
+ list6.sort()
+ list6
+[1, 2, 3, 4, 5, 6]
+ list7
+[1, 2, 3, 4, 5, 6]
+（二）
+&gt;&gt; ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149840" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-475981.html" target="_blank" c="1" mid="card_2786"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(58).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149839_li" onmouseover="feed_menu(149839,1);" onmouseout="feed_menu(149839,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149839" class="o" id="a_feed_menu_149839" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-475981.html" target="_blank">梦想一事无成</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:49">昨天&nbsp;16:49</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98263-1-1.html" target="_blank">爬取煎蛋网妹子图保存图片的问题</a></b><br>运行后就报错：
+
+
+这是什么原因 ，求各位大神帮助</div>
+</div>
+</div>
+
+<div id="feedcomment_149839" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-407876.html" target="_blank" c="1" mid="card_4029"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(59).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149838_li" onmouseover="feed_menu(149838,1);" onmouseout="feed_menu(149838,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149838" class="o" id="a_feed_menu_149838" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-407876.html" target="_blank">阿Rui</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:25">昨天&nbsp;16:25</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98262&amp;pid=3056591"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(15).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98262-1-1.html" target="_blank">甲鱼店铺教程U盘到手-学习中</a></b><br>来到鱼C论坛看到的是一种洁净般的感觉，不予别的论坛利益目标化广告很多，接触网络计算机也快10年了，一直没有有个计划方式的学习，一个良好的计划与 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149838" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-474487.html" target="_blank" c="1" mid="card_1393"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(60).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149837_li" onmouseover="feed_menu(149837,1);" onmouseout="feed_menu(149837,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149837" class="o" id="a_feed_menu_149837" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-474487.html" target="_blank">苍白i</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:16">昨天&nbsp;16:16</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98261-1-1.html" target="_blank">萌新求各位大佬帮助啊——python 关于没有输入整型变量而不退出的问题</a></b><br>我写的这个 可是输入的不是整型变量的话 就会自动报错退出 如何在对方输入的不是整型变量的时候 提示请输入整型变量呢？</div>
+</div>
+</div>
+
+<div id="feedcomment_149837" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-474228.html" target="_blank" c="1" mid="card_513"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(61).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149836_li" onmouseover="feed_menu(149836,1);" onmouseout="feed_menu(149836,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149836" class="o" id="a_feed_menu_149836" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-474228.html" target="_blank">baichen</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 16:05">昨天&nbsp;16:05</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98260-1-1.html" target="_blank">关于Python爬虫有道翻译</a></b><br>这是from data：
+i:i love you
+from:AUTO
+to:AUTO
+smartresult:dict
+client:fanyideskweb
+salt:1508743334678
+sign:a7233486e0520d27e8a3893afa9db54b
+d ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149836" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-289806.html" target="_blank" c="1" mid="card_9936"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(62).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149835_li" onmouseover="feed_menu(149835,1);" onmouseout="feed_menu(149835,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149835" class="o" id="a_feed_menu_149835" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-289806.html" target="_blank">御笔剑客</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 15:18">昨天&nbsp;15:18</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98258-1-1.html" target="_blank">声明函数原型是必要的吗？</a></b><br>这段代码为什么去掉函数原型声明后会少输出一行呢？声明函数原型是必要的吗？</div>
+</div>
+</div>
+
+<div id="feedcomment_149835" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477657.html" target="_blank" c="1" mid="card_5305"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(63).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149832_li" onmouseover="feed_menu(149832,1);" onmouseout="feed_menu(149832,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149832" class="o" id="a_feed_menu_149832" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477657.html" target="_blank">Cronus</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 14:44">昨天&nbsp;14:44</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98257-1-1.html" target="_blank">C++文件读写/复制</a></b><br>从文件source.txt中读取内容，保存到destination.txt文件中，程序执行后，每次目标文件中只有最后一个字符，为什么？求大神解决
+ #include
+#include 
+using n ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149832" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-347561.html" target="_blank" c="1" mid="card_8015"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(64).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149830_li" onmouseover="feed_menu(149830,1);" onmouseout="feed_menu(149830,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149830" class="o" id="a_feed_menu_149830" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=reward" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/reward.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-347561.html" target="_blank">mskyer</a> 发起了新悬赏 
+<span class="xg1"><span title="2017-10-23 13:11">昨天&nbsp;13:11</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98255-1-1.html" target="_blank">关于用python抓取豆瓣图书信息的相关问题</a></b><br>悬赏 100鱼币</div>
+</div>
+</div>
+
+<div id="feedcomment_149830" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-346186.html" target="_blank" c="1" mid="card_4554"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(65).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149829_li" onmouseover="feed_menu(149829,1);" onmouseout="feed_menu(149829,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149829" class="o" id="a_feed_menu_149829" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-346186.html" target="_blank">stevenmtroy</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 13:09">昨天&nbsp;13:09</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98254-1-1.html" target="_blank">二维数组的输出</a></b><br>为什么下面这段代码初始化并输出后的结果是这样
+1  2   3   00   0   0  0
+0   0   0   0
+而不是对角矩阵
+1  0  0  0
+0  2  0   0
+0   0  3  0
+
+include ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149829" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-458789.html" target="_blank" c="1" mid="card_5379"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(66).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149827_li" onmouseover="feed_menu(149827,1);" onmouseout="feed_menu(149827,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149827" class="o" id="a_feed_menu_149827" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-458789.html" target="_blank">leozhang81</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 12:32">昨天&nbsp;12:32</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98253-1-1.html" target="_blank">求助：为什么一次不能循环完啊？</a></b><br>&gt;&gt;&gt; temp=[0, 1, 1, 1, 1, 1]
+&gt;&gt;&gt; for iw in temp:
+	r=[]
+	r+=str(temp.pop())
+	print(r)
+
+['1']
+['1']
+['1']
+&gt;&gt;&gt; for iw in temp:
+	r=[]
+	r+=str(te ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149827" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-476456.html" target="_blank" c="1" mid="card_5906"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(67).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149824_li" onmouseover="feed_menu(149824,1);" onmouseout="feed_menu(149824,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149824" class="o" id="a_feed_menu_149824" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-476456.html" target="_blank">groldd</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 11:50">昨天&nbsp;11:50</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98252-1-1.html" target="_blank">tkinter</a></b><br>from tkinter import *
+import hashlib
+
+root = Tk()
+
+text = Text(root, width=30, height=5)
+text.pack()
+
+text.insert(INSERT, "I love Fishc.com!") ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149824" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-477519.html" target="_blank" c="1" mid="card_53"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(68).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149823_li" onmouseover="feed_menu(149823,1);" onmouseout="feed_menu(149823,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149823" class="o" id="a_feed_menu_149823" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-477519.html" target="_blank">lkafw</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 11:05">昨天&nbsp;11:05</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98249-1-1.html" target="_blank">while 循环的问题</a></b><br>我感觉我进入了一个误区，希望高手版主，来帮帮我解决这个问题，
+当我键入一个数字，while判断真，
+问题一：执行循环语句，&gt;&gt; guess = int(temp) 这里为什么要 ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149823" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-103676.html" target="_blank" c="1" mid="card_8862"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(69).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149822_li" onmouseover="feed_menu(149822,1);" onmouseout="feed_menu(149822,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149822" class="o" id="a_feed_menu_149822" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-103676.html" target="_blank">迷途</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 11:04">昨天&nbsp;11:04</span></span>
+
+
+<div class="ec">
+
+<a href="http://bbs.fishc.com/forum.php?mod=viewthread&amp;do=tradeinfo&amp;tid=98248&amp;pid=3056260"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/forum(16).php" alt="" class="tn"></a>
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98248-1-1.html" target="_blank">心心念念的神兽</a></b><br>心系这只萌萌的神兽很久了，甲鱼老是以没货为由不让兑换。 我估计是蛋没孵出来，躲角落去孵蛋去了。
+    昨天刚来的时候，眼神都是一脸委曲，忘了拍照了， ...</div>
+</div>
+</div>
+
+<div id="feedcomment_149822" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+<dl class="bbda cl">
+<dd class="m avt">
+<a href="http://bbs.fishc.com/space-uid-471144.html" target="_blank" c="1" mid="card_1656"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/avatar(70).php"></a>
+</dd>
+<dd class="cl">
+<ul class="el"><li class="cl " id="feed_149821_li" onmouseover="feed_menu(149821,1);" onmouseout="feed_menu(149821,0);">
+<a href="http://bbs.fishc.com/home.php?mod=spacecp&amp;ac=feed&amp;op=menu&amp;feedid=149821" class="o" id="a_feed_menu_149821" onclick="showWindow(this.id, this.href, &#39;get&#39;, 0);doane(event);" title="屏蔽动态" style="display:none;">菜单</a>
+<div class="cl">
+<a class="t" href="http://bbs.fishc.com/home.php?mod=space&amp;uid=478029&amp;do=home&amp;view=all&amp;appid=0&amp;icon=thread" title="只看此类动态"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/thread.gif"></a>
+<a href="http://bbs.fishc.com/space-uid-471144.html" target="_blank">Lesly_</a> 发表了新话题 
+<span class="xg1"><span title="2017-10-23 10:52">昨天&nbsp;10:52</span></span>
+
+
+<div class="ec">
+
+<div class="d">
+<b><a href="http://bbs.fishc.com/thread-98247-1-1.html" target="_blank">更改py文件属性</a></b><br>更改文件的属性，打开方式那没有Python Launcher for Windows(Console)怎么办</div>
+</div>
+</div>
+
+<div id="feedcomment_149821" style="display:none;"></div>
+</li></ul>
+
+</dd>
+</dl>
+</div>
+
+</div>
+<!--/id=feed_div-->
+
+<div class="pgs cl mtm"><div class="pg"><a href="http://bbs.fishc.com/home.php?mod=space&amp;do=home&amp;view=all&amp;order=dateline&amp;page=2" class="nxt">下一页</a></div></div>
+
+<div id="ajax_wait"></div>
+</div>
+
+<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+</div>
+<!--/content-->
+</div>
+
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+<script type="text/javascript">
+function filter_more(id) {
+if($('feed_filter_div_'+id).style.display == '') {
+$('feed_filter_div_'+id).style.display = 'none';
+$('feed_filter_notice_'+id).style.display = '';
+} else {
+$('feed_filter_div_'+id).style.display = '';
+$('feed_filter_notice_'+id).style.display = 'none';
+}
+}
+
+function close_feedbox() {
+var x = new Ajax();
+x.get('home.php?mod=spacecp&ac=common&op=closefeedbox', function(s){
+$('feed_box').style.display = 'none';
+});
+}
+
+function showmore(day, uid, e) {
+var obj = 'feed_more_div_'+day+'_'+uid;
+$(obj).style.display = $(obj).style.display == ''?'none':'';
+if(e.className == 'unfold'){
+e.innerHTML = '收起';
+e.className = 'fold';
+} else if(e.className == 'fold') {
+e.innerHTML = '展开';
+e.className = 'unfold';
+}
+}
+
+var elems = selector('li[class~=magicthunder]', $('feed_div'));
+for(var i=0; i<elems.length; i++){
+magicColor(elems[i]);
+}
+
+function showEditAvt(id) {
+$(id).style.display = $(id).style.display == '' ? 'block' : '';
+}
+if($('edit_avt') && BROWSER.ie && BROWSER.ie == 6) {
+_attachEvent($('edit_avt'), 'mouseover', function () { showEditAvt('edit_avt_tar'); });
+_attachEvent($('edit_avt'), 'mouseout', function () { showEditAvt('edit_avt_tar'); });
+}
+</script></div>
+
+
+<div class="aff">    </div>
+
+
+<div class="footer_top footer_top_r"></div>
+
+
+
+
+
+<script type="text/javascript">var cookieLogin = Ajax("TEXT");cookieLogin.get("connect.php?mod=check&op=cookie", function() {});</script>
+
+
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type = "text/javascript" src ="source/plugin/zhanmishu_sms/template/static/jQuery.min.js"><\/script>');
+</script><script type="text/javascript" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/jQuery.min.js.下载"></script>
+
+<script type="text/javascript">
+jQuery.noConflict();
+
+</script>
+
+
+<script type="text/javascript">
+function zmssms(code,mobile,verify,count,codeid,sendid,mobileid,verifyid,nationcode){
+    this.codeid = codeid ? codeid : '';;
+    this.sendid = sendid ? sendid : '';;
+    this.mobileid = mobileid ? mobileid : '';;
+    this.verifyid = verifyid ? verifyid : '';;
+
+    this.code = code ? code : jQuery("#"+this.codeid).val();
+    this.mobile = mobile ? mobile :  jQuery("#"+this.mobileid).val();
+    this.verify = verify ? verify :  jQuery("#"+this.verifyid).val();
+
+    this.count = count ? count : 60;
+    this.curCount = this.count ? count : 60;
+    this.nationcode = nationcode ? nationcode : 86;
+
+}
+zmssms.prototype.sendMessage=function(requesturl,formid,formdata){
+    var obj = this;
+    var SetRemainTime=function(){
+        var curCount;
+        if (obj.curCount == 0) {
+            window.clearInterval(InterValObj);
+            jQuery("#"+obj.sendid).removeAttr("disabled");
+            if (jQuery("#"+obj.sendid).html()) {
+                 jQuery("#"+obj.sendid).html("重新发送"); 
+            }else{
+                 jQuery("#"+obj.sendid).val("重新发送"); 
+            }
+            obj.code = "";
+        }else {
+            obj.curCount--; 
+            curCount = obj.curCount;
+            jQuery("#"+obj.sendid).removeAttr("disabled");
+            if (jQuery("#"+obj.sendid).html()) {
+                 jQuery("#"+obj.sendid).html("请在" + curCount + "秒内输入验证码"); 
+            }else{
+                 jQuery("#"+obj.sendid).val("请在" + curCount + "秒内输入验证码"); 
+            }
+        }              
+    }
+
+
+    if(obj.mobile){  
+        code = "";
+        for (var i = 0; i < 6; i++) {  
+            code += parseInt(Math.random() * 10).toString();
+        }
+        jQuery("#"+obj.codeid).val(code);
+        jQuery("#"+obj.sendid).attr("disabled", "true");  
+
+        var InterValObj = window.setInterval(SetRemainTime, 1000);
+        var nation = '';
+        if (obj.nationcode) {
+            nation = '&nationcode=' + obj.nationcode;
+        }
+        jQuery("#"+obj.mobileid).val(obj.mobile)
+        jQuery.ajax({  
+            type: "POST", 
+            dataType: "json", 
+            url: requesturl,   
+            data: jQuery("#" + formid).serialize()+nation,
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                jQuery("#"+obj.sendid).removeAttr("disabled");
+                                if (jQuery("#"+obj.sendid).html()) {
+                     jQuery("#"+obj.sendid).html("重新发送"); 
+                }else{
+                     jQuery("#"+obj.sendid).val("重新发送"); 
+                }
+            },  
+            success: function (msg){
+                
+                if (msg.code <= 0) {
+                    showDialog(msg.msg);
+                    window.clearInterval(InterValObj);
+                    jQuery("#"+obj.sendid).removeAttr("disabled");
+                    if (jQuery("#"+obj.sendid).html()) {
+                         jQuery("#"+obj.sendid).html("重新发送"); 
+                    }else{
+                         jQuery("#"+obj.sendid).val("重新发送"); 
+                    }
+                }else{
+                }
+            }  
+        });
+    }else{
+    }  
+}
+zmssms.prototype.checkVerify=function(requesturl,formid,mobile,data){
+    var obj = this;
+    if (!obj.code) {
+        return false;
+    }
+    jQuery.ajax({  
+        type: "POST",
+        dataType: "json", 
+        url: requesturl, 
+        data: jQuery("#"+formid).serialize(),
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            //window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+            if (msg.code <= 0) {
+                showDialog(msg.msg);
+            }
+
+            if (msg.code == 1) {
+
+            }
+
+        }  
+    }); 
+    return false;
+}
+zmssms.prototype.checkmobile=function () {
+    var obj = this;
+    var myreg = /^(13[0-9]|15[0-9]|17[0678]|18[0-9]|14[57]|09)[0-9]{8}$/;
+    if(myreg.test(jQuery("#"+obj.mobileid).val())) 
+    { 
+        jQuery("#zhanmishu_sms_tip").attr('style','display:none');
+        jQuery("#zhanmishu_sms_err").attr('style','display:none');
+        return true; 
+    }else{
+        jQuery("#zhanmishu_sms_err").html("请输入11位手机号码");
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+        return false;
+    }
+}
+
+
+
+function mobileblur(){
+    s = new zmssms('','','',60,'code','send','mobileverify_mobile','verifycode');
+    jQuery("#zhanmishu_sms_tip").attr('style','display:none');
+    if(!s.checkmobile()) 
+    { 
+        jQuery("#zhanmishu_sms_err").attr('style','display:block');
+        return false; 
+    } 
+}
+function mobilefocus(){
+    jQuery("#zhanmishu_sms_tip").attr('style','display:block;');
+    jQuery("#zhanmishu_sms_err").attr('style','display:none');
+}
+
+function new_mobileblur(){
+    jQuery("#new_zhanmishu_sms_tip").attr('style','display:none');
+    // if(!new_checkmobile()) 
+    // { 
+    //     jQuery("#new_zhanmishu_sms_err").attr('style','display:block');
+    //     return false; 
+    // } 
+}
+function new_mobilefocus(){
+    jQuery("#new_zhanmishu_sms_tip").attr('style','display:block;');
+    jQuery("#new_zhanmishu_sms_err").attr('style','display:none');
+}
+
+
+function verify_sendMessage() {
+
+    var ntlNumber = jQuery("#mobileverify_mobile").val();
+
+
+    s = new zmssms('',ntlNumber,'',60,'code','send','mobileverify_mobile','verifycode','');
+    s.sendMessage('plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=send','mobileverify_form');
+}
+
+function new_sendMessage() {
+    new_s = new zmssms('','','',60,'new_code','new_send','new_mobileverify_mobile','new_verifycode');
+    new_s.sendMessage('plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_send','mobileverify_form');
+}  
+
+function verifysms(){
+var verify = jQuery("#verifycode").val();
+var code = jQuery("#code").val();
+jQuery.ajax({
+        type: "POST", 
+        dataType: "json", 
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=verify',
+        data: "verify=" + verify + "&code="+code+"&formhash=4bbf065d",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+        	//window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+
+        	if (msg.code < 0) {
+                if (msg.code=='-5') {
+                    showDialog(msg.msg);
+                };
+                jQuery("#sms_verify_tip_wrong").css('display', 'block');
+                jQuery("#sms_verify_tip").removeClass("p_right");
+                if (jQuery("#new_mobileverify_mobile").length > 0 && jQuery("#new_send").length > 0 && jQuery("#new_zhanmishu_sms_tip").length>0) {
+                    jQuery("#new_mobileverify_mobile").attr("disabled","disabled");
+                    jQuery("#new_send").attr("disabled","disabled");
+                    jQuery("#new_send").attr("style","background: #cdcdcd;padding:0 5px;height: 20px;border: 0");
+                    jQuery("#new_zhanmishu_sms_tip").attr("disabled","disabled");
+                    jQuery("#new_verifycode").attr("disabled","disabled");
+                }
+                return false;
+        	}
+
+        	if (msg.code == 1) {
+        		jQuery("#sms_verify_tip").addClass("p_right");
+        		jQuery("#sms_verify_tip_wrong").css('display', 'none');
+                if (jQuery("#new_mobileverify_mobile").length > 0 && jQuery("#new_send").length > 0 && jQuery("#new_zhanmishu_sms_tip").length>0) {
+                    jQuery("#new_mobileverify_mobile").removeAttr("disabled");
+                    jQuery("#new_send").removeAttr("disabled");
+                    jQuery("#new_send").attr("style","padding:0 5px;");
+                    jQuery("#new_zhanmishu_sms_tip").removeAttr("disabled");
+                    jQuery("#new_verifycode").removeAttr("disabled");
+                }
+                return true;
+        	}
+
+        }  
+    }); 
+return false;
+}
+
+function new_verifysms(){
+    var verify = jQuery("#new_verifycode").val();
+    var oldverify = jQuery("#verifycode").val();
+    var code = jQuery("#new_code").val();
+    var oldcode = encodeURIComponent(jQuery("#code").val());
+    var oldmobile = jQuery("#mobileverify_mobile").val();
+    var mobile = encodeURIComponent(jQuery("#new_mobileverify_mobile").val());
+    jQuery.ajax({  
+        type: "POST",
+        dataType: "json",
+        url: 'plugin.php?id=zhanmishu_sms:verify&no_submit=no_submit&method=new_verify',
+        data: "verify=" + verify + "&oldmobile="+oldmobile+"&mobile="+mobile+"&oldverify="+oldverify+"&oldcode="+oldcode+"&code="+code+"&formhash=4bbf065d",  
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            //window.clearInterval(InterValObj);
+        },  
+        success: function (msg){
+            if (msg.code < 0) {
+                if (msg.code=='-5') {
+                    showDialog(msg.msg);
+                };
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'block');
+                jQuery("#new_sms_verify_tip").removeClass("p_right");
+                return false;
+            }
+            if (msg.code == 1) {
+                jQuery("#new_sms_verify_tip").addClass("p_right");
+                jQuery("#new_sms_verify_tip_wrong").css('display', 'none');
+                return true;
+            }
+
+        }  
+    }); 
+    return false;
+}
+
+jQuery(function(){
+    getpasswd = jQuery("[onclick='showWindow(\'login\', \'member.php?mod=logging&action=login&viewlostpw=1\')']");
+    getpasswd.attr("onclick","showWindow('login', 'plugin.php?id=zhanmishu_sms:getpassword')");
+})
+</script>
+<span style="display: none;"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/plugin.php"></span>
+
+<div id="ft" class="wp cl">
+<div id="flk">
+<p>
+            	<a href="http://bbs.fishc.com/forum.php?mod=misc&amp;action=showdarkroom">小黑屋</a><span class="pipe">&#8226;</span><a href="http://bbs.fishc.com/forum.php?mobile=yes">手机版</a><span class="pipe">&#8226;</span><a href="http://bbs.fishc.com/archiver/">Archiver</a><span class="pipe">&#8226;</span>( <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44051102000370" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/110.png" style="float:left;">粤公网安备 44051102000370号</a> | <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备11014136号</a> )&nbsp;<a href="http://discuz.qq.com/service/security" target="_blank" title="防水墙保卫网站远离侵害"><img src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/security.png"></a><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F8867f2e9bc13a08cafa6cffdfff2e6bd' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=8867f2e9bc13a08cafa6cffdfff2e6bd" target="_blank"><img border="0" src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/21.gif" width="20" height="20"></a>
+</p>
+<p class="xs0">
+            	&#169; 2010-2017 <a href="http://www.fishc.com/" target="_blank">FishC.com</a>
+GMT+8, 2017-10-24 15:20                Powered by <strong><a href="http://www.discuz.net/" target="_blank">Discuz!</a></strong><em> X2.5</em>                
+                <!--If you delete this theme infomation,You will lose your VIP and service.-->
+                <!--请保留设计者Dreambred署名，删除会你失去水母模板的升级服务.-->
+                <span style="margin-left:5px;">Theme by <a href="http://www.dreambred.com/" target="_blank" title="discuzx 2.5 ">dreambred</a></span>
+                <!--请保留设计者Dreambred署名，删除会你失去水母模板的升级服务.-->
+                <!--If you delete this theme infomation,You will lose your VIP and service.-->
+
+                
+  </p>
+            <div id="debuginfo">
+                        </div>
+</div>
+        
+        </div>
+
+
+    <div id="scrolltop">
+<span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo(&#39;0&#39;,&#39;0&#39;)" class="scrolltopa"><b>返回顶部</b></a></span>
+</div>
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '3264840|X3.1|0.6||0||0|7|1508829601|fea676c7161c22d588775cfdb07882d2|2';
+			</script>
+			<script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/discuz_tips.js.下载" type="text/javascript" charset="UTF-8"></script>    <script src="./鱼C工作室-免费编程视频教学,编程技术交流,C语言教学,汇编教学,win32教学,Delphi教学,加密与解密,Python教学,Windows程序设计,SDK编程教学 - Powered by Discuz!_files/j_gun.js.下载" type="text/javascript"></script>
+
+
+</body></html>

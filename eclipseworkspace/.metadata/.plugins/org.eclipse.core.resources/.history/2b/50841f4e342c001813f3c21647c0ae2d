@@ -1,0 +1,15 @@
+ class Test1 {
+	protected String name;
+	public Test1(String name){
+		this.name=name;
+		
+	}
+}
+public class Test extends Test1 {
+	protected String name;
+	public Test(String name){
+		
+		this.name=name;
+		
+	}
+}

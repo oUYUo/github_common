@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <!-- ioc入门 -->
+         <!-- 使用类的无参数构造创建 -->
+    <bean id="user" class="cn.itcast.ioc.User" scope="prototype"></bean> 
+       
+        <!-- 使用静态工厂创建工厂 -->
+        <bean id ="bean2" class="cn.itcast.bean.Bean2Factory" factory-method="getBean2"></bean>
+        
+        <!-- 实例工厂创建对象 -->
+        <!-- 创建工厂对象 -->
+        <bean id="bean3Factory" class="cn.itcast.bean.Bean3Factory"></bean>
+        <!--  <bean id="bean3" factory-bean="bean3Factory" factory-method="getBean3"></bean>-->
+        <!-- 使用有参数的构造注入 -->
+        <bean id="demo1" class="cn.itcast.property.PropertyDemo1">
+        	<!-- 使用有参数构造 -->
+        	<constructor-arg name="username" value="小王小马"></constructor-arg>
+        </bean>
+        
+        <!-- 使用set方法注入属性 -->
+        <bean id="book" class="cn.itcast.property.Book" >
+        	<!-- 注入属性值 
+        		name属性值：类里面定义的属性名称
+        	-->
+        	<property name="bookname" value="易筋经"></property>
+        </bean>
+        
+        <!-- 注入对象类型属性 -->
+        <!-- 配置service和dao的对象 -->
+        <bean id="userDao" class="cn.itcast.ioc.UserDao"></bean>
+        <bean id="userService" class="cn.itcast.ioc.UserService">
+        	<!-- 注入dao对象 
+        		name属性值：service类里面属性名称
+        		
+        		现在不要写value属性，刚才是字符串，现在是对象
+        		写ref属性：dao配置bean标签中id值
+        	-->
+        	<property name="userDao" ref="userDao"></property>
+        </bean>
+        <!-- p名称空间注入 -->
+        <bean id="person"	 class="cn.itcast.property.Person" p:pname="lucy"></bean>
+        
+        
+        <!-- 注入复杂类型属性值 -->
+        <bean id="person" class="cn.itcast.property.Person">
+        	<!-- 数组 -->
+        	<property name="arrs">
+        		<list>
+        			<value>小王</value>
+        			<value>小马</value>
+        			<value>小宋</value>
+        		</list>
+        	</property>
+        	<!-- list -->
+        	<property name="list">
+        		<list>
+        			<value>小王</value>
+        			<value>小马</value>
+        			<value>小宋</value>
+        		</list>
+        	</property>
+        	<!-- map -->
+        	<property name="map">
+        		<map>
+        			<entry key="aa" value="lucy"></entry>	
+        		</map>
+        	</property>
+        	<!-- properties -->
+        	<property name="properties">
+        		<props>
+        			<prop key="driverclass">com.mysql.jdbc.Driver</prop>
+        		</props>
+        	</property>
+        </bean>
+        
+</beans>
+
