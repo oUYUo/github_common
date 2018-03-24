@@ -1,0 +1,5 @@
+运行方法：
+（1）在地址栏输入：http://localhost:8080/Hello1/HelloWorldServlet
+    默认执行Servlet的doGet方法
+(2) 在地址栏输入：http://localhost:8080/Hello1/index.html
+   在文本框输入值之后，提交数据，根据表单的Method的值，选择执行doGet或doPost方法

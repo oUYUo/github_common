@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="exp2_2_4/src"/>
+	<classpathentry kind="src" path="exp2_2/src"/>
+	<classpathentry kind="src" path="exp2_3/src"/>
+	<classpathentry kind="src" path="exp2_4/src"/>
+	<classpathentry kind="src" path="exp2_5/src"/>
+	<classpathentry kind="src" path="ForwardTest/src"/>
+	<classpathentry kind="src" path="GB/src"/>
+	<classpathentry kind="src" path="Hello1/src"/>
+	<classpathentry kind="src" path="Hello2/src"/>
+	<classpathentry kind="src" path="Hello3/src"/>
+	<classpathentry kind="src" path="Hello4/src"/>
+	<classpathentry kind="src" path="Hello5/src"/>
+	<classpathentry kind="src" path="ResponseTest/src"/>
+	<classpathentry kind="src" path="ServletContextTest/src"/>
+	<classpathentry kind="src" path="SessionTest/src"/>
+	<classpathentry kind="src" path="ShowTime/src"/>
+	<classpathentry kind="src" path="VerifyCode/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="ForwardTest/build/classes"/>
+</classpath>

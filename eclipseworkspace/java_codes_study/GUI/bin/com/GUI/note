@@ -1,0 +1,21 @@
+组建
+图形用户界面（graphical user interface,GUI）
+awt：abstract window toolkit（抽象窗口工具集）  用操作系统提供的界面
+swing：功能更强，界面更丰富     各平台统一，他是轻量级的
+
+java.awt   frame button label textfield textfrad panel
+javax.swing jframe 都有加j
+
+组件（component）
+容器（container）类和非容器两大类
+容器又分为顶层容器和非顶层容器
+
+三个基本步骤
+
+创建组件（component）
+创建组成界面的各种元素，如按钮，文本框等
+指定布局（Layout）
+根据具体需要排列他们的位置关系
+响应时间（Event）
+定义图形用户界面的时间和个界面元素读不同时间的响应，从而实现图形用户界面与用户的交互功能
+

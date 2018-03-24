@@ -1,0 +1,482 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"c",
+				"cookies"
+			],
+			[
+				"get",
+				"get_title"
+			],
+			[
+				"sta",
+				"status_code"
+			],
+			[
+				"list_",
+				"list_zhuanzhi"
+			],
+			[
+				"all",
+				"all_people"
+			],
+			[
+				"list",
+				"list_zhuanzhi"
+			],
+			[
+				"li",
+				"list_new"
+			],
+			[
+				"l",
+				"list_all"
+			],
+			[
+				"lis",
+				"list_all"
+			],
+			[
+				"le",
+				"Len"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"bad",
+				"background-color"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"htt",
+				"http_proxy"
+			],
+			[
+				"fo",
+				"format"
+			],
+			[
+				"sub",
+				"subplot"
+			],
+			[
+				"arr",
+				"arrowprops"
+			],
+			[
+				"tans",
+				"transAxes"
+			],
+			[
+				"tran",
+				"transforms"
+			],
+			[
+				"x",
+				"x2"
+			],
+			[
+				"f",
+				"f1"
+			],
+			[
+				"fun",
+				"func1"
+			],
+			[
+				"lin",
+				"line2"
+			],
+			[
+				"tra",
+				"transFigure"
+			],
+			[
+				"thr",
+				"threads"
+			],
+			[
+				"Th",
+				"Thread"
+			],
+			[
+				"thre",
+				"Thread"
+			],
+			[
+				"add",
+				"added_thread"
+			],
+			[
+				"th",
+				"thread_job"
+			],
+			[
+				"ca",
+				"caculator"
+			],
+			[
+				"va1",
+				"var1"
+			],
+			[
+				"pri",
+				"print_selection"
+			],
+			[
+				"ins",
+				"insert"
+			],
+			[
+				"inset",
+				"insert_end"
+			],
+			[
+				"sim",
+				"simple_plot"
+			],
+			[
+				"ge",
+				"get_third_url"
+			],
+			[
+				"se",
+				"second_url_html"
+			],
+			[
+				"img",
+				"imgurl"
+			],
+			[
+				"app",
+				"apparent_encoding"
+			],
+			[
+				"a",
+				"apparent_encoding"
+			],
+			[
+				"pa",
+				"part_url"
+			],
+			[
+				"b",
+				"BeautifulSoup"
+			],
+			[
+				"re",
+				"requests"
+			],
+			[
+				"pr",
+				"printUnivList"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"url",
+				"url_list"
+			],
+			[
+				"h",
+				"header"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "run",
+		"selected_items":
+		[
+			[
+				"run",
+				"Build With: java - Run Java"
+			],
+			[
+				"Package Resource Viewer",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 549.0
+	},
+	"console":
+	{
+		"height": 190.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/repository/[A[B.pub",
+		"/C/Users/lenovo/Desktop/test.py",
+		"/C/Users/lenovo/Desktop/square.py",
+		"/E/妹子图/1.py",
+		"/F/_rosi/2.py",
+		"/C/Users/lenovo/Desktop/douban/idd.py",
+		"/C/Users/lenovo/Desktop/douban/ip_proxies/analysize_proxy.py",
+		"/C/Users/lenovo/Desktop/proxy_pool-master/ProxyGetter/getFreeProxy.py",
+		"/C/Users/lenovo/Desktop/proxy_pool-master/ProxyGetter/analysize_proxy.py",
+		"/C/Users/lenovo/Desktop/get_proxy_list.py",
+		"/C/Users/lenovo/Desktop/1.py",
+		"/C/Users/lenovo/Desktop/1/1-Java预备知识.mmap",
+		"/C/Users/lenovo/Desktop/proxy_pool/proxy_pool-master/ProxyGetter/getFreeProxy.py",
+		"/C/python3/Lib/my_proxy/ProxyGetter/getFreeProxy.py",
+		"/C/python3/Lib/my_proxy/getFreeProxy.py",
+		"/C/Users/lenovo/Desktop/proxies_scrapy_github.py",
+		"/C/Users/lenovo/Desktop/新建文件夹/sefolio-透明风格的单页网站模板/sefolio/index.html",
+		"/C/Users/lenovo/Desktop/新建文件夹/templated-linear/index.html",
+		"/C/Users/lenovo/Desktop/新建文件夹/css/skel-noscript.css",
+		"/C/Users/lenovo/Downloads/基于Java和VRML虚拟场景通信方式的研究_王汝传.caj",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/java.sublime-build",
+		"/D/java_codes/Tetris-Swing-master/README.md",
+		"/C/Users/lenovo/Desktop/eclipse_use_way.py",
+		"/F/虚拟机/MAC/unlocker207/win-install.cmd",
+		"/C/Users/lenovo/Downloads/imooc.sql",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/Java/Java.sublime-syntax",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/python27.sublime-build",
+		"/D/python_codes/1.py",
+		"/F/5252b爬虫实现/5252b.py",
+		"/D/c语言/java.class",
+		"/D/c语言/水仙花数.exe",
+		"/C/Users/lenovo/Desktop/zhuob.html",
+		"/C/Users/lenovo/Desktop/math_answer.py",
+		"/C/Users/lenovo/Desktop/文件夹/rosi_improve2.py",
+		"/C/Users/lenovo/Desktop/PanData/PanDownload数据目录",
+		"/C/Users/lenovo/Desktop/黑白棋/WhiteBlackChess/src/ChessPieces.java",
+		"/C/Users/lenovo/Desktop/图书管理/library/src/Library.java",
+		"/C/Users/lenovo/Desktop/黑白棋/WhiteBlackChess/src/ChessBoard.java",
+		"/C/Users/lenovo/Desktop/黑白棋/WhiteBlackChess/src/GameFrame.java",
+		"/C/Users/lenovo/Desktop/图书管理/library/src/CardManagement.java",
+		"/C/Users/lenovo/Desktop/HelloWorld.java",
+		"/C/Users/lenovo/Desktop/public.java",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/Java/JavaC.sublime-build",
+		"/C/Program Files/Java/jdk1.8.0_121/bin/runJava.bat",
+		"/C/Users/lenovo/Desktop/gcd.py",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/python34.sublime-build",
+		"/C/Python27/Lib/site-packages/sitecustomize.py",
+		"/C/Users/lenovo/Desktop/3.py",
+		"/C/Users/lenovo/Desktop/rosi_improve2.py",
+		"/D/java_codes/helloworld/src/Person/_main.java",
+		"/D/java_codes/java核心技术/src/com/Java核心技术/类和对象.java",
+		"/C/Users/lenovo/Desktop/2.java",
+		"/D/python_codes/python/杂/rosi_improve.py",
+		"/D/python_codes/numpy/csv.py",
+		"/D/python_codes/matplotlib/__init__.py",
+		"/D/python_codes/matplotlib/2.py",
+		"/D/python_codes/matplotlib/matplotlib.py",
+		"/D/python_codes/python/小说抓取/spider.py",
+		"/D/python_codes/matplotlib/1.py",
+		"/D/python_codes/spider/requests.py",
+		"/D/python_codes/matplotlib/useless.py",
+		"/D/python_codes/matplotlib/matplotlib_useful.py",
+		"/D/python_codes/spider/1.py",
+		"/C/Python34/Lib/site-packages/matplotlib/font_manager.py",
+		"/C/Users/lenovo/Desktop/python/tkinter/练手1.py",
+		"/C/Users/lenovo/Desktop/python/LearnPython-master_gitub/python_base.py",
+		"/C/Users/lenovo/Desktop/python/数据分析/1.py",
+		"/C/Users/lenovo/Desktop/python/tkinter/tkinter.py",
+		"/C/Users/lenovo/Desktop/python/tkinter/tkinter3.py",
+		"/D/蟒蛇/程序3/matplotlib.py",
+		"/C/Users/lenovo/Desktop/python/LearnPython-master_gitub/python_visual.py",
+		"/C/Users/lenovo/AppData/Local/Microsoft/Windows/INetCache/IE/UQ7EJ117/dabaitv[1].apk",
+		"/D/vip/【好书推荐】小甲鱼推荐学习书籍/Python/【入门】《零基础入门学习Python》.htm",
+		"/C/Users/lenovo/Desktop/hello_world.py",
+		"/C/Users/lenovo/Desktop/python/新建文件夹/ChapterReader.py",
+		"/C/Users/lenovo/Desktop/python/easygui.py",
+		"/C/Users/lenovo/Desktop/python/多线程/t",
+		"/C/Users/lenovo/Desktop/tkinter/tkinter4.py",
+		"/C/Users/lenovo/Desktop/tkinter/tkinter3.py",
+		"/C/Users/lenovo/Desktop/tkinter/tkinter2.py",
+		"/C/Users/lenovo/Desktop/tkinter/tkinter1.py",
+		"/C/Users/lenovo/Desktop/__pycache__/1.cpython-34.pyc",
+		"/C/Users/lenovo/Desktop/LearnPython-master/python_visual.py",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/ConvertToUTF8/ConvertToUTF8.sublime-settings",
+		"/C/Users/lenovo/Desktop/tkinter/tkinter3",
+		"/C/Users/lenovo/Desktop/build/1/1.exe",
+		"/C/Users/lenovo/Desktop/app/111.py",
+		"/C/Users/lenovo/Desktop/111.py",
+		"/C/Users/lenovo/Desktop/app数据分析/hi.py",
+		"/C/Users/lenovo/Desktop/python/matplotlib.py",
+		"/C/Users/lenovo/Desktop/python/计算器.py",
+		"/C/Users/lenovo/AppData/Roaming/Sublime Text 3/Packages/User/python2.sublime-build",
+		"/C/Users/lenovo/Desktop/python/1.py",
+		"/C/Users/lenovo/Desktop/rosi_improve2",
+		"/C/Users/lenovo/Desktop/5252b.py",
+		"/C/Users/lenovo/Desktop/work/helloworld.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"):\n",
+			"url",
+			"direc = direc.split",
+			"key, direc, any = winreg.EnumValue( local, j)\nif not is_string_like(direc):\n    continue\nif not os.path.dirname(direc):\n    direc = os.path.join(directory, direc)",
+			"import time\na=time.time()\nprint(a)\nb=time.clock()\nprint(b)\nc=time.mktime\n()\nprint(c)"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/python34.sublime-build",
+	"project": "Initialtelephone.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
